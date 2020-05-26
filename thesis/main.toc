@@ -22,6 +22,8 @@
 \contentsline {chapter}{\numberline {4}Matrix Approach}{7}{chapter.21}
 \contentsline {section}{\numberline {4.1}Colbourn, Dey, Nel}{7}{section.22}
 \contentsline {section}{\numberline {4.2}Harvey, Xu}{7}{section.23}
-\contentsline {chapter}{\numberline {5}Laplacian Paradigm}{9}{chapter.24}
-\contentsline {section}{\numberline {5.1}Kelner, Madry}{9}{section.25}
-\contentsline {chapter}{\numberline {6}Conclusion}{11}{chapter.26}
+\contentsline {subsection}{\numberline {4.2.1}Techniques used}{7}{subsection.24}
+\contentsline {subsubsection}{Naive chain rule algorithm}{7}{section*.25}
+\contentsline {chapter}{\numberline {5}Laplacian Paradigm}{9}{chapter.38}
+\contentsline {section}{\numberline {5.1}Kelner, Madry}{9}{section.39}
+\contentsline {chapter}{\numberline {6}Conclusion}{11}{chapter.40}
