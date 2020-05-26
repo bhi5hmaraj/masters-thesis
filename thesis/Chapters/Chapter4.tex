@@ -9,6 +9,28 @@
 
 \section{Harvey, Xu}
 
+\subsection{Techniques used}
+
+\subsubsection{Naive chain rule algorithm}
+
+\begin{algorithm}[H]
+ \KwIn{$G = (V,E) \  \text{and} \  L_G^+$}
+ \KwOut{Set of edges corresponding to a random spanning tree}
+ 
+ \For{$e = (u,v) \in E$ }{
+    $R_e^{\text{eff}} = (\chi_u - \chi_v)^T \ L_G^+ \ (\chi_u - \chi_v)$\;
+  \eIf{$(X \sim \text{Bernoulli}(R_e^{\text{eff}})) = 1$} {
+   Add edge $e$ to the spanning tree\;
+   $G = G / e$\;
+   }{
+   $G = G \setminus e$ \;
+  }
+  Update $ L_G^+ $ \;
+ }
+ \caption{Sampling uniform spanning tree using chain rule}
+\end{algorithm}
+
+
 %----------------------------------------------------------------------------------------
 
 
