@@ -5,7 +5,7 @@
 \label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter2} 
 
 %----------------------------------------------------------------------------------------
-\section{Colbourn, Dey, Nel}
+\section{Colbourn, Day, Nel}
 
 \section{Harvey, Xu}
 
@@ -14,6 +14,15 @@
 
 
 \subsubsection{Naive chain rule algorithm}
+
+% % % % Some Macros 
+
+\newcommand{\laplacian}[1][G]{\ensuremath{L_#1^+}}
+\newcommand{\reffformula}[1][\laplacian]{\ensuremath{ (\chi_u - \chi_v)^T #1 \ (\chi_u - \chi_v) }}
+\newcommand{\reff}[1][e]{\ensuremath{R_#1^{\text{eff}}}}
+\newcommand{\proj}{\ensuremath{I - \frac{\textbf{1} \textbf{1}^T}{n}}}
+
+
 
 \begin{algorithm}[H]
  \KwIn{$G = (V,E) \  \text{and} \  L_G^+$}
@@ -31,6 +40,52 @@
  }
  \caption{Sampling uniform spanning tree using chain rule}
 \end{algorithm}
+
+\subsection{Recursive Algorithm with lazy updates}
+
+% \newtheorem{HXt}{Theorem}
+
+\begin{HXl}[Formulas in \textbf{Theorem 1} are well defined]
+  Let $G=(V,E)$ be a connected graph and $D \subseteq E$ then  
+  
+  $\left( I - L_D \laplacian \right)$ is invertible $\iff G \setminus D$ is connected 
+  
+\end{HXl}
+
+\begin{proof}
+ TODO
+\end{proof}
+
+
+
+
+\begin{HXt}[Update identity for Deletion] 
+ Let $G=(V,E)$ be a connected graph and $D \subseteq E$. If $G \setminus D$ is connected then 
+$$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian\right)$$
+\end{HXt}
+
+\begin{proof}
+ TODO
+\end{proof}
+
+\begin{HXc}[Improved \textbf{Theorem 1} for submatrix]
+  Let $G=(V,E)$ be a connected graph and $D \subseteq G$. For $S \subseteq V$ define $ E[S] $ as $(S \times S) \cap E$. Suppose $E_D \subseteq E[S]$ and  $G \setminus D$ is connected then 
+  
+  $$ (L_G - L_D)_{S,S}^+ = (\laplacian)_{S,S} - \left( (\laplacian)_{S,S} \cdot ((L_D)_{S,S} \  (\laplacian)_{S,S} \; - \; I)^{-1} \cdot (L_D)_{S,S} \cdot (\laplacian)_{S,S} \right) $$ 
+  
+\end{HXc}
+\begin{proof}
+ TODO
+\end{proof}
+
+
+
+% 
+% \begin{HXl}
+%  Lemma
+% \end{HXl}
+
+
 
 
 %----------------------------------------------------------------------------------------
