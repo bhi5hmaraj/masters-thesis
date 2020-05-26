@@ -1,5 +1,5 @@
 # Random Spanning Trees 
-My masters thesis at CMI on Random Spanning Trees. The following this the approximate content of the thesis. A much more updated version is [here](https://docs.google.com/document/d/1yW18WbHVSleipTCIoebiUH_TyVIRHFEb48uDMau1KA8/edit?usp=sharing) . The template used is available [here](https://www.sunilpatel.co.uk/thesis-template/). 
+My masters thesis at CMI on Random Spanning Trees. The following this the approximate content of the thesis. A much more updated version is [here](https://github.com/bhi5hmaraj/masters-thesis/blob/master/thesis/main.pdf) . The template used is available [here](https://www.sunilpatel.co.uk/thesis-template/). 
 
 
 
