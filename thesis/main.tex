@@ -145,7 +145,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \noindent I, \authorname, declare that this thesis titled, \enquote{\ttitle} and the work presented in it are my own. I confirm that:
 
 \begin{itemize} 
-\item This work was done wholly or mainly while in candidature for a research degree at this University. Interesting
+\item This work was done wholly or mainly while in candidature for a research degree at this University. 
 \item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
 \item Where I have consulted the published work of others, this is always clearly attributed.
 \item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
@@ -164,17 +164,19 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
 \end{declaration}
 
-\cleardoublepage
 
-%----------------------------------------------------------------------------------------
-%	QUOTATION PAGE
-%----------------------------------------------------------------------------------------
-
-\vspace*{0.2\textheight}
-
-\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
-
-\hfill Dave Barry
+% 
+% \cleardoublepage
+% 
+% %----------------------------------------------------------------------------------------
+% %	QUOTATION PAGE
+% %----------------------------------------------------------------------------------------
+% 
+% \vspace*{0.2\textheight}
+% 
+% \noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+% 
+% \hfill Dave Barry
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
@@ -182,7 +184,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots. I see
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -218,37 +220,37 @@ The acknowledgments and the people to thank go here, don't forget to include you
 %----------------------------------------------------------------------------------------
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS
 %----------------------------------------------------------------------------------------
-
-\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
-
-% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
-
-Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
-%Constant Name & $Symbol$ & $Constant Value$ with units\\
-
-\end{constants}
+% 
+% \begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+% 
+% % The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+% 
+% Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+% %Constant Name & $Symbol$ & $Constant Value$ with units\\
+% 
+% \end{constants}
 
 %----------------------------------------------------------------------------------------
 %	SYMBOLS
 %----------------------------------------------------------------------------------------
 
-\begin{symbols}{lll} % Include a list of Symbols (a three column table)
-
-$a$ & distance & \si{\meter} \\
-$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
-%Symbol & Name & Unit \\
-
-\addlinespace % Gap to separate the Roman symbols from the Greek
-
-$\omega$ & angular frequency & \si{\radian} \\
-
-\end{symbols}
+% \begin{symbols}{lll} % Include a list of Symbols (a three column table)
+% 
+% $a$ & distance & \si{\meter} \\
+% $P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+% %Symbol & Name & Unit \\
+% 
+% \addlinespace % Gap to separate the Roman symbols from the Greek
+% 
+% $\omega$ & angular frequency & \si{\radian} \\
+% 
+% \end{symbols}
 
 %----------------------------------------------------------------------------------------
 %	DEDICATION
 %----------------------------------------------------------------------------------------
 
-\dedicatory{For/Dedicated to/To my\ldots} 
+% \dedicatory{For/Dedicated to/To my\ldots} 
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
@@ -262,22 +264,24 @@ $\omega$ & angular frequency & \si{\radian} \\
 % Uncomment the lines as you write the chapters
 
 \input{Chapters/Chapter1.tex}
-%\include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4} 
-%\include{Chapters/Chapter5} 
+\input{Chapters/Chapter2.tex} 
+\input{Chapters/Chapter3.tex} 
+\input{Chapters/Chapter4.tex}
+\input{Chapters/Chapter5.tex} 
+\input{Chapters/Chapter6.tex}
+
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
 
-\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+% \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
 
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
 
-\input{Appendices/AppendixA.tex}
+% \input{Appendices/AppendixA.tex}
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
 
@@ -285,7 +289,7 @@ $\omega$ & angular frequency & \si{\radian} \\
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\printbibliography[heading=bibintoc]
+% \printbibliography[heading=bibintoc]
 
 %----------------------------------------------------------------------------------------
 
