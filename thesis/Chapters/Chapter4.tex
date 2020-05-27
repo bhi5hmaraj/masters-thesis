@@ -17,11 +17,14 @@
 
 % % % % Some Macros 
 
-\newcommand{\laplacian}[1][G]{\ensuremath{L_#1^+}}
-\newcommand{\reffformula}[1][\laplacian]{\ensuremath{ (\chi_u - \chi_v)^T #1 \ (\chi_u - \chi_v) }}
+\newcommand{\laplacian}[1][G]{\ensuremath{L_{#1}^{+}}}
+\newcommand{\reffformula}[1][\laplacian]{\ensuremath{ (\chi_u - \chi_v)^T \  #1 \ (\chi_u - \chi_v) }}
 \newcommand{\reff}[1][e]{\ensuremath{R_#1^{\text{eff}}}}
 \newcommand{\proj}{\ensuremath{I - \frac{\textbf{1} \textbf{1}^T}{n}}}
 
+%  from https://tex.stackexchange.com/questions/39390/writing-a-limit-so-that-the-subscript-goes-directly-underneath
+
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
 
 
 \begin{algorithm}[H]
@@ -41,9 +44,20 @@
  \caption{Sampling uniform spanning tree using chain rule}
 \end{algorithm}
 
+\subsection{Facts used}
+
+\begin{HXf}[Woodbury matrix identity]
+ $\mathbb{M}$
+\end{HXf}
+
+
+
+
 \subsection{Recursive Algorithm with lazy updates}
 
 % \newtheorem{HXt}{Theorem}
+
+
 
 \subsubsection{Deletion}
 
@@ -132,10 +146,26 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \begin{HXc}[Improves \textbf{Theorem 2} for sub-matrices]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. Suppose $F \subseteq E[S]$, where $S \subseteq V$. For any $k > 0$,
  
-  $$ (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} - \left((\laplacian)_{S,S} \cdot B_F \cdot (\frac{I}{k} + B_F^T \ \laplacian \ B_F)^{-1} \cdot B_F^T \cdot \laplacian \right)$$
+  $$ (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} - \left((\laplacian)_{S,S} \cdot (B_F)_{S,*} \cdot (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \cdot (B_F^T)_{S,*} \cdot (\laplacian )_{S,S} \right)$$
  
 \end{HXc}
+\begin{proof}
+ TODO
+\end{proof}
 
+\begin{HXt}[Extends \textbf{Theorem 2} to $k \rightarrow \infty$ case]
+ For a forest $F_1 \subseteq E$, let $G(k) = G + k \ F_1$ as defined in \textbf{Definition 3} . Let $F_2 \subseteq E$ be disjoint from $F_1$ such that $F_1 \cup F_2$ is a forest. Let $B_{F_2}$ be the incidence matrix of $F_2$. For $k > 0$ define $N = \Lim{k \to \infty} \laplacian[G(k)]$
+
+ $$ \Lim{k \to \infty} \laplacian[G(k) + kF_2] = N - \left( N \cdot B_{F_2} \cdot (B_{F_2}^T \ N \ B_{F_2}) \cdot B_{F_2}^T \cdot N \right)$$ 
+
+ Also $\text{ker} \left( \Lim{k \to \infty} \laplacian[G(k) + kF_2] \right) = \text{span }(B_{F_1 \cup F_2} \cup \textbf{1})$
+ \end{HXt}
+
+
+
+\begin{proof}
+ TODO
+\end{proof}
 
 %----------------------------------------------------------------------------------------
 
