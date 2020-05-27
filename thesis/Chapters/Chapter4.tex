@@ -45,6 +45,8 @@
 
 % \newtheorem{HXt}{Theorem}
 
+\subsubsection{Deletion}
+
 \begin{HXl}[Formulas in \textbf{Theorem 1} are well defined]
   Let $G=(V,E)$ be a connected graph and $D \subseteq E$ then  
   
@@ -68,6 +70,11 @@ $$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \
  TODO
 \end{proof}
 
+\begin{HXd}[Submatrix]
+ 
+\end{HXd}
+
+
 \begin{HXc}[Improved \textbf{Theorem 1} for submatrix]
   Let $G=(V,E)$ be a connected graph and $D \subseteq G$. For $S \subseteq V$ define $ E[S] $ as $(S \times S) \cap E$. Suppose $E_D \subseteq E[S]$ and  $G \setminus D$ is connected then 
   
@@ -78,14 +85,56 @@ $$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \
  TODO
 \end{proof}
 
+\begin{HXd}[Incidence Matrix]
+Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is defined as $v_e = (\chi_u - \chi_v)$ . Given a set of edges $D = \{e_1, e_2 \cdots e_m\} \subseteq E$ , the incidence matrix of $D$ is defined as $B_D = [v_{e_1} | v_{e_2} \cdots | v_{e_m}]$  
+\end{HXd}
+
+\begin{HXd}[$G + ke$]
+ $G + ke$ is the weighted graph obtained by increasing e's weight by k
+\end{HXd}
 
 
-% 
-% \begin{HXl}
-%  Lemma
-% \end{HXl}
+
+\subsubsection{Contraction}
+
+\begin{HXl}[Formulas in \textbf{Theorem 2} are well defined]
+ Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ with $|F| = r$ and let $B_F$ be the incidence matrix of $F$.
+ 
+ $$ B_F^T \ \laplacian \ B_F \ \text{is invertible} \iff \text{ F is a forest} $$
+\end{HXl}
+
+\begin{proof}
+ TODO
+\end{proof}
 
 
+\begin{HXl}[Formulas in \textbf{Theorem 2} are well defined]
+ Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. For any $k > 0$ , 
+ 
+ $$\text{If F is a forest then } \left( \frac{I}{k} +  B_F^T \ \laplacian \ B_F \right) \ \text{is invertible for any k $> 0$}$$
+\end{HXl}
+
+\begin{proof}
+ TODO
+\end{proof}
+
+\begin{HXt}[Contraction update formula for finite $k$]
+ Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. For any $k > 0$,
+ 
+ $$ (L_G + k \ L_F)^+ = \laplacian - \left(\laplacian \cdot B_F \cdot (\frac{I}{k} + B_F^T \ \laplacian \ B_F)^{-1} \cdot B_F^T \cdot \laplacian \right)$$
+ 
+\end{HXt}
+
+\begin{proof}
+ TODO
+\end{proof}
+
+\begin{HXc}[Improves \textbf{Theorem 2} for sub-matrices]
+ Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. Suppose $F \subseteq E[S]$, where $S \subseteq V$. For any $k > 0$,
+ 
+  $$ (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} - \left((\laplacian)_{S,S} \cdot B_F \cdot (\frac{I}{k} + B_F^T \ \laplacian \ B_F)^{-1} \cdot B_F^T \cdot \laplacian \right)$$
+ 
+\end{HXc}
 
 
 %----------------------------------------------------------------------------------------

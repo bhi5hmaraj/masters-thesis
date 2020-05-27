@@ -25,6 +25,8 @@
 \contentsline {subsection}{\numberline {4.2.1}Techniques used}{7}{subsection.24}
 \contentsline {subsubsection}{Naive chain rule algorithm}{7}{section*.25}
 \contentsline {subsection}{\numberline {4.2.2}Recursive Algorithm with lazy updates}{7}{subsection.38}
-\contentsline {chapter}{\numberline {5}Laplacian Paradigm}{9}{chapter.42}
-\contentsline {section}{\numberline {5.1}Kelner, Madry}{9}{section.43}
-\contentsline {chapter}{\numberline {6}Conclusion}{11}{chapter.44}
+\contentsline {subsubsection}{Deletion}{7}{section*.39}
+\contentsline {subsubsection}{Contraction}{8}{section*.46}
+\contentsline {chapter}{\numberline {5}Laplacian Paradigm}{9}{chapter.51}
+\contentsline {section}{\numberline {5.1}Kelner, Madry}{9}{section.52}
+\contentsline {chapter}{\numberline {6}Conclusion}{11}{chapter.53}
