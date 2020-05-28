@@ -22,6 +22,8 @@
 \newcommand{\reff}[1][e]{\ensuremath{R_#1^{\text{eff}}}}
 \newcommand{\proj}{\ensuremath{I - \frac{\textbf{1} \textbf{1}^T}{n}}}
 
+\newcommand{\Mset}[2]{\ensuremath{\mathbb{M}_{#1 \times #2}}}
+
 %  from https://tex.stackexchange.com/questions/39390/writing-a-limit-so-that-the-subscript-goes-directly-underneath
 
 \newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
@@ -47,8 +49,75 @@
 \subsection{Facts used}
 
 \begin{HXf}[Woodbury matrix identity]
- $\mathbb{M}$
+ Let $ M \in \mathbb{M}_{n \times n} , U \in \mathbb{M}_{n \times k}, V \in \mathbb{M}_{n \times k}$. Suppose $M$ is non-singular then $M + UV^T$ is non-singular $\iff \ I + V^T M^{-1} U$ is non-singular. If $M + UV^T$ is non-singular, then 
+ $$ (M + UV^T)^{-1} = M^{-1} - \left( M^{-1} \cdot U \cdot (I + V^TM^{-1}U)^{-1} \cdot V^T \cdot M^{-1}\right) $$
 \end{HXf}
+
+\begin{proof}
+ TODO
+\end{proof}
+
+\begin{HXf}
+ For any $L \in \mathbb{M}_{n \times n}$ with $\text{ker}(L) = \text{span}(\textbf{1})$, we have $LL^+ = I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ and $P := I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ is called the \textbf{projection matrix}. 
+\end{HXf}
+
+\begin{HXf}[Sub-matrices]
+For all the results below, $S$ denotes a index set and $S^c$ denotes it's complement.
+ \begin{enumerate}
+  \item For any $A,B \in \Mset{n}{n}, (A + B)_{S,S} = A_{S,S} + B_{S,S}$
+  \item If $C = D \cdot E \cdot F$ then $C_{S,S} = D_{S,*} \cdot E \cdot F_{*,S}$
+  \item For $A \in \Mset{m}{n}, B \in \Mset{n}{l}$ , If $A_{S^c, S^c} = 0$ or $B_{S^c, S^c} = 0$ then \\ $(AB)_{S,S} = A_{S,S} \cdot B_{S,S}$
+  \item For any matrix $C$ where $C = D \cdot E \cdot F$ . If $D_{*, S^c} = 0$ and $F_{S^c, *} = 0$, then $C = D_{*, S} \cdot E_{S,S} \cdot F_{S,*}$
+  \item $D = 
+\begin{bmatrix}
+M & 0 \\
+0 & 0 \\
+\end{bmatrix},
+$ 
+and $
+E = 
+\begin{bmatrix}
+A & B \\
+X & Y \\
+\end{bmatrix}
+$
+where $M, A \in \Mset{n}{n}$ and If $(MA - I)$ is invertible Then,
+$$ (DE - I)^{-1} = \begin{bmatrix}
+(MA - I)^{-1} & (MA - I)^{-1} \cdot M \cdot B \\
+0 & -I \\
+\end{bmatrix}
+$$
+\begin{proof}
+ $(DE - I)^{-1}$ can be computed using Shur's Complement(\cite{wiki:shur}) . 
+ 
+ Suppse $N =  
+\begin{bmatrix}
+P & Q \\
+R & S \\
+\end{bmatrix}
+$ and Shur's complement of block $S$ and $P$ is  $$N / S := P - QS^{-1}R \qquad N / P := S - RP^{-1}Q$$
+Then $$N^{-1} = 
+\begin{bmatrix}
+P^{-1} + (P^{-1} Q (N/P)^{-1} R  P^{-1}) & -(P^{-1}Q(N/P)^{-1}) \\[0.3cm]
+-((N/P)^{-1}RP^{-1}) & (N/P)^{-1} \\
+\end{bmatrix}
+$$
+In our case $N = 
+\begin{bmatrix}
+MA - I & MB \\
+0 & -I \\
+\end{bmatrix}
+$ and $(N/P) = -I$. From this it follows that $$N^{-1} = (DE-I)^{-1} = \begin{bmatrix}
+(MA - I)^{-1} & (MA - I)^{-1} \cdot M \cdot B \\
+0 & -I \\
+\end{bmatrix}
+$$
+\end{proof}
+
+ \end{enumerate}
+
+\end{HXf}
+
 
 
 
