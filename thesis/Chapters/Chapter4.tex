@@ -118,6 +118,24 @@ $$
 
 \end{HXf}
 
+\begin{HXf}
+ Let $A, B \in \Mset{n}{n}$ with $B$ being symmetric PSD. Suppose $x$ is an eigenvector of $AB$ corresponding to eigenvalue $\lambda$. Then $\sqrt{B} x$ is an eigenvector of $\sqrt{B}A\sqrt{B}$ corresponding to eigenvalue $\lambda$ 
+\end{HXf}
+
+\begin{HXf}
+ Let $G$ be a graph with $n$ vertices. Suppose $(\lambda_1, \lambda_2 \cdots \lambda_n)$ be the eigenvalues corresponding to the eigenvectors $(v_1, v_2 \cdots v_n) $ of the Laplacian of $G$ denoted as $L_G$. $L_G$ is symmetric PSD with $\lambda_1 = 0$ and $v_1 = \textbf{1}$. The following properties relate the eigenvalues of $L_G$ with the connectivity of $G$ :
+ 
+\begin{enumerate}
+ \item $\lambda_2 > 0 \iff G$ is connected
+ \item $G$ is disconnected $\iff \exists z$ with $z^T \textbf{1} = 0$ and $z^T L_G z = 0$
+\end{enumerate}
+
+The above is true for $\laplacian$ also 
+ 
+\end{HXf}
+
+
+
 
 
 
@@ -215,7 +233,7 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \begin{HXc}[Improves \textbf{Theorem 2} for sub-matrices]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. Suppose $F \subseteq E[S]$, where $S \subseteq V$. For any $k > 0$,
  
-  $$ (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} - \left((\laplacian)_{S,S} \cdot (B_F)_{S,*} \cdot (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \cdot (B_F^T)_{S,*} \cdot (\laplacian )_{S,S} \right)$$
+  $$ (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} - \left((\laplacian)_{S,S} \  (B_F)_{S,*} \  (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \   (B_F^T)_{S,*} \  (\laplacian )_{S,S} \right)$$
  
 \end{HXc}
 \begin{proof}
@@ -235,6 +253,13 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \begin{proof}
  TODO
 \end{proof}
+saaas
+\subsection{The updated algorithm}
+
+\begin{center}
+    \includegraphics{Figures/alg-tree}
+\end{center}
+
 
 %----------------------------------------------------------------------------------------
 
