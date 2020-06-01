@@ -21,8 +21,13 @@
 \newcommand{\reffformula}[1][\laplacian]{\ensuremath{ (\chi_u - \chi_v)^T \  #1 \ (\chi_u - \chi_v) }}
 \newcommand{\reff}[1][e]{\ensuremath{R_#1^{\text{eff}}}}
 \newcommand{\proj}{\ensuremath{I - \frac{\textbf{1} \textbf{1}^T}{n}}}
-
+\newcommand{\sqlaplacian}[1][G]{\ensuremath{\sqrt{L_{#1}^{+}}}}
 \newcommand{\Mset}[2]{\ensuremath{\mathbb{M}_{#1 \times #2}}}
+
+% from https://tex.stackexchange.com/questions/107186/how-to-write-norm-which-adjusts-its-size
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+%  
+
 
 %  from https://tex.stackexchange.com/questions/39390/writing-a-limit-so-that-the-subscript-goes-directly-underneath
 
@@ -122,7 +127,7 @@ $$
  Let $A, B \in \Mset{n}{n}$ with $B$ being symmetric PSD. Suppose $x$ is an eigenvector of $AB$ corresponding to eigenvalue $\lambda$. Then $\sqrt{B} x$ is an eigenvector of $\sqrt{B}A\sqrt{B}$ corresponding to eigenvalue $\lambda$ 
 \end{HXf}
 
-\begin{HXf}
+\begin{HXf}[Laplacian and graph connectivity]
  Let $G$ be a graph with $n$ vertices. Suppose $(\lambda_1, \lambda_2 \cdots \lambda_n)$ be the eigenvalues corresponding to the eigenvectors $(v_1, v_2 \cdots v_n) $ of the Laplacian of $G$ denoted as $L_G$. $L_G$ is symmetric PSD with $\lambda_1 = 0$ and $v_1 = \textbf{1}$. The following properties relate the eigenvalues of $L_G$ with the connectivity of $G$ :
  
 \begin{enumerate}
@@ -133,6 +138,33 @@ $$
 The above is true for $\laplacian$ also 
  
 \end{HXf}
+
+
+ \begin{HXd}[$\chi_u$]
+ $\chi_u$ is a vector of size $|V|$
+
+ \[
+    \chi_u(i) = 
+\begin{cases}
+    1,& \text{if } i = u\\
+    0,              & \text{otherwise}
+\end{cases}
+\]
+ \end{HXd}
+
+ \begin{HXd}[Uniform random spanning tree]
+  Let $\hat{T}$ be the random variable denoting a uniformly random spanning tree, then $\mathbb{P}(\hat{T} = T) = \frac{1}{|\mathcal{T}|}$, where $\mathcal{T}$ is the set of all spanning trees of $G$. 
+ \end{HXd}
+
+
+\begin{HXf}
+ Given a graph $G = (V,E)$ with laplacian $L_G$, the effective resistance of an edge $e = \{u, v\} \in E$ is 
+ $$ \reff = \reffformula $$
+ 
+ Then for any $e \in E$ we have $$\mathbb{P}(e \in \hat{T}) = \reff$$
+ 
+\end{HXf}
+
 
 
 
@@ -156,7 +188,59 @@ The above is true for $\laplacian$ also
 \end{HXl}
 
 \begin{proof}
- TODO
+ First let's show that If $(I - L_D\laplacian)$ is singular then $G \setminus D$ is disconnected 
+ 
+ \begin{itemize}
+  \item Since $(I - L_D\laplacian)$ is singular $\exists x \neq 0 \text{ s.t. }$ $(I - L_D\laplacian)x = 0$
+  \begin{alignat}{1}
+   & \implies L_D \laplacian \ x = x \\
+   & \implies 1 \in eigenvalues(L_D\laplacian) \\
+   & \implies 1 \in eigenvalues((L_G - L_{G \setminus D}) \laplacian) 
+%    & \therefore
+  \end{alignat}
+  
+  \item Let $x \perp \textbf{1}$ be an eigenvector of $(L_G - L_{G \setminus D}) \laplacian$ with eigenvalue 1.
+  \item By \textbf{Fact 4}, $y = \frac{\sqrt{\laplacian} x}{\norm{\sqrt{\laplacian}x}}$ is an eigenvector of $\sqrt{\laplacian} (L_G - L_{G \setminus D}) \sqrt{\laplacian}$
+
+\begin{alignat}{1}
+   & = y^T \cdot \sqrt{\laplacian} (L_G - L_{G \setminus D}) \sqrt{\laplacian} \cdot y = 1 \\
+   & = y^T \sqrt{\laplacian} L_G \sqrt{\laplacian} y = (HOW) y^T \laplacian L_G y = y^T P y  \\
+   & = y^T  \left( I - \frac{\textbf{1}^T \textbf{1}}{n} \right) y = y^T y - \left( \frac{y^T \textbf{1}^T \textbf{1} y}{n} \right) = (HOW) y^T y = 1 
+\end{alignat}
+
+    \item $\therefore  y^T \sqrt{\laplacian} L_{G \setminus D} \sqrt{\laplacian} y = 0$ now if we consider $z = \sqrt{\laplacian} y$ and show that $z^T \textbf{1} = 0$ then we can use $\textbf{Fact 5}$ to complete the proof
+    
+    \begin{alignat}{1}
+     &  y^T \sqrt{\laplacian} \textbf{1} = x^T \sqrt{\laplacian} \sqrt{\laplacian} \textbf{1} = 0 \text{(HOW is 1 in kernel of } \laplacian \\ 
+     &  G \setminus D \text{ is disconnected}
+    \end{alignat}
+
+  
+ \end{itemize} 
+
+Now to prove the converse, If $G \setminus D$ is disconnected then $I - L_D \laplacian$ is singular
+
+\begin{itemize}
+ \item If $G \setminus D$ is disconnected then $\exists y \perp \textbf{1}, ||y|| = 1$ we have
+    
+%     \begin{alignat}{1}
+    \begin{enumerate}
+     \item $ y^T \cdot \sqlaplacian \cdot L_{G \setminus D} \cdot \sqlaplacian \cdot y = 0 (HOW) $
+     \item $ y^T \cdot \sqlaplacian \cdot L_G \cdot \sqlaplacian \cdot y = y^T y = 1 $
+    \end{enumerate}
+    
+\item From (1) and (2) we get $y^T \sqlaplacian (L_G - L_{G \setminus D}) \sqlaplacian y= 1$
+\begin{alignat}{1}
+ & \implies y^T \cdot \sqlaplacian \cdot L_D \cdot \sqlaplacian \cdot y = 1 \\
+ & \implies 1 \in \text{eigenvalues}(L_D\laplacian) (HOW)\\
+ & \implies (I - L_D\laplacian) \text{ is singular}
+\end{alignat}
+
+\end{itemize}
+
+
+
+
 \end{proof}
 
 
@@ -253,12 +337,12 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \begin{proof}
  TODO
 \end{proof}
-saaas
+
 \subsection{The updated algorithm}
 
-\begin{center}
+% \begin{center}
     \includegraphics{Figures/alg-tree}
-\end{center}
+% \end{center}
 
 
 %----------------------------------------------------------------------------------------

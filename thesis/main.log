@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  30 MAY 2020 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  1 JUN 2020 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1703,6 +1703,9 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
 \c@HXt=\count420
 \c@HXl=\count421
 \c@HXc=\count422
@@ -1789,7 +1792,7 @@ LaTeX Info: Redefining \pageref on input line 6443.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 110.
+(scrhack)             need that hack, on input line 111.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -1804,17 +1807,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip99
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 110.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 110.
-Package hyperref Info: Option `colorlinks' set `true' on input line 110.
-Package hyperref Info: Option `unicode' set `true' on input line 110.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 111.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 111.
+Package hyperref Info: Option `colorlinks' set `true' on input line 111.
+Package hyperref Info: Option `unicode' set `true' on input line 111.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 110.
+Package hyperref Info: Option `breaklinks' set `true' on input line 111.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1826,23 +1829,23 @@ Package csquotes Info: ... found 'babel' package.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 111.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1998,14 +2001,14 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 110.
-Package scrbase Info: activating english \abbrevname on input line 110.
-Package scrbase Info: activating english \byname on input line 110.
-Package scrbase Info: activating english \acknowledgementname on input line 110
+(scrlayer)             \begin{document} on input line 111.
+Package scrbase Info: activating english \abbrevname on input line 111.
+Package scrbase Info: activating english \byname on input line 111.
+Package scrbase Info: activating english \acknowledgementname on input line 111
 .
-Package scrbase Info: activating english \authorshipname on input line 110.
-Package scrbase Info: activating english \constantsname on input line 110.
-Package scrbase Info: activating english \symbolsname on input line 110.
+Package scrbase Info: activating english \authorshipname on input line 111.
+Package scrbase Info: activating english \constantsname on input line 111.
+Package scrbase Info: activating english \symbolsname on input line 111.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -2017,10 +2020,10 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 110.
-Package biblatex Info: Reference segment=0 on input line 110.
+Package biblatex Info: Reference section=0 on input line 111.
+Package biblatex Info: Reference segment=0 on input line 111.
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring ON on input line 110.
+Package hyperref Info: Link coloring ON on input line 111.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2029,52 +2032,237 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count441
 )
-LaTeX Info: Redefining \ref on input line 110.
-LaTeX Info: Redefining \pageref on input line 110.
-LaTeX Info: Redefining \nameref on input line 110.
+LaTeX Info: Redefining \ref on input line 111.
+LaTeX Info: Redefining \pageref on input line 111.
+LaTeX Info: Redefining \nameref on input line 111.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 \c__siunitx_mathsf_int=\count442
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 110.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 111.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 110.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 111.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 110
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 111
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 110
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 111
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 110.
+(Font)              <10.95> on input line 111.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 110.
+(Font)              <8> on input line 111.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 110.
-LaTeX Font Info:    Try loading font information for U+msa on input line 110.
+(Font)              <6> on input line 111.
+LaTeX Font Info:    Try loading font information for U+msa on input line 111.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 110.
+LaTeX Font Info:    Try loading font information for U+msb on input line 111.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information f
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 111
+.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+\c__siunitx_mathtt_int=\count443
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 111
+.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+1: section
+[1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+--------------------
+ Declaration of Authorship
+--------------------
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 169.
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 169.
+
+1: section
+[3] [4
+
+]
+--------------------
+ Abstract
+--------------------
+1: section
+[5] [6
+
+]
+--------------------
+ Acknowledgements
+--------------------
+1: section
+[7] [8
+
+] (./main.toc
+1: section
+[9])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [10] (./main.lof)
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+
+1: section
+[11
+
+] [12
+
+] (./main.lot)
+\tf@lot=\write8
+\openout8 = `main.lot'.
+
+
+1: section
+[13] [14
+
+]
+1: section
+[15] [16
+
+]
+1: section
+(./Chapters/Chapter1.tex
+Chapter 1.
+) (./Chapters/Chapter2.tex
+1: section
+[1
+
+] [2
+
+]
+Chapter 2.
+) (./Chapters/Chapter3.tex
+1: section
+[3] [4
+
+]
+Chapter 3.
+) (./Chapters/Chapter4.tex
+1: section
+[5] [6
+
+]
+Chapter 4.
+1: section
+[7] [8] [9] [10]
+Overfull \hbox (59.25922pt too wide) detected at line 320
+\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 L[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/
+10.95 k L[]\OT1/lmr/m/n/10.95 )[] = (\OML/lmm/m/it/10.95 L[]\OT1/lmr/m/n/10.95 
+)[] \OMS/lmsy/m/n/10.95 ^^@ []
+ []
+
+<Figures/alg-tree.pdf, id=362, 490.23149pt x 478.1865pt>
+File: Figures/alg-tree.pdf Graphic file (type pdf)
+<use Figures/alg-tree.pdf>
+Package pdftex.def Info: Figures/alg-tree.pdf  used on input line 344.
+(pdftex.def)             Requested size: 490.23029pt x 478.18532pt.
+
+Overfull \hbox (86.2012pt too wide) in paragraph at lines 344--346
+[] 
+ []
+
+) (./Chapters/Chapter5.tex [11] [12 <./Figures/alg-tree.pdf>]
+Chapter 5.
+) (./Chapters/Chapter6.tex
+1: section
+[13
+
+] [14
+
+]
+Chapter 6.
+)
+1: section
+[15] [16
+
+]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 304.
+
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+
+1: section
+[17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5A82C53036AE00A9FFF2EF37C0B853DE;4708.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 36052 strings out of 492982
+ 717478 string characters out of 6134896
+ 953429 words of memory out of 5000000
+ 39112 multiletter control sequences out of 15000+600000
+ 650353 words of font info for 81 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,20n,74p,10377b,2398s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
+8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (33 pages, 462418 bytes).
+PDF statistics:
+ 547 PDF objects out of 1000 (max. 8388607)
+ 452 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 270 words of extra memory for PDF output out of 10000 (max. 10000000)
+
