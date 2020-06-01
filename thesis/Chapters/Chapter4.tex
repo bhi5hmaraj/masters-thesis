@@ -252,7 +252,18 @@ $$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \
 \end{HXt}
 
 \begin{proof}
- TODO
+ If R.H.S is indeed true then it should satisfy the property of $LL^+ = P$
+ $$ (L_G - L_D) \cdot (L_G - L_D)^+ $$
+ $$ (L_G - L_D) \cdot \left(\laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian\right) \right)$$
+ $$\left[P - L_D\laplacian \right] - \left[(L_G\laplacian - L_D\laplacian) \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian\right]$$
+ $$\left[P - L_D\laplacian \right] + \left[\left( (L_D\laplacian - I) + \frac{\textbf{1}\textbf{1}^T}{n} \right) \cdot \left((L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian\right)\right]$$
+ $$\left[P - L_D\laplacian \right] + \left[ (L_D\laplacian) + \left(\frac{\textbf{1}\textbf{1}^T}{n} \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian \right) \right]$$
+ 
+ We can see that $-\textbf{1}^T (L_D \laplacian -I) = -\textbf{1}^T L_D \laplacian + (I \textbf{1})^T = 0 + \textbf{1}^T = \textbf{1}^T$. Hence $\textbf{1}^T (L_D \laplacian -I)^{-1} = -\textbf{1}^T$. And also $\textbf{1}^T L_D = 0$. Hence, 
+ 
+ $$ P - L_D\laplacian + L_D\laplacian + \textbf{1}^T L_D\laplacian = P$$
+
+ 
 \end{proof}
 
 \begin{HXd}[Submatrix]
@@ -267,8 +278,65 @@ $$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \
   
 \end{HXc}
 \begin{proof}
- TODO
+From \textbf{Theorem 1} we know that $(L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian\right)$. If we apply \textbf{Fact 3.1} to $(L_G - L_D)^+$ we get 
+
+$$ (\laplacian)_{S,S} - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian \right)_{S,S} $$
+
+Applying \textbf{Fact 3.3} we get (HOW)
+
+$$(\laplacian)_{S,S} - \left( (\laplacian)_{S,S} \cdot (L_D\laplacian-I)^{-1}_{S,S} \cdot (L_D)_{S,S} \cdot (\laplacian)_{S,S} \right) $$
+
+Now applying \textbf{Fact 3.5} to $(L_D\laplacian-I)^{-1}_{S,S}$ 
+
+\textbf{Fact 3.5} states that If 
+$D = 
+\begin{bmatrix}
+M & 0 \\
+0 & 0 \\
+\end{bmatrix},
+$ 
+and $
+E = 
+\begin{bmatrix}
+A & B \\
+X & Y \\
+\end{bmatrix}
+$where $M, A \in \Mset{n}{n}$ and If $(MA - I)$ is invertible Then,
+$$ (DE - I)^{-1} = \begin{bmatrix}
+(MA - I)^{-1} & (MA - I)^{-1} \cdot M \cdot B \\
+0 & -I \\
+\end{bmatrix}
+$$
+
+Here we have $L_D = 
+\begin{bmatrix}
+(L_D)_{S,S} & 0 \\
+0 & 0 \\
+\end{bmatrix},
+$ (HOW can it always be this way)
+and $
+L_G = 
+\begin{bmatrix}
+(L_G)_{S,S} & (L_G)_{S,S^c} \\
+(L_G)_{S^c,S} & (L_G)_{S^c,S^c} \\
+\end{bmatrix}
+$
+
+$$\therefore \; (L_DL_G - I)^{-1} = 
+\begin{bmatrix}
+((L_D)_{S,S} (L_G)_{S,S} - I)^{-1} & (L_D)_{S,S}(L_G)_{S,S^c} \\
+0 & -I \\
+\end{bmatrix}
+$$
+
+Hence we get the required result 
+  $$ (L_G - L_D)_{S,S}^+ = (\laplacian)_{S,S} - \left( (\laplacian)_{S,S} \cdot ((L_D)_{S,S} \  (\laplacian)_{S,S} \; - \; I)^{-1} \cdot (L_D)_{S,S} \cdot (\laplacian)_{S,S} \right) $$ 
+  
 \end{proof}
+
+
+\subsubsection{Contraction}
+
 
 \begin{HXd}[Incidence Matrix]
 Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is defined as $v_e = (\chi_u - \chi_v)$ . Given a set of edges $D = \{e_1, e_2 \cdots e_m\} \subseteq E$ , the incidence matrix of $D$ is defined as $B_D = [v_{e_1} | v_{e_2} \cdots | v_{e_m}]$  
@@ -279,9 +347,6 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \end{HXd}
 
 
-
-\subsubsection{Contraction}
-
 \begin{HXl}[Formulas in \textbf{Theorem 2} are well defined]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ with $|F| = r$ and let $B_F$ be the incidence matrix of $F$.
  
@@ -289,7 +354,17 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \end{HXl}
 
 \begin{proof}
- TODO
+ For any $x \in \mathbb{R}^r, x \neq 0, \text{ let } y = B_F x$. We first prove the following claim
+ 
+ \begin{HXcl}
+  The incidence matrix of a acyclic graph has full column rank
+ \end{HXcl}
+    \begin{proof}
+    TODO
+    \end{proof}
+    
+Therefore $y \neq 0$
+ 
 \end{proof}
 
 
