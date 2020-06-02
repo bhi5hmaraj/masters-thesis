@@ -17,6 +17,93 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
+  \entry{COLBOURN1996268}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CCJ}{%
+         family={Colbourn},
+         familyi={C\bibinitperiod},
+         given={Charles\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MWJ}{%
+         family={Myrvold},
+         familyi={M\bibinitperiod},
+         given={Wendy\bibnamedelima J.},
+         giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=NE}{%
+         family={Neufeld},
+         familyi={N\bibinitperiod},
+         given={Eugene},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CCJMWJNE1}
+    \strng{fullhash}{CCJMWJNE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Colbourn, Day, and Nel developed the first algorithm requiring at mostO(n3)
+  arithmetic operations for ranking and unranking spanning trees of a graph
+  (nis the number of vertices of the graph). We present two algorithms for the
+  more general problem of ranking and unranking rooted spanning arborescences
+  of a directed graph. The first is conceptually very simple and requiresO(n3)
+  arithmetic operations. The second approach shows that the number of
+  arithmetic operations can be reduced to the same as that of the best known
+  algorithms for matrix multiplication.%
+    }
+    \verb{doi}
+    \verb https://doi.org/10.1006/jagm.1996.0014
+    \endverb
+    \field{issn}{0196-6774}
+    \field{number}{2}
+    \field{pages}{268 \bibrangedash  281}
+    \field{title}{Two Algorithms for Unranking Arborescences}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0196677496900140
+    \endverb
+    \field{volume}{20}
+    \field{journaltitle}{Journal of Algorithms}
+    \field{year}{1996}
+  \endentry
+
+  \entry{harvey2016generating}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=HNJ}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={Nicholas\bibnamedelima JA},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=XK}{%
+         family={Xu},
+         familyi={X\bibinitperiod},
+         given={Keyulu},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{HNJXK1}
+    \strng{fullhash}{HNJXK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{LATIN 2016: Theoretical Informatics}
+    \field{pages}{522\bibrangedash 535}
+    \field{title}{Generating random spanning trees via fast matrix
+  multiplication}
+    \field{year}{2016}
+  \endentry
+
   \entry{wiki:shur}{misc}{}
     \name{author}{1}{}{%
       {{hash=W}{%
