@@ -1,20 +1,5 @@
 % Chapter 2
 
-\chapter{Matrix Approach} % Main chapter title
-
-\label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter2} 
-
-%----------------------------------------------------------------------------------------
-\section{Colbourn, Day, Nel}
-
-\section{Harvey, Xu}
-
-\subsection{Techniques used}
-
-
-
-\subsubsection{Naive chain rule algorithm}
-
 % % % % Some Macros 
 
 \newcommand{\laplacian}[1][G]{\ensuremath{L_{#1}^{+}}}
@@ -32,6 +17,25 @@
 %  from https://tex.stackexchange.com/questions/39390/writing-a-limit-so-that-the-subscript-goes-directly-underneath
 
 \newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+
+\chapter{Matrix Approach} % Main chapter title
+
+\label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter2} 
+
+%----------------------------------------------------------------------------------------
+\section{Colbourn, Day, Nel}
+
+\section{Harvey, Xu}
+
+\cite{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by CMN which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
+
+% \subsection{Techniques used}
+
+
+
+\subsubsection{Naive chain rule algorithm}
+
+
 
 
 \begin{algorithm}[H]
@@ -51,6 +55,36 @@
  \caption{Sampling uniform spanning tree using chain rule}
 \end{algorithm}
 
+Computing $\laplacian$ takes $\mathcal{O}(N^3)$ hence the overall running time is $\mathcal{O}(MN^3)$
+
+\subsection{Summary of the paper}
+
+On a high level the main ideas used in the paper are 
+
+\begin{enumerate}
+ \item Use a divide and conquer algorithm to break the graph into smaller parts and sample on each parts seperately and update the pseudoinverse of the laplacian lazily only on the subgraph when needed
+ \item The important insight here is that the sampling probability of an edge depends only on 4 entries of the pseudoinverse of the laplacian. Hence we don't need to update all the entries of the matrix when the graph is modified
+ \item A well known method to compute inverse of a matrix with updates is to use the Sherman-Morrison-Woodbury formula. But in this case the formula has to be modified to work for the case where only a submatrix is modified.
+ \item Since while contracting an edge the number of vertices decreases it would get cumbersome to modify the dimension of the matrix evertime. So they overcome this issue by considering the formula on the limit case. When the graph is considered as a electric network then increasing the weight of an edge corresponds to shorting that link, hence in the limit case we get the same result as contracting the edge
+\item Also one of the main improvements over the previous algorithms (\cite{COLBOURN1996268}) is that the intricacies of LU decomposition is avoided since the current algorithm uses only matrix inversion as black box. 
+\end{enumerate}
+
+\subsection{Harvey, Xu Algorithm}
+
+(TODO) Insert algorithm here and explain how it works
+\begin{center}
+    \includegraphics[scale=0.85]{Figures/alg-tree}
+\end{center}
+
+
+
+\subsection{Structure of the paper}
+
+\begin{center}
+\includegraphics[scale=0.7]{deps} 
+\end{center}
+
+
 \subsection{Facts used}
 
 \begin{HXf}[Woodbury matrix identity]
@@ -65,6 +99,8 @@
 \begin{HXf}
  For any $L \in \mathbb{M}_{n \times n}$ with $\text{ker}(L) = \text{span}(\textbf{1})$, we have $LL^+ = I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ and $P := I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ is called the \textbf{projection matrix}. 
 \end{HXf}
+
+The folowing set of facts are about the properties of matrix operations (addition, multiplication, etc.) on sub-matrices. The first 4 are easy to see, so I haven't derived them. For the last one I have written a derivation using Shur's complement from Wikipedia
 
 \begin{HXf}[Sub-matrices]
 For all the results below, $S$ denotes a index set and $S^c$ denotes it's complement.
@@ -127,7 +163,7 @@ $$
  Let $A, B \in \Mset{n}{n}$ with $B$ being symmetric PSD. Suppose $x$ is an eigenvector of $AB$ corresponding to eigenvalue $\lambda$. Then $\sqrt{B} x$ is an eigenvector of $\sqrt{B}A\sqrt{B}$ corresponding to eigenvalue $\lambda$ 
 \end{HXf}
 
-\begin{HXf}[Laplacian and graph connectivity]
+\begin{HXf}[Laplacian and graph connectivity (Fiedler value)]
  Let $G$ be a graph with $n$ vertices. Suppose $(\lambda_1, \lambda_2 \cdots \lambda_n)$ be the eigenvalues corresponding to the eigenvectors $(v_1, v_2 \cdots v_n) $ of the Laplacian of $G$ denoted as $L_G$. $L_G$ is symmetric PSD with $\lambda_1 = 0$ and $v_1 = \textbf{1}$. The following properties relate the eigenvalues of $L_G$ with the connectivity of $G$ :
  
 \begin{enumerate}
@@ -172,13 +208,14 @@ The above is true for $\laplacian$ also
 
 
 
-\subsection{Recursive Algorithm with lazy updates}
-
-% \newtheorem{HXt}{Theorem}
-
-
+\subsection{Technical details of the results}
 
 \subsubsection{Deletion}
+The first step in obtaining a updation formula for deletion is to make sure $(I - L_D \laplacian)$ is invertible. As the inverse of this term would be used in the expansion of $(L_G - L_D)^+$
+
+
+For the first direction of Lemma 1, the main result used is \textbf{Fact 5} ($G$ is disconnected $\iff \exists z$ with $z^T \textbf{1} = 0$ and $z^T \laplacian z = 0$). So if we can show this for a suitable $z$ we are done. Now using the hypothesis that $(I - L_D \laplacian)$ is singular and \textbf{Fact 4} they derive the following $ y^T \cdot \sqlaplacian \cdot L_{G \setminus D} \cdot \sqlaplacian \cdot y = 0$. As we an see the remaining part is to show $(z = \sqlaplacian y) \perp \textbf{1}$
+
 
 \begin{HXl}[Formulas in \textbf{Theorem 1} are well defined]
   Let $G=(V,E)$ be a connected graph and $D \subseteq E$ then  
@@ -188,6 +225,9 @@ The above is true for $\laplacian$ also
 \end{HXl}
 
 \begin{proof}
+
+
+
  First let's show that If $(I - L_D\laplacian)$ is singular then $G \setminus D$ is disconnected 
  
  \begin{itemize}
@@ -245,7 +285,7 @@ Now to prove the converse, If $G \setminus D$ is disconnected then $I - L_D \lap
 
 
 
-
+In \textbf{Theorem 1} they just show that the formula for the updated pseudoinverse is indeed true. This is shown using the following identity $L L^+ = P$
 \begin{HXt}[Update identity for Deletion] 
  Let $G=(V,E)$ be a connected graph and $D \subseteq E$. If $G \setminus D$ is connected then 
 $$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian\right)$$
@@ -267,10 +307,10 @@ $$ (L_G - L_D)^+ = \laplacian - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \
 \end{proof}
 
 \begin{HXd}[Submatrix]
- 
+ A submatrix of a martix $A$ containing rows $S$ and columns $T$ is denoted as $A_{S,T}$
 \end{HXd}
 
-
+\textbf{Corollary 1} modifies the update formula in \textbf{Theorem 1} to work for submatrices and hence reduce the compliexity to $\mathcal{O}(|S|^{\omega})$. They do this by first applying the facts related to submatrices \textbf{Fact 3.3, 3.5} to break the formula into 
 \begin{HXc}[Improved \textbf{Theorem 1} for submatrix]
   Let $G=(V,E)$ be a connected graph and $D \subseteq G$. For $S \subseteq V$ define $ E[S] $ as $(S \times S) \cap E$. Suppose $E_D \subseteq E[S]$ and  $G \setminus D$ is connected then 
   
@@ -412,12 +452,6 @@ Therefore $y \neq 0$
 \begin{proof}
  TODO
 \end{proof}
-
-\subsection{The updated algorithm}
-
-% \begin{center}
-    \includegraphics{Figures/alg-tree}
-% \end{center}
 
 
 %----------------------------------------------------------------------------------------
