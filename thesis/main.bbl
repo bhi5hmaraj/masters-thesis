@@ -17,6 +17,311 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global}
+  \entry{aldous1990random}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ADJ}{%
+         family={Aldous},
+         familyi={A\bibinitperiod},
+         given={David\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SIAM}%
+    }
+    \strng{namehash}{ADJ1}
+    \strng{fullhash}{ADJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1990}
+    \field{labeldatesource}{year}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{4}
+    \field{pages}{450\bibrangedash 465}
+    \field{title}{The random walk construction of uniform spanning trees and
+  uniform labelled trees}
+    \field{volume}{3}
+    \field{journaltitle}{SIAM Journal on Discrete Mathematics}
+    \field{year}{1990}
+  \endentry
+
+  \entry{doi:10.1287/opre.2017.1603}{article}{}
+    \name{author}{5}{}{%
+      {{hash=AA}{%
+         family={Asadpour},
+         familyi={A\bibinitperiod},
+         given={Arash},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GMX}{%
+         family={Goemans},
+         familyi={G\bibinitperiod},
+         given={Michel\bibnamedelima X.},
+         giveni={M\bibinitperiod\bibinitdelim X\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mądry},
+         familyi={M\bibinitperiod},
+         given={Aleksander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GSO}{%
+         family={Gharan},
+         familyi={G\bibinitperiod},
+         given={Shayan\bibnamedelima Oveis},
+         giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Saberi},
+         familyi={S\bibinitperiod},
+         given={Amin},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AA+1}
+    \strng{fullhash}{AAGMXMAGSOSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{abstract}{%
+    We present a randomized O(log n/log log n)-approximation algorithm for the
+  asymmetric traveling salesman problem (ATSP). This provides the first
+  asymptotic improvement over the long-standing Θ(log n)-approximation bound
+  stemming from the work of Frieze et al. (1982) [Frieze AM, Galbiati G,
+  Maffioki F (1982) On the worst-case performance of some algorithms for the
+  asymmetric traveling salesman problem. Networks 12(1):23–39]. The key
+  ingredient of our approach is a new connection between the approximability of
+  the ATSP and the notion of so-called thin trees. To exploit this connection,
+  we employ maximum entropy rounding—a novel method of randomized rounding of
+  LP relaxations of optimization problems. We believe that this method might be
+  of independent interest.%
+    }
+    \verb{doi}
+    \verb 10.1287/opre.2017.1603
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1287/opre.2017.1603
+    \endverb
+    \field{number}{4}
+    \field{pages}{1043\bibrangedash 1061}
+    \field{title}{An O(log n/log log n)-Approximation Algorithm for the
+  Asymmetric Traveling Salesman Problem}
+    \verb{url}
+    \verb https://doi.org/10.1287/opre.2017.1603
+    \endverb
+    \field{volume}{65}
+    \field{journaltitle}{Operations Research}
+    \field{year}{2017}
+  \endentry
+
+  \entry{10.1007/3-540-51687-5_27}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BIJ}{%
+         family={Bar-Ilan},
+         familyi={B\bibinitperiod-I\bibinitperiod},
+         given={Judit},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zernik},
+         familyi={Z\bibinitperiod},
+         given={Dror},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=BJC}{%
+         family={Bermond},
+         familyi={B\bibinitperiod},
+         given={Jean-Claude},
+         giveni={J\bibinitperiod-C\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Raynal},
+         familyi={R\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Berlin Heidelberg}%
+    }
+    \strng{namehash}{BIJZD1}
+    \strng{fullhash}{BIJZD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1989}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    The problem of distributively constructing a minimum spanning tree has been
+  thoroughly studied. The root of this spanning tree is often elected as a
+  leader, and then centralized algorithms are run in the distributed system.
+  If, however, we have fault tolerance in mind, selecting a random spanning
+  tree and a random leader are more desirable. If we manage to select a random
+  tree, the probability that a bad channel will disconnect some nodes from the
+  random tree is relatively small. Otherwise, a small number of predetermined
+  edges will greatly effect the system's behavior.%
+    }
+    \field{booktitle}{Distributed Algorithms}
+    \field{isbn}{978-3-540-46750-2}
+    \field{pages}{1\bibrangedash 12}
+    \field{title}{Random leaders and random spanning trees}
+    \list{location}{1}{%
+      {Berlin, Heidelberg}%
+    }
+    \field{year}{1989}
+  \endentry
+
+  \entry{63516}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=BA}{%
+         family={{Broder}},
+         familyi={B\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BA1}
+    \strng{fullhash}{BA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1989}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{30th Annual Symposium on Foundations of Computer Science}
+    \field{pages}{442\bibrangedash 447}
+    \field{title}{Generating random spanning trees}
+    \field{year}{1989}
+  \endentry
+
+  \entry{10.5555/535891}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CCJ}{%
+         family={Colbourn},
+         familyi={C\bibinitperiod},
+         given={Charles\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press, Inc.}%
+    }
+    \strng{namehash}{CCJ1}
+    \strng{fullhash}{CCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1987}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{isbn}{0195049209}
+    \field{title}{The Combinatorics of Network Reliability}
+    \list{location}{1}{%
+      {USA}%
+    }
+    \field{year}{1987}
+  \endentry
+
+  \entry{COLBOURN1989271}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CCJ}{%
+         family={Colbourn},
+         familyi={C\bibinitperiod},
+         given={Charles\bibnamedelima J},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=DRP}{%
+         family={Day},
+         familyi={D\bibinitperiod},
+         given={Robert\bibnamedelima P.J},
+         giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=NLD}{%
+         family={Nel},
+         familyi={N\bibinitperiod},
+         given={Louis\bibnamedelima D},
+         giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CCJDRPNLD1}
+    \strng{fullhash}{CCJDRPNLD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1989}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    The set S of spanning trees of an n-vertex graph G can be placed in
+  one-to-one correspondence with the integers in the interval [1, s], where s =
+  |S|. We develop O(n3) unranking and ranking functions for the spanning trees
+  of an arbitrary graph. The unranking function maps any interval [1, s] to the
+  corresponding tree, while the ranking function maps a spanning tree to the
+  appropriate index in the interval. The unranking function provides an O(n3)
+  method for generating a random spanning tree of a graph with uniform
+  distribution.%
+    }
+    \verb{doi}
+    \verb https://doi.org/10.1016/0196-6774(89)90016-3
+    \endverb
+    \field{issn}{0196-6774}
+    \field{number}{2}
+    \field{pages}{271 \bibrangedash  286}
+    \field{title}{Unranking and ranking spanning trees of a graph}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/0196677489900163
+    \endverb
+    \field{volume}{10}
+    \field{journaltitle}{Journal of Algorithms}
+    \field{year}{1989}
+  \endentry
+
+  \entry{colbourn1988estimating}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CCJ}{%
+         family={Colbourn},
+         familyi={C\bibinitperiod},
+         given={Charles\bibnamedelima J},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=DBM}{%
+         family={Debroni},
+         familyi={D\bibinitperiod},
+         given={Bradley\bibnamedelima M},
+         giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MWJ}{%
+         family={Myrvold},
+         familyi={M\bibinitperiod},
+         given={Wendy\bibnamedelima J},
+         giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Utilitas Mathematica Pub. Incorporated}%
+    }
+    \strng{namehash}{CCJDBMMWJ1}
+    \strng{fullhash}{CCJDBMMWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1988}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{217\bibrangedash 223}
+    \field{title}{Estimating the coefficients of the reliability polynomial}
+    \field{volume}{62}
+    \field{journaltitle}{Congressus Numerantium}
+    \field{year}{1988}
+  \endentry
+
   \entry{COLBOURN1996268}{article}{}
     \name{author}{3}{}{%
       {{hash=CCJ}{%
@@ -71,6 +376,284 @@
     \field{year}{1996}
   \endentry
 
+  \entry{10.1145/3055399.3055499}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=DD}{%
+         family={Durfee},
+         familyi={D\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kyng},
+         familyi={K\bibinitperiod},
+         given={Rasmus},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Peebles},
+         familyi={P\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=RAB}{%
+         family={Rao},
+         familyi={R\bibinitperiod},
+         given={Anup\bibnamedelima B.},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sachdeva},
+         familyi={S\bibinitperiod},
+         given={Sushant},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \keyw{Random Spanning Trees, Sampling Algorithm, Approximate Schur
+  Complement, Graph Sparsification}
+    \strng{namehash}{DD+1}
+    \strng{fullhash}{DDKRPJRABSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{year}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{booktitle}{Proceedings of the 49th Annual ACM SIGACT Symposium on
+  Theory of Computing}
+    \verb{doi}
+    \verb 10.1145/3055399.3055499
+    \endverb
+    \field{isbn}{9781450345286}
+    \field{pages}{730–742}
+    \field{series}{STOC 2017}
+    \field{title}{Sampling Random Spanning Trees Faster than Matrix
+  Multiplication}
+    \verb{url}
+    \verb https://doi.org/10.1145/3055399.3055499
+    \endverb
+    \list{location}{1}{%
+      {Montreal, Canada}%
+    }
+    \field{year}{2017}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{doi:10.1137/120890971}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FA}{%
+         family={Frieze},
+         familyi={F\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Goyal},
+         familyi={G\bibinitperiod},
+         given={Navin},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RL}{%
+         family={Rademacher},
+         familyi={R\bibinitperiod},
+         given={Luis},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={Vempala},
+         familyi={V\bibinitperiod},
+         given={Santosh},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FA+1}
+    \strng{fullhash}{FAGNRLVS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{doi}
+    \verb 10.1137/120890971
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1137/120890971
+    \endverb
+    \field{number}{2}
+    \field{pages}{497\bibrangedash 513}
+    \field{title}{Expanders via Random Spanning Trees}
+    \verb{url}
+    \verb https://doi.org/10.1137/120890971
+    \endverb
+    \field{volume}{43}
+    \field{journaltitle}{SIAM Journal on Computing}
+    \field{year}{2014}
+  \endentry
+
+  \entry{DBLP:journals/corr/abs-1005-0265}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FWS}{%
+         family={Fung},
+         familyi={F\bibinitperiod},
+         given={Wai\bibnamedelima Shing},
+         giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=HNJA}{%
+         family={Harvey},
+         familyi={H\bibinitperiod},
+         given={Nicholas J.\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FWSHNJA1}
+    \strng{fullhash}{FWSHNJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \verb{eprint}
+    \verb 1005.0265
+    \endverb
+    \field{title}{Graph Sparsification by Edge-Connectivity and Random Spanning
+  Trees}
+    \verb{url}
+    \verb http://arxiv.org/abs/1005.0265
+    \endverb
+    \field{volume}{abs/1005.0265}
+    \field{journaltitle}{CoRR}
+    \field{eprinttype}{arXiv}
+    \field{year}{2010}
+  \endentry
+
+  \entry{6108216}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=GSO}{%
+         family={{Gharan}},
+         familyi={G\bibinitperiod},
+         given={S.\bibnamedelima O.},
+         giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={{Saberi}},
+         familyi={S\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={{Singh}},
+         familyi={S\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GSOSASM1}
+    \strng{fullhash}{GSOSASM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{2011 IEEE 52nd Annual Symposium on Foundations of
+  Computer Science}
+    \field{pages}{550\bibrangedash 559}
+    \field{title}{A Randomized Rounding Approach to the Traveling Salesman
+  Problem}
+    \field{year}{2011}
+  \endentry
+
+  \entry{10.5555/1496770.1496834}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=GN}{%
+         family={Goyal},
+         familyi={G\bibinitperiod},
+         given={Navin},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=RL}{%
+         family={Rademacher},
+         familyi={R\bibinitperiod},
+         given={Luis},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={Vempala},
+         familyi={V\bibinitperiod},
+         given={Santosh},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Society for Industrial}%
+      {Applied Mathematics}%
+    }
+    \strng{namehash}{GNRLVS1}
+    \strng{fullhash}{GNRLVS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{Proceedings of the Twentieth Annual ACM-SIAM Symposium on
+  Discrete Algorithms}
+    \field{pages}{576–585}
+    \field{series}{SODA ’09}
+    \field{title}{Expanders via Random Spanning Trees}
+    \list{location}{1}{%
+      {New York, New York}%
+    }
+    \field{year}{2009}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{GUENOCHE1983214}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GA}{%
+         family={Guénoche},
+         familyi={G\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+    }
+    \strng{namehash}{GA1}
+    \strng{fullhash}{GA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1983}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    Dans cet article, nous proposons un algorithme de complexité polynomiale
+  pour construire un arbre au hasard qui soit un graphe partiel d'un graphe
+  donné. Il consiste essentielleement à construire une arborescence de rang
+  donné sur ce graphe, l'ensemble des arborescences étant ordonné par
+  rapport aux valeurs croissantes de la racine et à racine égale suivant
+  l'ordre lexicographique du codage utilisé pour les arborescences.%
+    }
+    \verb{doi}
+    \verb https://doi.org/10.1016/0196-6774(83)90022-6
+    \endverb
+    \field{issn}{0196-6774}
+    \field{number}{3}
+    \field{pages}{214 \bibrangedash  220}
+    \field{title}{Random spanning tree}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/0196677483900226
+    \endverb
+    \field{volume}{4}
+    \field{journaltitle}{Journal of Algorithms}
+    \field{year}{1983}
+  \endentry
+
   \entry{harvey2016generating}{inproceedings}{}
     \name{author}{2}{}{%
       {{hash=HNJ}{%
@@ -104,6 +687,320 @@
     \field{year}{2016}
   \endentry
 
+  \entry{KANDEL1996171}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KD}{%
+         family={Kandel},
+         familyi={K\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MY}{%
+         family={Matias},
+         familyi={M\bibinitperiod},
+         given={Y.},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=UR}{%
+         family={Unger},
+         familyi={U\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WP}{%
+         family={Winkler},
+         familyi={W\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KD+1}
+    \strng{fullhash}{KDMYURWP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    This paper considers the following sequence shuffling problem: Given a
+  biological sequence (either DNA or protein) s, generate a random instance
+  among all the permutations of s that exhibit the same frequencies of k-lets
+  (e.g. dinucleotides, doublets of amino acids, triplets, etc.). Since certain
+  biases in the usage of k-lets are fundamental to biological sequences,
+  effective generation of such sequences is essential for the evaluation of the
+  results of many sequence analysis tools. This paper introduces two sequence
+  shuffling algorithms: A simple swapping-based algorithm is shown to generate
+  a near-random instance and appears to work well, although its efficiency is
+  unproven; a generation algorithm based on Euler tours is proven to produce a
+  precisely uniform instance, and hence solve the sequence shuffling problem,
+  in time not much more than linear in the sequence length.%
+    }
+    \verb{doi}
+    \verb https://doi.org/10.1016/S0166-218X(97)81456-4
+    \endverb
+    \field{issn}{0166-218X}
+    \field{number}{1}
+    \field{pages}{171 \bibrangedash  185}
+    \field{title}{Shuffling biological sequences}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0166218X97814564
+    \endverb
+    \field{volume}{71}
+    \field{journaltitle}{Discrete Applied Mathematics}
+    \field{year}{1996}
+  \endentry
+
+  \entry{10.5555/1747597.1748019}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=KJA}{%
+         family={Kelner},
+         familyi={K\bibinitperiod},
+         given={Jonathan\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Madry},
+         familyi={M\bibinitperiod},
+         given={Aleksander},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE Computer Society}%
+    }
+    \keyw{spanning trees, random walks on graphs, electrical flows}
+    \strng{namehash}{KJAMA1}
+    \strng{fullhash}{KJAMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Proceedings of the 2009 50th Annual IEEE Symposium on
+  Foundations of Computer Science}
+    \field{isbn}{9780769538501}
+    \field{pages}{13–21}
+    \field{series}{FOCS ’09}
+    \field{title}{Faster Generation of Random Spanning Trees}
+    \list{location}{1}{%
+      {USA}%
+    }
+    \field{year}{2009}
+  \endentry
+
+  \entry{doi:10.1002/andp.18471481202}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KG}{%
+         family={Kirchhoff},
+         familyi={K\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KG1}
+    \strng{fullhash}{KG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1847}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1002/andp.18471481202
+    \endverb
+    \verb{eprint}
+    \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/andp.18471481202
+    \endverb
+    \field{number}{12}
+    \field{pages}{497\bibrangedash 508}
+    \field{title}{Ueber die Auflösung der Gleichungen, auf welche man bei der
+  Untersuchung der linearen Vertheilung galvanischer Ströme geführt wird}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.18471481202
+    \endverb
+    \field{volume}{148}
+    \field{journaltitle}{Annalen der Physik}
+    \field{year}{1847}
+  \endentry
+
+  \entry{KULKARNI1990185}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KV}{%
+         family={Kulkarni},
+         familyi={K\bibinitperiod},
+         given={V.G},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KV1}
+    \strng{fullhash}{KV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1990}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    Let E be a finite set and B be a given set of subsets of E. Let w(B) be a
+  positive weight of B ∈ B. In this paper we develop an algorithm to generate
+  a random subset U ∈ B such that the P(U = B) is proportioned to w(B). If
+  the complexity of computing sums of the weights of B contained in
+  set-intervals in B is O(f(∥E∥)), then the algorithm developed here has
+  complexity O(∥E∥f(∥E∥)). The algorithm is specialized to the
+  following cases: (i) B = all subsets of E, (ii) B = all subsets of E with k
+  elements, (iii) B = all spanning trees in a network, and (iv) B = all paths
+  in a directed acyclic network. Different types of weight functions are
+  considered. It is shown that this proposed algorithm unifies many existing
+  algorithms.%
+    }
+    \verb{doi}
+    \verb https://doi.org/10.1016/0196-6774(90)90002-V
+    \endverb
+    \field{issn}{0196-6774}
+    \field{number}{2}
+    \field{pages}{185 \bibrangedash  207}
+    \field{title}{Generating random combinatorial objects}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/019667749090002V
+    \endverb
+    \field{volume}{11}
+    \field{journaltitle}{Journal of Algorithms}
+    \field{year}{1990}
+  \endentry
+
+  \entry{doi:10.1002/net.3230200303}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NLD}{%
+         family={Nel},
+         familyi={N\bibinitperiod},
+         given={Louis\bibnamedelima D.},
+         giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=CCJ}{%
+         family={Colbourn},
+         familyi={C\bibinitperiod},
+         given={Charles\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NLDCCJ1}
+    \strng{fullhash}{NLDCCJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1990}
+    \field{labeldatesource}{year}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{abstract}{%
+    Abstract A simplified model of a communications network is a probabilistic
+  graph in which each edge operates with the same probability. The all-terminal
+  reliability, or probability that all nodes are connected, can be expressed as
+  a polynomial in the edge operation probability. The coefficients of this
+  polynomial are obtained from an interval partitioning of the cographic
+  matroid, and only the first few coefficients can be computed efficiently. One
+  of the best sets of efficiently computable reliability bounds is the
+  Ball-Provan bounds. These bounds are obtained using the efficiently
+  computable coefficients and can be improved substantially if additional
+  coefficients are known. In this paper, we develop a Monte Carlo method for
+  estimating additional coefficients by randomly sampling over spanning trees
+  of the network. Confidence intervals for all-terminal reliability are
+  obtained by using these estimates as additional constraints in the
+  Ball-Provan bounds. This approach has some advantages over conventional Monte
+  Carlo point estimate methods. In particular, the computational complexity
+  does not depend on the reliability of the network.%
+    }
+    \verb{doi}
+    \verb 10.1002/net.3230200303
+    \endverb
+    \verb{eprint}
+    \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/net.3230200303
+    \endverb
+    \field{number}{3}
+    \field{pages}{277\bibrangedash 298}
+    \field{title}{Combining monte carlo estimates and bounds for network
+  reliability}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/net.3230200303
+    \endverb
+    \field{volume}{20}
+    \field{journaltitle}{Networks}
+    \field{year}{1990}
+  \endentry
+
+  \entry{Propp1998HowTG}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PJG}{%
+         family={Propp},
+         familyi={P\bibinitperiod},
+         given={James\bibnamedelima Gary},
+         giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=WDB}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={David\bibnamedelima Bruce},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PJGWDB1}
+    \strng{fullhash}{PJGWDB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{labeldatesource}{year}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{pages}{170\bibrangedash 217}
+    \field{title}{How to Get a Perfectly Random Sample from a Generic Markov
+  Chain and Generate a Random Spanning Tree of a Directed Graph}
+    \field{volume}{27}
+    \field{journaltitle}{J. Algorithms}
+    \field{year}{1998}
+  \endentry
+
+  \entry{10.1145/3188745.3188852}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=SA}{%
+         family={Schild},
+         familyi={S\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \keyw{Schur complements, random walks, random spanning trees}
+    \strng{namehash}{SA1}
+    \strng{fullhash}{SA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{Proceedings of the 50th Annual ACM SIGACT Symposium on
+  Theory of Computing}
+    \verb{doi}
+    \verb 10.1145/3188745.3188852
+    \endverb
+    \field{isbn}{9781450355599}
+    \field{pages}{214–227}
+    \field{series}{STOC 2018}
+    \field{title}{An Almost-Linear Time Algorithm for Uniform Random Spanning
+  Tree Generation}
+    \verb{url}
+    \verb https://doi.org/10.1145/3188745.3188852
+    \endverb
+    \list{location}{1}{%
+      {Los Angeles, CA, USA}%
+    }
+    \field{year}{2018}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
   \entry{wiki:shur}{misc}{}
     \name{author}{1}{}{%
       {{hash=W}{%
@@ -126,6 +1023,46 @@
     \verb 233275
     \endverb
     \field{year}{2020}
+  \endentry
+
+  \entry{10.1145/237814.237880}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=WDB}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={David\bibnamedelima Bruce},
+         giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \strng{namehash}{WDB1}
+    \strng{fullhash}{WDB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{year}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Proceedings of the Twenty-Eighth Annual ACM Symposium on
+  Theory of Computing}
+    \verb{doi}
+    \verb 10.1145/237814.237880
+    \endverb
+    \field{isbn}{0897917855}
+    \field{pages}{296–303}
+    \field{series}{STOC ’96}
+    \field{title}{Generating Random Spanning Trees More Quickly than the Cover
+  Time}
+    \verb{url}
+    \verb https://doi.org/10.1145/237814.237880
+    \endverb
+    \list{location}{1}{%
+      {Philadelphia, Pennsylvania, USA}%
+    }
+    \field{year}{1996}
+    \warn{\item Can't use 'location' + 'address'}
   \endentry
 \enddatalist
 \endinput

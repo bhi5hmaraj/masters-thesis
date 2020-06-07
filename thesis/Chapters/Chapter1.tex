@@ -15,6 +15,55 @@
 
 %----------------------------------------------------------------------------------------
 
+Spanning trees have been a central object of study in graph theory for a long time. \cite{doi:10.1002/andp.18471481202} established a linear algebraic relationship between spanning trees of graphs and determinants while studying electric networks. In this thesis we discuss about some algorithms to sample \textbf{uniform spanning trees} (all spanning trees are equally likely to be sampled). \\
+
+
+Sampling spanning trees happen to be a primitive used in various problems such as - 
+
+\begin{itemize}
+\item Constructing expanders (\cite{10.5555/1496770.1496834}, \cite{doi:10.1137/120890971})
+\item Approximation algorithms for the travelling salesman problem(\cite{6108216}, \cite{doi:10.1287/opre.2017.1603})
+\item Graph Sparcification (\cite{DBLP:journals/corr/abs-1005-0265})
+\item Analysis of network reliability (\cite{10.5555/535891},\cite{doi:10.1002/net.3230200303}, \cite{colbourn1988estimating})
+\item Sequence shuffling problem in Bioinformatics (\cite{KANDEL1996171})
+
+\end{itemize}
+
+\cite{10.1007/3-540-51687-5_27} proposed a distributed algorithm for this problem.
+
+
+\subsection{Algorithms for sampling random spanning trees}
+There has been a lot of activity from the 80's in solving this problem as fast as possible. 
+\subsubsection{Determinant Based }
+These algorithms are based on Kirchoff Matrix Tree theorem and involve computing determinants of the laplacian matrix of the graph  to sample spanning trees. These notions would be made clear in later part of the thesis.
+
+\begin{itemize}
+\item Random Spanning Tree, \cite{GUENOCHE1983214}
+\item Unranking and ranking spanning trees of a graph, \cite{COLBOURN1989271}
+\item Generating random combinatorial objects, \cite{KULKARNI1990185}
+\item Two Algorithms for Unranking Arborescences, \cite{COLBOURN1996268}
+\item Generating random spanning trees via fast matrix multiplication, \cite{harvey2016generating}
+\end{itemize}
+
+
+\subsubsection{Random Walk Based}
+These algorithms simulate a random walk on the input graph and try to consutruct a spanning tree from this simulation.
+\begin{itemize}
+\item Generating random spanning trees, \cite{63516}
+\item The random walk construction of uniform spanning trees and uniform labelled trees, \cite{aldous1990random}
+\item Generating random spanning trees more quickly than the cover time, \cite{10.1145/237814.237880}
+\item How to Get a Perfectly Random Sample from a Generic Markov Chain and Generate a Random Spanning Tree of a Directed Graph, \cite{Propp1998HowTG}
+
+\end{itemize}
+
+
+\subsubsection{Approximation Algorithms}
+These are more recent algorithms which sample a uniform spanning tree with a high probability. The main theme here is to employ tools from approximation algorithms. 
+\begin{itemize}
+\item Faster generation of random spanning trees, \cite{10.5555/1747597.1748019}
+\item Sampling Random Spanning Trees Faster than Matrix Multiplication, \cite{10.1145/3055399.3055499}
+\item An Almost-Linear Time Algorithm for Uniform Random Spanning Tree Generation, \cite{10.1145/3188745.3188852}
+\end{itemize}
 
 
 

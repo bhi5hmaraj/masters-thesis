@@ -23,11 +23,11 @@
 \label{Chapter4} % For referencing the chapter elsewhere, use \ref{Chapter2} 
 
 %----------------------------------------------------------------------------------------
-\section{Colbourn, Day, Nel}
+% \section{Colbourn, Day, Nel}
 
 \section{Harvey, Xu}
 
-\cite{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by CMN which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
+\cite{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ (where $\omega$ is the exponent of fast matrix multiplication) algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by CMN which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
 
 % \subsection{Techniques used}
 
@@ -92,9 +92,9 @@ On a high level the main ideas used in the paper are
  $$ (M + UV^T)^{-1} = M^{-1} - \left( M^{-1} \cdot U \cdot (I + V^TM^{-1}U)^{-1} \cdot V^T \cdot M^{-1}\right) $$
 \end{HXf}
 
-\begin{proof}
- TODO
-\end{proof}
+% \begin{proof}
+%  TODO
+% \end{proof}
 
 \begin{HXf}
  For any $L \in \mathbb{M}_{n \times n}$ with $\text{ker}(L) = \text{span}(\textbf{1})$, we have $LL^+ = I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ and $P := I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ is called the \textbf{projection matrix}. 
@@ -377,9 +377,13 @@ Hence we get the required result
 
 \subsubsection{Contraction}
 
+The main approach proposed to tackle contraction updates is to increase the weight of the edges that are to be contracted to a large value $k$. 
 
 \begin{HXd}[Incidence Matrix]
-Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is defined as $v_e = (\chi_u - \chi_v)$ . Given a set of edges $D = \{e_1, e_2 \cdots e_m\} \subseteq E$ , the incidence matrix of $D$ is defined as $B_D = [v_{e_1} | v_{e_2} \cdots | v_{e_m}]$  
+Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is defined as $v_e = (\chi_u - \chi_v)$ . Given a set of edges $D = \{e_1, e_2 \cdots e_m\} \subseteq E$ , the incidence matrix of $D$ is defined as $B_D = [v_{e_1} | v_{e_2} \cdots | v_{e_m}]$ 
+
+\textbf{Note - } I have used a different notation for the incidence matrix compared to the original paper I found it to be a bit confusing. And $B$ is the common notation for incidence matrices in other resources. 
+
 \end{HXd}
 
 \begin{HXd}[$G + ke$]
@@ -394,17 +398,18 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 \end{HXl}
 
 \begin{proof}
- For any $x \in \mathbb{R}^r, x \neq 0, \text{ let } y = B_F x$. We first prove the following claim
+First they show \\ 
+$ F$ is a forest $\implies B_F^T \ \laplacian \ B_F \ \text{is invertible}$ 
+
+So the main idea of this proof is to show that $B_F^T \ \laplacian \ B_F $ is positive definite. This is enough because positive definite matrices are non singular (if not then then they will have 0 as an eigenvalue). Now using the following claim
  
  \begin{HXcl}
   The incidence matrix of a acyclic graph has full column rank
  \end{HXcl}
-    \begin{proof}
-    TODO
-    \end{proof}
     
-Therefore $y \neq 0$
- 
+Hence for any $x \in \mathbb{R}^r, x \neq 0, \text{ let } y = B_F x$ and $y \neq 0$. Also $y^T \textbf{1} = x^T B_F^T \textbf{1} = 0$. Hence $y \perp ker(\laplacian)$. Now since $G$ is connected we have $\lambda_2(L_G) > 0$. Now since $y$ corresponds to all vectors perpendicular to $ker(\laplacian)$ we can say that $y^T \laplacian y > 0$ now expanding $y = B_F x$ we get $x^T (B_F^T \ \laplacian \ B_F) x > 0$ . Hence $B_F^T \ \laplacian \ B_F$ is positive definite and hence invertible. 
+
+Now for the converse (TODO)
 \end{proof}
 
 
@@ -415,8 +420,13 @@ Therefore $y \neq 0$
 \end{HXl}
 
 \begin{proof}
- TODO
+ Suppose $A, B$ are positive definite matrices then $A + B$ is also positive definite. Since $A, B$ are positive definite we have $x^T A x > 0 , x^T B x > 0$ for any $x$. Combining these two identity we get $x^T (A + B) x > 0$. Hence $A + B$ is also positive definite.
+ 
+ By \textbf{Lemma 2} $B_F^T \ \laplacian \ B_F$ is positive definite. And $I/k$ is also positive definite because all the eigenvalues are $1/k$ and we have $k > 0$. Since positive definite matrices are non-singular, $\left( \frac{I}{k} +  B_F^T \ \laplacian \ B_F \right)$ is invertible
 \end{proof}
+
+
+\textbf{Theorem 2} uses \textbf{Lemma 2} to show that the contraction update formula for finite $k$ is well defined. 
 
 \begin{HXt}[Contraction update formula for finite $k$]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. For any $k > 0$,
@@ -426,8 +436,21 @@ Therefore $y \neq 0$
 \end{HXt}
 
 \begin{proof}
- TODO
-\end{proof}
+ They use the same strategy used in \textbf{Theorem 1}. Also note that $B_F B_F^T = L_F$
+ 
+ $$\left[L_G + k B_F B_F^T \right] \cdot \left[\laplacian - \left(\laplacian \  B_F \  (\frac{I}{k} + B_F^T \ \laplacian \ B_F)^{-1} \  B_F^T \  \laplacian \right) \right]$$
+
+ 
+$$= P + k B_F B_F^T \laplacian - \left( (L_G\laplacian B_F + kB_F B_F^T \laplacian B_F)\ (\frac{I}{k} + B_F^T \laplacian B_F)^{-1} \ B_F^T \ \laplacian \right)$$
+
+Here $L_G \laplacian B_F = (I - \frac{\textbf{1} \textbf{1}^T}{n}) B_F = B_F$. Because each column sum of $B_F$ is 0.
+
+$$ = P + k B_F B_F^T \laplacian - \left( k B_F \ (\frac{I}{k} + B_F^T \laplacian B_F) \ (\frac{I}{k} + B_F^T \laplacian B_F)^{-1} \ B_F^T \ \laplacian \right)$$ 
+
+$$ = P + k B_F B_F^T \laplacian - k B_F B_F^T \laplacian  = P$$
+ 
+ \end{proof}
+
 
 \begin{HXc}[Improves \textbf{Theorem 2} for sub-matrices]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. Suppose $F \subseteq E[S]$, where $S \subseteq V$. For any $k > 0$,
@@ -438,6 +461,8 @@ Therefore $y \neq 0$
 \begin{proof}
  TODO
 \end{proof}
+
+In \textbf{Theorem 3} they finally show that the 
 
 \begin{HXt}[Extends \textbf{Theorem 2} to $k \rightarrow \infty$ case]
  For a forest $F_1 \subseteq E$, let $G(k) = G + k \ F_1$ as defined in \textbf{Definition 3} . Let $F_2 \subseteq E$ be disjoint from $F_1$ such that $F_1 \cup F_2$ is a forest. Let $B_{F_2}$ be the incidence matrix of $F_2$. For $k > 0$ define $N = \Lim{k \to \infty} \laplacian[G(k)]$
