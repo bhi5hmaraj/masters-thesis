@@ -4,10 +4,10 @@
 
 \newcommand{\laplacian}[1][G]{\ensuremath{L_{#1}^{+}}}
 \newcommand{\reffformula}[1][\laplacian]{\ensuremath{ (\chi_u - \chi_v)^T \  #1 \ (\chi_u - \chi_v) }}
-\newcommand{\reff}[1][e]{\ensuremath{R_#1^{\text{eff}}}}
+
 \newcommand{\proj}{\ensuremath{I - \frac{\textbf{1} \textbf{1}^T}{n}}}
 \newcommand{\sqlaplacian}[1][G]{\ensuremath{\sqrt{L_{#1}^{+}}}}
-\newcommand{\Mset}[2]{\ensuremath{\mathbb{M}_{#1 \times #2}}}
+% \newcommand{\Mset}[2]{\ensuremath{\mathbb{M}_{#1 \times #2}}}
 % \newcommand\norm[1]{\left\lVert#1\right\rVert}
 
 % from https://tex.stackexchange.com/questions/107186/how-to-write-norm-which-adjusts-its-size
@@ -109,6 +109,7 @@ This formula is used to recurse on the subproblems for each subset. In this mann
 
 
 \subsubsection{An Example}
+The below diagram shows how the algorithm proceeds by recursively spliting the graph.
 
 \begin{figure}[h!]
 \begin{minipage}{\textwidth}
@@ -430,7 +431,7 @@ The main approach proposed to tackle contraction updates is to increase the weig
 \begin{HXd}[Incidence Matrix]
 Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is defined as $v_e = (\chi_u - \chi_v)$ . Given a set of edges $D = \{e_1, e_2 \cdots e_m\} \subseteq E$ , the incidence matrix of $D$ is defined as $B_D = [v_{e_1} | v_{e_2} \cdots | v_{e_m}]$ 
 
-\textbf{Note - } I have used a different notation for the incidence matrix compared to the original paper I found it to be a bit confusing. And $B$ is the common notation for incidence matrices in other resources. 
+\textbf{Note - } I have used a different notation for the incidence matrix compared to the original paper as I found it to be a bit confusing. And $B$ is the common notation for incidence matrices in other resources such as \citet{TCS-054}. 
 
 \end{HXd}
 
@@ -457,7 +458,7 @@ So the main idea of this proof is to show that $B_F^T \ \laplacian \ B_F $ is po
     
 Hence for any $x \in \mathbb{R}^r, x \neq 0, \text{ let } y = B_F x$ and $y \neq 0$. Also $y^T \textbf{1} = x^T B_F^T \textbf{1} = 0$. Hence $y \perp ker(\laplacian)$. Now since $G$ is connected we have $\lambda_2(L_G) > 0$. Now since $y$ corresponds to all vectors perpendicular to $ker(\laplacian)$ we can say that $y^T \laplacian y > 0$ now expanding $y = B_F x$ we get $x^T (B_F^T \ \laplacian \ B_F) x > 0$ . Hence $B_F^T \ \laplacian \ B_F$ is positive definite and hence invertible. 
 
-Now for the converse (TODO)
+% Now for the converse (TODO)
 \end{proof}
 
 
@@ -503,9 +504,14 @@ This coroallry is a direct consequence of the facts pertaining to submatrices (\
 \begin{HXc}[Improves \textbf{Theorem 2} for sub-matrices]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. Suppose $F \subseteq E[S]$, where $S \subseteq V$. For any $k > 0$,
  
-  $$ (L_G + k \ L_F)^+_{S,S} = $$
-  $$(\laplacian)_{S,S} - \left((\laplacian)_{S,S} \  (B_F)_{S,*} \  (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \   (B_F^T)_{S,*} \  (\laplacian )_{S,S} \right)$$
- 
+%   $$ 
+%   \begin{multline*}
+  $$
+  (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} -\left((\laplacian)_{S,S} \  (B_F)_{S,*} \  (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \   (B_F^T)_{S,*} \  (\laplacian )_{S,S} \right)
+ $$
+%   \end{multline*}
+% $$
+
 \end{HXc}
 
 In \textbf{Theorem 3} they extend the contraction formula from \textbf{Theorem 2} to the case $k \rightarrow \infty$ . The main idea of the proof is to define $M_k = \laplacian[G + kF]$ \footnote{I have changed the notation to $M$ as the proof used in the paper used $N$ for defining 2 different formulas} \\ $M = \laplacian - \left(\laplacian \ B_F \ (B_F^T \laplacian B_F)^{-1} \ B_F^T \  \laplacian\right)$ and to show that $\Lim{k \to \infty} \norm{M_k - M} = 0$

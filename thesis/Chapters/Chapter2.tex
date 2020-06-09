@@ -1,7 +1,8 @@
 % Chapter 2
 
 \chapter{Background} % Main chapter title
-
+\newcommand{\Mset}[2]{\ensuremath{\mathbb{M}_{#1 \times #2}}}
+\newcommand{\reff}[1][e]{\ensuremath{R_#1^{\text{eff}}}}
 \label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter2} 
 
 %----------------------------------------------------------------------------------------
@@ -79,8 +80,14 @@ where $D$ is a diagonal matrix with diagonal entries as degree of the correspond
 
 \end{Bd}
 
+\subsection{Properties of Laplacian}
+
 \begin{Bf}
  The Laplacian of a graph is PSD
+\end{Bf}
+
+\begin{Bf}
+ ker($L$) = span(\textbf{1})
 \end{Bf}
 
 \begin{Bf}
@@ -91,18 +98,94 @@ where $D$ is a diagonal matrix with diagonal entries as degree of the correspond
 
 \subsection{Kirchoff Matrix Tree Theorem}
 
+\begin{Bf}
+ The number of spanning trees in a graph $G$ is \textbf{det}($L_G[i]$) (for any $i$) sad where $L_G$ denotes the Laplacian of $G$ and $L_G[i]$ denotes the matrix with $i^{th}$ row and column removed. 
+\end{Bf}
 
 
 \section{Electric Networks}
 
-\subsubsection{Incidence Matrix} 
-\footnote{I have used a transposed version compared to \citet{TCS-054} so that it's consistent with the notation used later}
-\subsubsection{Unweighted Case}
+\subsection{Unweighted Graph}
 
-Given an unweighted graph $G$ we associate a electrical network by replacing each edge with a resistor with resistance $1 \ \Omega$. 
+\subsubsection{Incidence Matrix} 
+
+Given an undirected unweighted graph $G=(V,E)$ with arbitary orientation of edges. Let $B \in  \Mset{n}{m}$ \footnote{I have used a transposed version compared to \citet{TCS-054} so that it's consistent with the notation used later} called the edge-vertex incidence matrix defined as 
+
+\[
+    B(i, e) = 
+\begin{cases}
+ 1 & \text{if } i \text{ is tail of } e\\
+ -1 & \text{if } i \text{ is head of } e \\
+ 0 & \text{otherwise}
+\end{cases}
+\]
+
+\begin{Bf}
+ For a graph $G$ with arbitrarily chosen incidence matrix $B$ and Laplacian $L$, 
+ $$B \cdot B^T = L$$
+\end{Bf}
+
+
+Given an unweighted graph $G = (V,E)$ we associate a electrical network by replacing each edge with a resistor with resistance $1 \ \Omega$. A current source is introduced in each vertex, denoted as $\textbf{c}_{\text{ext}} \in \mathbb{R}^n$. This induces a voltage at each vertex and current at each edge. Let's denote it as $\textbf{v} \in \mathbb{R}^n, \textbf{i} \in \mathbb{R}^m$
+
+
+
+Let $i_{xy}$ denote the current from vertex $x$ to $y$ for edge $(x,y) \in E$. And $v_x$ denote the potential at a vertex $x \in V$.
+
+\subsubsection{Kirchoff's current law}
+
+Kirchoff's current law states that the algebraic sum of current into any vertex equals zero. 
+
+$$ B \cdot \textbf{i} = \textbf{c}_{\text{ext}} $$
+
+\subsubsection{Ohm's law}
+Ohm's law states that electric current through an edge is directly proportional to the potential different across an edge and inversely proportional to the resistance of the edge.
+
+$$ i_{xy} = \frac{v_x - v_y}{r_{xy}} $$
+
+Since the resistance in the unweighted graph is $1 \ \Omega$ we have 
+
+$$ \textbf{i} = B^T \cdot \textbf{v} $$ 
+
+Combining Ohm's law and Kirchoff's law we get 
+
+$$ L \cdot \textbf{v} = \textbf{c}_{\text{ext}} $$ 
+
+\subsubsection{Laplacian pseudoinverse}
+
+
+
+\subsubsection{Effective Resistance}
+
+Effective resistance across 2 vertices $x,y$ is the resistance between $x,y$ if we treat the graph as a single resistor connected between $x$ and $y$. 
+
+In our case we are mainly interested in the effective resistance across an edge $e = (x,y) \in E$.
+
+\begin{Bd}
+ Effective Resistance is the potential difference across an edge $e = (x,y)$ when $1A$ is inducted at $x$ and taken out at $y$. It is denoted as \reff
+\end{Bd}
+
+So we have $\textbf{c}_{\text{ext}} = e_x - e_y$ where $e_i$ denotes a vector with 1 in the $i^{th}$ index and 0 elsewhere. By definition of effective resistance we have 
+
+\begin{align*}
+ \reff &= (e_x - e_y)^T \cdot \textbf{v} \\
+ \reff &= (e_x - e_y)^T \cdot L^+  \cdot \textbf{c}_{\text{ext}} \\
+ \reff &= (e_x - e_y)^T \cdot L^+  \cdot (e_x - e_y) 
+\end{align*}
+
+
+\subsection{Weighted Graph}
+
+There are a few subtle changes which needs to be incorporated for the weighted graph setting. Suppose $G=(V,E)$ be a undirected weighted graph with weight function $\textbf{w}: E \rightarrow \mathbb{R}_{\geq 0}$. Now the electric network of $G$ coressponds has edges replaced by a resistor with resistance $r_e = 1 / \textbf{w}(e) , \forall e \in E$. The intuition is that lower weight for an edge in graph $G$ means it's barely there hence it coressponds to higher resistance. And having no edge coressponds to infinite resistance. 
+
+For deriving the other relations let $W \in \Mset{m}{m}$ be a diagonal matrix such that $W(e,e) = \textbf{w}(e)$. Now $L = B \ W \ B^T$ and Ohm's law becomes $\textbf{i} = W \ B^T \ \textbf{v} $. As it can be seen the formula for effective resistance remains the same
+
+\pagebreak
 
 % https://tex.stackexchange.com/questions/57152/how-to-draw-graphs-in-latex
 
+\subsection{An Example}
+Consider the following weighted graph $G$ in \textbf{Figure 2.1}
 \definecolor {processblue}{cmyk}{0,0,0,0}
 
 
@@ -154,6 +237,35 @@ draw,black , text=black , minimum width =1 cm}]
 \label{fig:test}
 \end{figure}
 
+Following the convention such that current going inside a vertex as negative and out as positive.
+
+By Ohm's law we have 
+
+\begin{align*}
+i_{AD} &= 4  \, (v_A - v_D) \\ 
+i_{DC} &= 10 \, (v_D - v_C) \\
+i_{CB} &= 5  \, (v_C - v_B) \\
+i_{AB} &= 1  \, (v_A - v_B) 
+\end{align*}
+
+By Kirchoff's current law we have 
+\begin{align*}
+ i_{AD} + i_{AB} &= 1 \\
+ -i_{AD} + i_{DC} &= 0 \\
+ -i_{DC} + i_{CB} &= 0 \\
+ -i_{AB} - i_{CB} &= -1
+\end{align*}
+
+Now combining these two we get 
+
+\begin{align*}
+ 5v_A  - 1 v_B - 0 v_C - 1 v_D &= 1 \\
+ -1v_A + 6 v_B - 5 v_C - 0 v_D &= -1 \\
+ 0v_A - 5v_B + 15 v_C - 10 v_D &= 0 \\
+ -4v_A - 0v_B - 10v_C + 14v_D &= 0
+\end{align*}
+
+And this is exactly what we would have gotten using $L \cdot \textbf{v} = \textbf{c}_{\text{ext}}$
 
 %----------------------------------------------------------------------------------------
 

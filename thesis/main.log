@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  9 JUN 2020 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  9 JUN 2020 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2525,10 +2525,6 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 
 ]
 1: section
-[15] [16
-
-]
-1: section
 (./Chapters/Chapter1.tex
 Chapter 1.
 
@@ -2548,31 +2544,28 @@ Chapter 2.
 [3
 
 ]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 98.
-
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 99.
+(Font)              <9> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 99.
+(Font)              <5> on input line 112.
+ [4] [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 131.
+(Font)              <10> on input line 214.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 131.
+(Font)              <7> on input line 214.
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ; in font nullfont!
-) (./Chapters/Chapter4.tex [4]
+) (./Chapters/Chapter4.tex [6]
 Chapter 3.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 37.
 
 1: section
-[5
+[7
 
-] [6]
-<Figures/HX-algo-screenshot.png, id=408, 670.97736pt x 653.97264pt>
+] [8]
+<Figures/HX-algo-screenshot.png, id=442, 670.97736pt x 653.97264pt>
 File: Figures/HX-algo-screenshot.png Graphic file (type png)
 <use Figures/HX-algo-screenshot.png>
 Package pdftex.def Info: Figures/HX-algo-screenshot.png  used on input line 101
@@ -2583,50 +2576,57 @@ Overfull \hbox (65.65186pt too wide) in paragraph at lines 101--103
 [][] 
  []
 
-[7 <./Figures/HX-algo-screenshot.png (PNG copy)>]
-<Figures/alg-tree.pdf, id=417, 490.23149pt x 478.1865pt>
+[9 <./Figures/HX-algo-screenshot.png (PNG copy)>]
+<Figures/alg-tree.pdf, id=451, 490.23149pt x 478.1865pt>
 File: Figures/alg-tree.pdf Graphic file (type pdf)
 <use Figures/alg-tree.pdf>
-Package pdftex.def Info: Figures/alg-tree.pdf  used on input line 116.
+Package pdftex.def Info: Figures/alg-tree.pdf  used on input line 117.
 (pdftex.def)             Requested size: 416.69873pt x 406.46043pt.
 
-Overfull \hbox (12.66965pt too wide) in paragraph at lines 116--118
+Overfull \hbox (12.66965pt too wide) in paragraph at lines 117--119
  [] 
  []
 
-[8 <./Figures/alg-tree.pdf>]
-<Figures/deps.pdf, id=474, 597.23125pt x 209.18149pt>
+[10 <./Figures/alg-tree.pdf>]
+<Figures/deps.pdf, id=507, 597.23125pt x 209.18149pt>
 File: Figures/deps.pdf Graphic file (type pdf)
 <use Figures/deps.pdf>
-Package pdftex.def Info: Figures/deps.pdf  used on input line 130.
+Package pdftex.def Info: Figures/deps.pdf  used on input line 131.
 (pdftex.def)             Requested size: 418.05902pt x 146.42603pt.
 
-Overfull \hbox (14.02994pt too wide) in paragraph at lines 130--131
+Overfull \hbox (14.02994pt too wide) in paragraph at lines 131--132
  [] 
  []
 
-[9 <./Figures/deps.pdf>] [10] [11]
-Overfull \hbox (26.77843pt too wide) in paragraph at lines 369--370
+[11 <./Figures/deps.pdf>] [12] [13]
+Overfull \hbox (26.77843pt too wide) in paragraph at lines 370--371
 []\T1/lmr/m/n/10.95 From \T1/lmr/bx/n/10.95 The-o-rem 1 \T1/lmr/m/n/10.95 we kn
 ow that $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 L[] \OMS/lmsy/m/n/10.95 ^^@ \O
 ML/lmm/m/it/10.95 L[]\OT1/lmr/m/n/10.95 )[] = \OML/lmm/m/it/10.95 L[] \OMS/lmsy
 /m/n/10.95 ^^@ []$\T1/lmr/m/n/10.95 .
  []
 
-[12] [13] [14]
-Overfull \hbox (7.71399pt too wide) in paragraph at lines 524--525
+[14] [15]
+Overfull \hbox (59.25922pt too wide) detected at line 511
+\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 L[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/
+10.95 k L[]\OT1/lmr/m/n/10.95 )[] = (\OML/lmm/m/it/10.95 L[]\OT1/lmr/m/n/10.95 
+)[] \OMS/lmsy/m/n/10.95 ^^@ []
+ []
+
+[16]
+Overfull \hbox (7.71399pt too wide) in paragraph at lines 530--531
 []\T1/lmr/m/n/10.95 From \T1/lmr/bx/n/10.95 The-o-rem 2 \T1/lmr/m/n/10.95 we ha
 ve $\OML/lmm/m/it/10.95 M[] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 L[] \OMS/l
 msy/m/n/10.95 ^^@ []$
  []
 
-) (./Chapters/Chapter6.tex [15] [16
+) (./Chapters/Chapter6.tex [17] [18
 
 ]
 Chapter 4.
 )
 1: section
-[17] [18
+[19] [20
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 326.
@@ -2640,7 +2640,7 @@ d Sushant Sachdeva.
  []
 
 1: section
-[19]
+[21]
 Overfull \hbox (0.66351pt too wide) in paragraph at lines 326--326
 [][]$\T1/lmtt/m/n/10.95 http : / / www . sciencedirect . com / science / articl
 e / pii / 0196677483900226$[][]\T1/lmr/m/n/10.95 . 
@@ -2652,26 +2652,26 @@ Overfull \hbox (4.2047pt too wide) in paragraph at lines 326--326
 TIN 2016: The-o-ret-i-cal In-for-mat-ics\T1/lmr/m/n/10.95 . Springer,
  []
 
-[20]
+[22]
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 326.
- [21]
+ [23]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E52E65C8A76B61928248C215134D8912;5091.
+(rerunfilecheck)             Checksum: 35F8FD739E50E39C2287DDA3B9219526;5982.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53468 strings out of 492982
- 1156606 string characters out of 6134896
- 1430949 words of memory out of 5000000
- 56182 multiletter control sequences out of 15000+600000
+ 53482 strings out of 492982
+ 1156783 string characters out of 6134896
+ 1432949 words of memory out of 5000000
+ 56187 multiletter control sequences out of 15000+600000
  689039 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,82p,10377b,2931s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2695,10 +2695,10 @@ hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 823838 bytes).
+Output written on main.pdf (37 pages, 834653 bytes).
 PDF statistics:
- 791 PDF objects out of 1000 (max. 8388607)
- 666 compressed objects within 7 object streams
- 179 named destinations out of 1000 (max. 500000)
- 322 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 829 PDF objects out of 1000 (max. 8388607)
+ 703 compressed objects within 8 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 370 words of extra memory for PDF output out of 10000 (max. 10000000)
 
