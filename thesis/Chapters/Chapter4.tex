@@ -8,12 +8,13 @@
 \newcommand{\proj}{\ensuremath{I - \frac{\textbf{1} \textbf{1}^T}{n}}}
 \newcommand{\sqlaplacian}[1][G]{\ensuremath{\sqrt{L_{#1}^{+}}}}
 \newcommand{\Mset}[2]{\ensuremath{\mathbb{M}_{#1 \times #2}}}
+% \newcommand\norm[1]{\left\lVert#1\right\rVert}
 
 % from https://tex.stackexchange.com/questions/107186/how-to-write-norm-which-adjusts-its-size
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 %  
-
-
+\newcommand{\comment}[1]{}
+% https://tex.stackexchange.com/questions/87303/multi-line-block-comments-in-latex
 %  from https://tex.stackexchange.com/questions/39390/writing-a-limit-so-that-the-subscript-goes-directly-underneath
 
 \newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
@@ -66,31 +67,13 @@ On a high level the main ideas used in the paper are
  \item The important insight here is that the sampling probability of an edge depends only on 4 entries of the pseudoinverse of the laplacian. Hence we don't need to update all the entries of the matrix when the graph is modified
  \item A well known method to compute inverse of a matrix with updates is to use the Sherman-Morrison-Woodbury formula. But in this case the formula has to be modified to work for the case where only a submatrix is modified.
  \item Since while contracting an edge the number of vertices decreases it would get cumbersome to modify the dimension of the matrix evertime. So they overcome this issue by considering the formula on the limit case. When the graph is considered as a electric network then increasing the weight of an edge corresponds to shorting that link, hence in the limit case we get the same result as contracting the edge
-\item Also one of the main improvements over the previous algorithms of the same complexity (\citet{COLBOURN1996268}) is that the intricacies of LU decomposition is avoided since the current algorithm uses only matrix inversion.
+\item One of the main improvements over the previous algorithms of the same complexity (\citet{COLBOURN1996268}) is that the intricacies of LU decomposition is avoided since the current algorithm uses only matrix inversion.
+\item All the formulas are derived for the submatrix case hence the complexity of a sub problem depends only on the size of the subproblem.
 \end{enumerate}
 
 
 
 \subsection{Harvey, Xu Algorithm}
-
-% https://texfaq.org/FAQ-ftncapt
-\begin{figure}[h!]
-\begin{minipage}{\textwidth}
-      \includegraphics[scale=0.7]{HX-algo-screenshot.png}
-    \caption[Harvey, Xu algorithm]%
-    {Harvey, Xu algorithm \footnote{This image is exactly reproduced from the paper.} }
-  \end{minipage}
-
-%   \caption{}
-% https://tex.stackexchange.com/questions/10181/using-footnote-in-a-figures-caption
-% \caption[Caption for LOF]{ \textsuperscript{1}}
-%   \small\textsuperscript{1} This image is exactly reproduced from the paper.
-% %   
-%   \caption[Compact Routing Example]%
-%     {Compact Routing \footnote{abcd} Example}
-%     
-  \label{fig:alg}
-\end{figure}
 
 Given a graph $G = (V_G, E_G)$. The algortihm proceeds by spliting the vertex set into 2 equal halves $V_G = S \uplus R$. And now they define subsets of edges $E[S] = (S \times S) \cap E_G$ and $E[R, S] = (S \times R) \cap E_G$. 
 
@@ -110,6 +93,20 @@ This formula is used to recurse on the subproblems for each subset. In this mann
 \end{itemize}
 
 \pagebreak
+
+
+% https://texfaq.org/FAQ-ftncapt
+\begin{figure}[h!]
+\begin{minipage}{\textwidth}
+      \includegraphics[scale=0.7]{HX-algo-screenshot.png}
+    \caption[Harvey, Xu algorithm]%
+    {Harvey, Xu algorithm \footnote{This image is exactly reproduced from the paper.} }
+  \end{minipage}
+
+  \label{fig:alg}
+\end{figure}
+\pagebreak
+
 
 \subsubsection{An Example}
 
@@ -295,14 +292,14 @@ For the first direction of Lemma 1, the main result used is \textbf{Fact 5} ($G$
 
 \begin{alignat}{1}
    & = y^T \cdot \sqrt{\laplacian} (L_G - L_{G \setminus D}) \sqrt{\laplacian} \cdot y = 1 \\
-   & = y^T \sqrt{\laplacian} L_G \sqrt{\laplacian} y = (HOW) y^T \laplacian L_G y = y^T P y  \\
-   & = y^T  \left( I - \frac{\textbf{1}^T \textbf{1}}{n} \right) y = y^T y - \left( \frac{y^T \textbf{1}^T \textbf{1} y}{n} \right) = (HOW) y^T y = 1 
+   & = y^T \sqrt{\laplacian} L_G \sqrt{\laplacian} y = \comment{HOW} y^T \laplacian L_G y = y^T P y  \\
+   & = y^T  \left( I - \frac{\textbf{1}^T \textbf{1}}{n} \right) y = y^T y - \left( \frac{y^T \textbf{1}^T \textbf{1} y}{n} \right) = \comment{(HOW)} y^T y = 1 
 \end{alignat}
 
     \item $\therefore  y^T \sqrt{\laplacian} L_{G \setminus D} \sqrt{\laplacian} y = 0$ now if we consider $z = \sqrt{\laplacian} y$ and show that $z^T \textbf{1} = 0$ then we can use $\textbf{Fact 5}$ to complete the proof
     
     \begin{alignat}{1}
-     &  y^T \sqrt{\laplacian} \textbf{1} = x^T \sqrt{\laplacian} \sqrt{\laplacian} \textbf{1} = 0 \text{(HOW is 1 in kernel of } \laplacian \\ 
+     &  y^T \sqrt{\laplacian} \textbf{1} = x^T \sqrt{\laplacian} \sqrt{\laplacian} \textbf{1} = 0 \comment{\text{(HOW is 1 in kernel of }} \laplacian \\ 
      &  G \setminus D \text{ is disconnected}
     \end{alignat}
 
@@ -316,14 +313,14 @@ Now to prove the converse, If $G \setminus D$ is disconnected then $I - L_D \lap
     
 %     \begin{alignat}{1}
     \begin{enumerate}
-     \item $ y^T \cdot \sqlaplacian \cdot L_{G \setminus D} \cdot \sqlaplacian \cdot y = 0 (HOW) $
+     \item $ y^T \cdot \sqlaplacian \cdot L_{G \setminus D} \cdot \sqlaplacian \cdot y = 0 \comment{(HOW)} $
      \item $ y^T \cdot \sqlaplacian \cdot L_G \cdot \sqlaplacian \cdot y = y^T y = 1 $
     \end{enumerate}
     
 \item From (1) and (2) we get $y^T \sqlaplacian (L_G - L_{G \setminus D}) \sqlaplacian y= 1$
 \begin{alignat}{1}
  & \implies y^T \cdot \sqlaplacian \cdot L_D \cdot \sqlaplacian \cdot y = 1 \\
- & \implies 1 \in \text{eigenvalues}(L_D\laplacian) (HOW)\\
+ & \implies 1 \in \text{eigenvalues}(L_D\laplacian) \comment{(HOW)}\\
  & \implies (I - L_D\laplacian) \text{ is singular}
 \end{alignat}
 
@@ -373,7 +370,7 @@ From \textbf{Theorem 1} we know that $(L_G - L_D)^+ = \laplacian - \left( \lapla
 
 $$ (\laplacian)_{S,S} - \left( \laplacian \cdot (L_D\laplacian-I)^{-1} \cdot L_D \cdot \laplacian \right)_{S,S} $$
 
-Applying \textbf{Fact 3.3} we get (HOW)
+Applying \textbf{Fact 3.3} we get \comment{(HOW)}
 
 $$(\laplacian)_{S,S} - \left( (\laplacian)_{S,S} \cdot (L_D\laplacian-I)^{-1}_{S,S} \cdot (L_D)_{S,S} \cdot (\laplacian)_{S,S} \right) $$
 
@@ -502,18 +499,16 @@ $$ = P + k B_F B_F^T \laplacian - k B_F B_F^T \laplacian  = P$$
  
  \end{proof}
 
-
+This coroallry is a direct consequence of the facts pertaining to submatrices (\textbf{Fact 3})
 \begin{HXc}[Improves \textbf{Theorem 2} for sub-matrices]
  Let $G = (V, E)$ be a connected graph. Given $F \subseteq E$ and let $B_F$ be the incidence matrix of $F$. Suppose $F \subseteq E[S]$, where $S \subseteq V$. For any $k > 0$,
  
-  $$ (L_G + k \ L_F)^+_{S,S} = (\laplacian)_{S,S} - \left((\laplacian)_{S,S} \  (B_F)_{S,*} \  (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \   (B_F^T)_{S,*} \  (\laplacian )_{S,S} \right)$$
+  $$ (L_G + k \ L_F)^+_{S,S} = $$
+  $$(\laplacian)_{S,S} - \left((\laplacian)_{S,S} \  (B_F)_{S,*} \  (\frac{I}{k} + (B_F^T)_{S,*} \ (\laplacian)_{S,S} \ (B_F)_{S,*})^{-1} \   (B_F^T)_{S,*} \  (\laplacian )_{S,S} \right)$$
  
 \end{HXc}
-\begin{proof}
- TODO
-\end{proof}
 
-In \textbf{Theorem 3} they finally show that the 
+In \textbf{Theorem 3} they extend the contraction formula from \textbf{Theorem 2} to the case $k \rightarrow \infty$ . The main idea of the proof is to define $M_k = \laplacian[G + kF]$ \footnote{I have changed the notation to $M$ as the proof used in the paper used $N$ for defining 2 different formulas} \\ $M = \laplacian - \left(\laplacian \ B_F \ (B_F^T \laplacian B_F)^{-1} \ B_F^T \  \laplacian\right)$ and to show that $\Lim{k \to \infty} \norm{M_k - M} = 0$
 
 \begin{HXt}[Extends \textbf{Theorem 2} to $k \rightarrow \infty$ case]
  For a forest $F_1 \subseteq E$, let $G(k) = G + k \ F_1$ as defined in \textbf{Definition 3} . Let $F_2 \subseteq E$ be disjoint from $F_1$ such that $F_1 \cup F_2$ is a forest. Let $B_{F_2}$ be the incidence matrix of $F_2$. For $k > 0$ define $N = \Lim{k \to \infty} \laplacian[G(k)]$
@@ -526,12 +521,24 @@ In \textbf{Theorem 3} they finally show that the
 
 
 \begin{proof}
- TODO
+ From \textbf{Theorem 2} we have $M_k = \laplacian - \left(\laplacian \cdot B_F \cdot (\frac{I}{k} + B_F^T \ \laplacian \ B_F)^{-1} \cdot B_F^T \cdot \laplacian \right)$ and they define $A = B_F^T \laplacian B_F$
+ 
+ $$ \norm{M_k - M} = \norm{\laplacian \ B_F \left( (\frac{I}{k} + A)^{-1} - A^{-1} \right) \ B_F^T \ \laplacian}$$
+ 
+ Using the property of matrix norm $\norm{X \ Y} \leq \norm{X} \ \norm{Y}$, they get 
+ 
+ $$ \norm{M_k - M} \leq \norm{\laplacian}^2 \ \norm{B_F} \ \norm{B_F^T} \ \norm{\left( \frac{I}{k} + A \right)^{-1} - A^{-1}} \qquad (1)$$
+ 
+ Now they expand the last term in the above inequality using the Sherman-Morrison-Woodbury identity and apply the matrix norm inequality and with some straighforward manipulations they show that 
+ 
+ $$\Lim{k \to \infty} \norm{\left( \frac{I}{k} + A \right)^{-1} - A^{-1} } = 0$$
+ 
+Now applying this to $(1)$ they prove that $\Lim{k \to \infty} \norm{M_k - M} = 0$
 \end{proof}
 
 
 
-\subsubsection{Summary}
+\subsection{Summary}
 
 The ideas discussed here such as lazy updates were used in \citet{10.1137/070684008} to get a randomized algorithm for non-bipartite matching in $\mathcal{O}(N^\omega)$. 
 

@@ -8,30 +8,31 @@
 \contentsline {chapter}{List of Tables}{xiii}{chapter*.6}
 \contentsline {chapter}{List of Abbreviations}{xv}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.9}
-\contentsline {subsection}{\numberline {1.0.1}Algorithms for sampling random spanning trees}{1}{subsection.10}
-\contentsline {subsubsection}{Determinant Based }{1}{section*.11}
-\contentsline {subsubsection}{Random Walk Based}{2}{section*.12}
-\contentsline {subsubsection}{Approximation Algorithms}{2}{section*.13}
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.14}
-\contentsline {section}{\numberline {2.1}Markov Chains}{3}{section.15}
-\contentsline {subsection}{\numberline {2.1.1}Fundamental theorem of Markov chain}{3}{subsection.16}
-\contentsline {subsection}{\numberline {2.1.2}Markov chain tree theorem}{3}{subsection.17}
-\contentsline {section}{\numberline {2.2}Results from Spectral Graph Theory}{3}{section.18}
-\contentsline {subsection}{\numberline {2.2.1}Kirchoff Matrix Tree Theorem}{3}{subsection.19}
-\contentsline {subsection}{\numberline {2.2.2}Some properties of Laplacian}{3}{subsection.20}
-\contentsline {section}{\numberline {2.3}Electric Networks}{3}{section.21}
-\contentsline {chapter}{\numberline {3}Random Walk Approach}{5}{chapter.22}
-\contentsline {section}{\numberline {3.1}Aldous, Broder}{5}{section.23}
-\contentsline {section}{\numberline {3.2}Wilson}{5}{section.24}
-\contentsline {chapter}{\numberline {4}Matrix Approach}{7}{chapter.25}
-\contentsline {section}{\numberline {4.1}Harvey, Xu}{7}{section.26}
-\contentsline {subsubsection}{Naive chain rule algorithm}{7}{section*.27}
-\contentsline {subsection}{\numberline {4.1.1}Summary of the paper}{7}{subsection.40}
-\contentsline {subsection}{\numberline {4.1.2}Harvey, Xu Algorithm}{8}{subsection.46}
-\contentsline {subsection}{\numberline {4.1.3}Structure of the paper}{9}{subsection.47}
-\contentsline {subsection}{\numberline {4.1.4}Facts used}{9}{subsection.48}
-\contentsline {subsection}{\numberline {4.1.5}Technical details of the results}{11}{subsection.64}
-\contentsline {subsubsection}{Deletion}{11}{section*.65}
-\contentsline {subsubsection}{Contraction}{13}{section*.83}
-\contentsline {chapter}{\numberline {5}Conclusion}{17}{chapter.92}
-\contentsline {chapter}{Bibliography}{19}{chapter*.93}
+\contentsline {subsection}{\numberline {1.0.1}Algorithms for sampling random spanning trees}{1}{subsection.11}
+\contentsline {subsubsection}{Matrix Based }{1}{section*.12}
+\contentsline {subsubsection}{Random Walk Based}{2}{section*.13}
+\contentsline {subsubsection}{Approximation Algorithms}{2}{section*.14}
+\contentsline {subsection}{\numberline {1.0.2}Motivation}{2}{subsection.15}
+\contentsline {subsection}{\numberline {1.0.3}Structure of the thesis}{2}{subsection.16}
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.17}
+\contentsline {section}{\numberline {2.1}Preliminary Linear Algebra}{3}{section.18}
+\contentsline {section}{\numberline {2.2}Laplacian of a Graph}{3}{section.24}
+\contentsline {subsection}{\numberline {2.2.1}Kirchoff Matrix Tree Theorem}{4}{subsection.29}
+\contentsline {section}{\numberline {2.3}Electric Networks}{4}{section.30}
+\contentsline {subsubsection}{Incidence Matrix}{4}{section*.31}
+\contentsline {subsubsection}{Unweighted Case}{4}{section*.33}
+\contentsline {chapter}{\numberline {3}Matrix Approach}{5}{chapter.35}
+\contentsline {section}{\numberline {3.1}Harvey, Xu}{5}{section.36}
+\contentsline {subsubsection}{Naive chain rule algorithm}{5}{section*.37}
+\contentsline {subsection}{\numberline {3.1.1}Summary of the paper}{5}{subsection.50}
+\contentsline {subsection}{\numberline {3.1.2}Harvey, Xu Algorithm}{6}{subsection.57}
+\contentsline {subsubsection}{Notation}{6}{section*.58}
+\contentsline {subsubsection}{An Example}{8}{section*.62}
+\contentsline {subsection}{\numberline {3.1.3}Structure of the paper}{9}{subsection.66}
+\contentsline {subsection}{\numberline {3.1.4}Facts used}{9}{subsection.68}
+\contentsline {subsection}{\numberline {3.1.5}Technical details of the results}{11}{subsection.84}
+\contentsline {subsubsection}{Deletion}{11}{section*.85}
+\contentsline {subsubsection}{Contraction}{13}{section*.103}
+\contentsline {subsection}{\numberline {3.1.6}Summary}{15}{subsection.113}
+\contentsline {chapter}{\numberline {4}Conclusion}{17}{chapter.114}
+\contentsline {chapter}{Bibliography}{19}{chapter*.115}
