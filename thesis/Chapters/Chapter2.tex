@@ -5,20 +5,148 @@
 \label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter2} 
 
 %----------------------------------------------------------------------------------------
-\section{Markov Chains}
+% \section{Markov Chains}
+% 
+% \subsection{Fundamental theorem of Markov chain}
+% 
+% \subsection{Markov chain tree theorem}
 
-\subsection{Fundamental theorem of Markov chain}
+To make the exposition self contained I have chosen the results which are relevant to understanding the Harvey, Xu algorithm. Most of these results are taken from \citet{TCS-054}
 
-\subsection{Markov chain tree theorem}
+\section{Preliminary Linear Algebra}
 
-\section{Results from Spectral Graph Theory}
+\begin{Bf}
+ If $A$ is a $n \times n$ real symmetric matrix, then all it's eigenvalues are real. 
+\end{Bf}
+
+\begin{Bf}[Eigenvectors of different eigenvalues are orthogonal]
+ Let $\lambda_i$ and $\lambda_j$ be two eigenvalues of a symmetric matrix $A$ and $\textbf{u}_i, \textbf{u}_j$ be it's corresponding eigenvectors. If $\lambda_i \neq \lambda_j$ then $\langle \textbf{u}_i, \textbf{u}_j \rangle = 0$
+\end{Bf}
+
+\begin{Bf}[Min-Max Characterizations of Eigenvalues]
+ If $A$ is a $n \times n$ real symmetric matrix, then the largest eigenvalue of $A$ is 
+ 
+ $$ \lambda_n(A) = \max_{v \in \mathbb{R}^n \setminus \{0\}} \frac{v^T A v}{v^Tv}$$
+ 
+ $$ \lambda_1(A) = \min_{v \in \mathbb{R}^n \setminus \{0\}} \frac{v^T A v}{v^Tv}$$
+\end{Bf}
+
+% https://tex.stackexchange.com/questions/128508/a-new-line-inside-subscript
+
+\begin{Bf}[Courant-Weyl-Fisher min-max principle]
+ \[ \lambda_k(A) = \min_{\substack{v \in \mathbb{R}^n \setminus \{0\}\\ v^Tu_i = 0 \ \forall i \in \{1, \dots , k-1\}}} \frac{v^T A v}{v^Tv} \]
+ 
+ \[ \lambda_k(A) = \max_{\substack{v \in \mathbb{R}^n \setminus \{0\}\\ v^Tu_i = 0 \ \forall i \in \{1, \dots , k-1\}}} \frac{v^T A v}{v^Tv} \]
+\end{Bf}
+
+\begin{Bf}[Positive Semi Definite]
+ A matrix $A$ is said to be positive semi definite (PSD) if $\lambda_1(A) \geq 0$ . $A$ is said to be positive definite if $\lambda_1(A) > 0$
+\end{Bf}
+
+
+\section{Laplacian of a Graph}
+
+\begin{Bd}[Laplacian]
+ For an undirected unweighted graph $G = (V, E)$ the Laplacian $L_G$ is a $|V| \times |V|$ matrix defined as 
+ 
+  \[
+    L_G(i, j) = 
+\begin{cases}
+    -1& \text{if } (i, j) \ \in E\\
+    deg(i)& \text{if } i = j\\
+    0              & \text{otherwise}
+\end{cases}
+\]
+
+It can also be seen that 
+$$L_G = D - A$$
+
+where $D$ is a diagonal matrix with diagonal entries as degree of the corresponding vertex. 
+
+ \end{Bd}
+
+ \begin{Bd}[Weighted Laplacian]
+ For an undirected weighted graph $G = (V, E)$ and a weight function $\textbf{w}: E \rightarrow \mathbb{R}_{\geq 0}$ the Laplacian $L_G$ is a $|V| \times |V|$ matrix defined as 
+ 
+  \[
+    L_G(i, j) = 
+\begin{cases}
+    -w(i,j)& \text{if } (i, j) \ \in E\\
+    \displaystyle\sum_{(i,v) \in E} w(i, v)& \text{if } i = j\\
+    0              & \text{otherwise}
+\end{cases}
+\]
+
+\end{Bd}
+
+\begin{Bf}
+ The Laplacian of a graph is PSD
+\end{Bf}
+
+\begin{Bf}
+ Let $L$ be the Laplacian of a graph $G= (V,E)$, then
+ $$ \lambda_2(L) > 0 \iff G \text{ is connected}$$
+\end{Bf}
+
 
 \subsection{Kirchoff Matrix Tree Theorem}
 
-\subsection{Some properties of Laplacian}
+
 
 \section{Electric Networks}
 
+% https://tex.stackexchange.com/questions/57152/how-to-draw-graphs-in-latex
+
+\definecolor {processblue}{cmyk}{0,0,0,0}
+
+
+% https://tex.stackexchange.com/questions/37581/latex-figures-side-by-side
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+%   \includegraphics[width=.4\linewidth]{image1}
+
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$A$};
+\node[state] (A) [above =of C] {$D$};
+\node[state] (B) [above right =of C] {$C$};
+\node[state] (D) [right =of C] {$B$};
+\path (C) edge node[below] {$1$} (D);
+\path (B) edge node[right] {$5$} (D);
+\path (A) edge node[above] {$10$} (B);
+\path (C) edge node[left] {$4$} (A);
+\end{tikzpicture}
+
+  \caption{The original graph $G$}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+%   \includegraphics[width=.4\linewidth]{image1}
+
+\begin{circuitikz}[american]
+ \put(0,0){0};
+ \draw (0, -2) to[short, -*, i=$1 A$] (0,0) node[left]{$A$};
+ \draw (0,0) to[R, l=\mbox{$1 \  \Omega$}] (3,0) node[right]{$B$};
+ \draw (0,0) to[R, l=$0.25 \ \Omega$] (0,3) node[left]{$D$};
+ \draw (3,0) to[R, l=\mbox{$0.2 \ \Omega$}] (3,3) node[right]{$C$};
+ % this works, but it has wrong spacing
+ \draw (0,3) to[R, l=$0.1 \ \Omega$] (3,3);
+ \draw (3, 0) to[short, *-, i=$1 A$] (3,-2);
+ \draw (3, -2) to[isource, l=$1 A$] (0, -2);
+ \end{circuitikz}
+
+\caption{The electric network version of $G$}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{An example of a graph and it's corresponding electric network}
+\label{fig:test}
+\end{figure}
 
 
 %----------------------------------------------------------------------------------------

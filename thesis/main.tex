@@ -42,8 +42,9 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 % \usepackage{tikzpicture}
 \usepackage{lmodern} % Use the Palatino font by default
-
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+% ACM-Reference-Format
+% https://stackoverflow.com/questions/48411689/error-when-using-biblatex-with-acm-reference-format
+\usepackage[backend=bibtex,style=ACM-Reference-Format,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \usepackage[linesnumbered,lined,boxed]{algorithm2e}
 % \usepackage{algpseudocode}
@@ -59,6 +60,16 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage{graphicx}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage {tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{circuitikz}
+% \usepackage {xcolor}
+\usepackage{wasysym}
+
+\usetikzlibrary {positioning}
+\usepackage{graphicx}
+
 \renewcommand{\qedsymbol}{\rule{0.5em}{0.5em}}
 % 
 % \usepackage{framed} % or, "mdframed"
@@ -71,6 +82,15 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \newtheorem{HXd}{Definition}
 \newtheorem{HXf}{Fact}
 \newtheorem{HXcl}{Claim}
+
+\newtheorem{IP}{Problem}
+
+\newtheorem{Bt}{Theorem}
+\newtheorem{Bl}{Lemma}
+% \newtheorem{Hc}{Corollary}
+\newtheorem{Bd}{Definition}
+\newtheorem{Bf}{Fact}
+% \newtheorem{HXcl}{Claim}
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS

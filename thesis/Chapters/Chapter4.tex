@@ -27,7 +27,7 @@
 
 \section{Harvey, Xu}
 
-\cite{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ (where $\omega$ is the exponent of fast matrix multiplication) algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by CMN which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
+\citet{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ (where $\omega$ is the exponent of fast matrix multiplication) algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by CMN which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
 
 % \subsection{Techniques used}
 
@@ -55,7 +55,7 @@
  \caption{Sampling uniform spanning tree using chain rule}
 \end{algorithm}
 
-Computing $\laplacian$ takes $\mathcal{O}(N^3)$ hence the overall running time is $\mathcal{O}(MN^3)$
+Computing $\laplacian$ takes $\mathcal{O}(N^3)$ hence the overall running time is $\mathcal{O}(MN^3)$. The main bottleneck of this algorithm is to modify the graph each time after making a decision to sample an edge.
 
 \subsection{Summary of the paper}
 
@@ -66,24 +66,75 @@ On a high level the main ideas used in the paper are
  \item The important insight here is that the sampling probability of an edge depends only on 4 entries of the pseudoinverse of the laplacian. Hence we don't need to update all the entries of the matrix when the graph is modified
  \item A well known method to compute inverse of a matrix with updates is to use the Sherman-Morrison-Woodbury formula. But in this case the formula has to be modified to work for the case where only a submatrix is modified.
  \item Since while contracting an edge the number of vertices decreases it would get cumbersome to modify the dimension of the matrix evertime. So they overcome this issue by considering the formula on the limit case. When the graph is considered as a electric network then increasing the weight of an edge corresponds to shorting that link, hence in the limit case we get the same result as contracting the edge
-\item Also one of the main improvements over the previous algorithms (\cite{COLBOURN1996268}) is that the intricacies of LU decomposition is avoided since the current algorithm uses only matrix inversion as black box. 
+\item Also one of the main improvements over the previous algorithms of the same complexity (\citet{COLBOURN1996268}) is that the intricacies of LU decomposition is avoided since the current algorithm uses only matrix inversion.
 \end{enumerate}
+
+
 
 \subsection{Harvey, Xu Algorithm}
 
-(TODO) Insert algorithm here and explain how it works
+% https://texfaq.org/FAQ-ftncapt
+\begin{figure}[h!]
+\begin{minipage}{\textwidth}
+      \includegraphics[scale=0.7]{HX-algo-screenshot.png}
+    \caption[Harvey, Xu algorithm]%
+    {Harvey, Xu algorithm \footnote{This image is exactly reproduced from the paper.} }
+  \end{minipage}
+
+%   \caption{}
+% https://tex.stackexchange.com/questions/10181/using-footnote-in-a-figures-caption
+% \caption[Caption for LOF]{ \textsuperscript{1}}
+%   \small\textsuperscript{1} This image is exactly reproduced from the paper.
+% %   
+%   \caption[Compact Routing Example]%
+%     {Compact Routing \footnote{abcd} Example}
+%     
+  \label{fig:alg}
+\end{figure}
+
+Given a graph $G = (V_G, E_G)$. The algortihm proceeds by spliting the vertex set into 2 equal halves $V_G = S \uplus R$. And now they define subsets of edges $E[S] = (S \times S) \cap E_G$ and $E[R, S] = (S \times R) \cap E_G$. 
+
+Suppose $S = S_1 \uplus S_2$ and $R = R_1 \uplus R_2$. Then we can see that 
+$$ E[S] = E[S_1] \cup E[S_2] \cup E[S_1, S_2] $$ 
+$$ E[R, S] = \bigcup\limits_{i,j \in \{1,2\} } E[R_i, S_j] $$
+
+This formula is used to recurse on the subproblems for each subset. In this manner each edge will be visited exactly once by the algorithm
+
+\subsubsection{Notation}
+\begin{itemize}
+ \item $N$ - This is an auxillary matrix which starts with $\laplacian$ and gets updated lazily as the algorithm progresses.
+ \item \textbf{function} $SampleSpanningTree(G = (V, E))$ - This is the main function from which the execution of the algorithm starts. It takes input a graph and outputs a set of edges corresponding to a random spanning tree.
+ \item \textbf{function} $SampleEdgesWithin(S)$ - This function takes input a set of vertices $S$ and returns sets $F$ and $D$ which are set of edges contracted and deleted respectively in the subgraph induced by $S$ on $G$. 
+ \item \textbf{function} $SampleEdgesCrossing(R,S)$ - This function works similar to the above one but samples edges crossing the sets $R$ and $S$. Also the base case of the entire algorithm (case where $|R| = |S| = 1$) of making the decision to sample an edge is handled here.
+ \item \textbf{procedure} $Update(S,F,D)$ - This function updates the sub matrix $N_{S,S}$ based on the formulas derived in \textbf{Corollary 1} and \textbf{Theorem 3}
+\end{itemize}
+
+\pagebreak
+
+\subsubsection{An Example}
+
+\begin{figure}[h!]
+\begin{minipage}{\textwidth}
 \begin{center}
     \includegraphics[scale=0.85]{Figures/alg-tree}
+%     \caption{An example}\textsuperscript{2}
+    \caption[Example]{An example\footnote{The function calls to $SampleEdgesWithin(S_1)$ and $SampleEdgesWithin(S_2)$ in turn would call their respective $SampleEdgesCrossing$ functions. But it would be the base case and would look similar to the one portrayed here and hence omitted for the sake of brevity.}}
 \end{center}
+\end{minipage}
 
-
+\end{figure}
+\pagebreak
 
 \subsection{Structure of the paper}
+
+\begin{figure}[h!]
 
 \begin{center}
 \includegraphics[scale=0.7]{deps} 
 \end{center}
-
+\caption{Dependencies between the results}
+ 
+\end{figure}
 
 \subsection{Facts used}
 
@@ -353,7 +404,7 @@ Here we have $L_D =
 (L_D)_{S,S} & 0 \\
 0 & 0 \\
 \end{bmatrix},
-$ (HOW can it always be this way)
+$ 
 and $
 L_G = 
 \begin{bmatrix}
@@ -478,6 +529,11 @@ In \textbf{Theorem 3} they finally show that the
  TODO
 \end{proof}
 
+
+
+\subsubsection{Summary}
+
+The ideas discussed here such as lazy updates were used in \citet{10.1137/070684008} to get a randomized algorithm for non-bipartite matching in $\mathcal{O}(N^\omega)$. 
 
 %----------------------------------------------------------------------------------------
 

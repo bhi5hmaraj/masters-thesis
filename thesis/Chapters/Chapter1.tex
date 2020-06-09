@@ -15,26 +15,32 @@
 
 %----------------------------------------------------------------------------------------
 
-Spanning trees have been a central object of study in graph theory for a long time. \cite{doi:10.1002/andp.18471481202} established a linear algebraic relationship between spanning trees of graphs and determinants while studying electric networks. In this thesis we discuss about some algorithms to sample \textbf{uniform spanning trees} (all spanning trees are equally likely to be sampled). \\
+Spanning trees have been a central object of study in graph theory for a long time. \citet{doi:10.1002/andp.18471481202} established a linear algebraic relationship between spanning trees of graphs and determinants while studying electric networks. We are interested in the following problem.
+
+\begin{IP}[Uniform random spanning tree]
+ Given an undirected connected graph $G = (V, E)$, sample a spanning tree $T$ with probability $\frac{1}{|\mathcal{T}|}$ where $\mathcal{T}$ denotes the set of all spanning trees of $G$. 
+\end{IP}
 
 
-Sampling spanning trees happen to be a primitive used in various problems such as - 
+
+Sampling spanning trees happens to be a primitive used in various problems such as 
 
 \begin{itemize}
 \item Constructing expanders (\cite{10.5555/1496770.1496834}, \cite{doi:10.1137/120890971})
 \item Approximation algorithms for the travelling salesman problem(\cite{6108216}, \cite{doi:10.1287/opre.2017.1603})
-\item Graph Sparcification (\cite{DBLP:journals/corr/abs-1005-0265})
+\item Graph Sparcification (\cite{DBLP:journals/corr/abs-1005-0265}, \cite{dolev2016random})
 \item Analysis of network reliability (\cite{10.5555/535891},\cite{doi:10.1002/net.3230200303}, \cite{colbourn1988estimating})
 \item Sequence shuffling problem in Bioinformatics (\cite{KANDEL1996171})
 
 \end{itemize}
 
-\cite{10.1007/3-540-51687-5_27} proposed a distributed algorithm for this problem.
+\citet{10.1007/3-540-51687-5_27} proposed a distributed algorithm for this problem. Recently \citet{a11040053} implemented some of the random walk algorithms and have compared their efficiencies. 
 
 
 \subsection{Algorithms for sampling random spanning trees}
-There has been a lot of activity from the 80's in solving this problem as fast as possible. 
-\subsubsection{Determinant Based }
+There has been a lot of progress in this problem for the past 40 years. These algorithms can be broadly classified into 3 categories. 
+
+\subsubsection{Matrix Based }
 These algorithms are based on Kirchoff Matrix Tree theorem and involve computing determinants of the laplacian matrix of the graph  to sample spanning trees. These notions would be made clear in later part of the thesis.
 
 \begin{itemize}
@@ -47,7 +53,7 @@ These algorithms are based on Kirchoff Matrix Tree theorem and involve computing
 
 
 \subsubsection{Random Walk Based}
-These algorithms simulate a random walk on the input graph and try to consutruct a spanning tree from this simulation.
+These algorithms simulate variants of random walk on the input graph and consutructs a spanning tree from this simulation.
 \begin{itemize}
 \item Generating random spanning trees, \cite{63516}
 \item The random walk construction of uniform spanning trees and uniform labelled trees, \cite{aldous1990random}
@@ -65,6 +71,9 @@ These are more recent algorithms which sample a uniform spanning tree with a hig
 \item An Almost-Linear Time Algorithm for Uniform Random Spanning Tree Generation, \cite{10.1145/3188745.3188852}
 \end{itemize}
 
+\subsection{Structure of the thesis}
+
+First we define the basic ideas which would be used later. Then we give a brief summary of the algorithms of some of the papers listed above. Then we explain the \citet{harvey2016generating} algorithm in detail.
 
 
 
