@@ -27,12 +27,12 @@
 %\usetheme{AnnArbor}
 %\usetheme{Antibes}
 %\usetheme{Bergen}
-%\usetheme{Berkeley}
+% \usetheme{Berkeley}
 %\usetheme{Berlin}
 %\usetheme{Boadilla}
 \usetheme{CambridgeUS}
 %\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
+% \usetheme{Darmstadt}
 %\usetheme{Dresden}
 % \usetheme{Frankfurt}
 %\usetheme{Goettingen}
@@ -56,12 +56,12 @@
 % changes the colors of your current slide theme.
 
 % \usecolortheme{albatross}
-\usecolortheme{beaver}
-%\usecolortheme{beetle}
+% \usecolortheme{beaver}
+% \usecolortheme{beetle}
 %\usecolortheme{crane}
-%\usecolortheme{dolphin}
+\usecolortheme{dolphin}
 %\usecolortheme{dove}
-%\usecolortheme{fly}
+% \usecolortheme{fly}
 %\usecolortheme{lily}
 % \usecolortheme{orchid}
 % \usecolortheme{rose}
@@ -78,19 +78,33 @@
 
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
-
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage {tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{circuitikz}
+\usepackage {xcolor}
+\usepackage{wasysym}
+\usepackage[lined]{algorithm2e}
+\setbeamercovered{transparent=8}
+\usetikzlibrary{positioning}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{Full Title of the Talk} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Short title]{Random Spanning Trees} % The short title appears at the bottom of every slide, the full title is only on the title page
 
-\author{John Smith} % Your name
-\institute[UCLA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\author{Bhishmaraj S} % Your name
+\institute[CMI] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-University of California \\ % Your institution for the title page
+Chennai Mathematical Institute \\ % Your institution for the title page
 \medskip
-\textit{john@smith.com} % Your email address
+\textit{bhishma@cmi.ac.in} % Your email address
 }
 \date{\today} % Date, can be changed to a custom date
 
@@ -110,10 +124,10 @@ University of California \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{Background} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 %------------------------------------------------
 
-\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{O} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
 \begin{frame}
 \frametitle{Paragraphs of Text}
@@ -125,28 +139,43 @@ Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. A
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Bullet Points}
-\begin{itemize}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-\item Nam cursus est eget velit posuere pellentesque
-\item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
-\end{itemize}
+\frametitle{Naive algorithm using effective resistance}
+
+
+
+\begin{algorithm}[H]
+ \KwIn{$G = (V,E) \  \text{and} \  L_G^+$}
+ \KwOut{Set of edges corresponding to a random spanning tree}
+ 
+ \For{$e = (u,v) \in E$ }{
+    $R_e^{\text{eff}} = (\chi_u - \chi_v)^T \ L_G^+ \ (\chi_u - \chi_v)$\;
+  \eIf{$(X \sim \text{Bernoulli}(R_e^{\text{eff}})) = 1$} {
+   Add edge $e$ to the spanning tree\;
+   $G = G / e$\;
+   }{
+   $G = G \setminus e$ \;
+  }
+  Update $ L_G^+ $ \;
+ }
+ \caption{Sampling uniform spanning tree using chain rule}
+\end{algorithm}
+
+
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
 \frametitle{Blocks of Highlighted Text}
+\pause
 \begin{block}{Block 1}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
 \end{block}
-
+\pause
 \begin{block}{Block 2}
 Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
 \end{block}
-
+\pause
 \begin{block}{Block 3}
 Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
 \end{block}
@@ -217,23 +246,605 @@ $E = mc^2$
 \end{frame}
 
 %------------------------------------------------
+\definecolor {processblue}{cmyk}{0,0,0,0}
 
-\begin{frame}
+\begin{frame}[t]
 \frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
+
+\begin{figure}[h!]
+\centering
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+%   \includegraphics[width=.4\linewidth]{image1}
+
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle ,top color =white , bottom color = processblue!20 ,
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$A$};
+\node[state] (A) [above =of C] {$D$};
+\node[state] (B) [above right =of C] {$C$};
+\node[state] (D) [right =of C] {$B$};
+\path (C) edge node[below] {$1$} (D);
+\path (B) edge node[right] {$5$} (D);
+\path (A) edge node[above] {$10$} (B);
+\path (C) edge node[left] {$4$} (A);
+\end{tikzpicture}
+
+  \caption{The original graph $G$}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+%   \includegraphics[width=.4\linewidth]{image1}
+
+\onslide<2->{
+\begin{circuitikz}[american]
+ \put(0,0){0};
+ \draw (0, -2) to[short, -*, i=$1 A$] (0,0) node[left]{$A$};
+ \draw (0,0) to[R, l=\mbox{$1 \  \Omega$}] (3,0) node[right]{$B$};
+ \draw (0,0) to[R, l=$0.25 \ \Omega$] (0,3) node[left]{$D$};
+ \draw (3,0) to[R, l=\mbox{$0.2 \ \Omega$}] (3,3) node[right]{$C$};
+ % this works, but it has wrong spacing
+ \draw (0,3) to[R, l=$0.1 \ \Omega$] (3,3);
+ \draw (3, 0) to[short, *-, i=$1 A$] (3,-2);
+ \draw (3, -2) to[isource, l=$1 A$] (0, -2);
+ \end{circuitikz}
+
+\caption{The electric network version of $G$}
+}
+\label{fig:sub2}
+\end{subfigure}
+\caption{An example of a graph and it's corresponding electric network}
+\label{fig:test}
+\end{figure}
+
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
+\frametitle{Aldous-Broder Algorithm example}
 
-This statement requires citation \cite{p1}.
+\only<1>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!green] (A) [above =of C] {$A$};
+\node[state] (B) [above right =of C] {$B$};
+\node[state] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+\only<2>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!green] (B) [above right =of C] {$B$};
+\node[state] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+\only<3>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!green] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+\only<4>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!green] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+\only<5>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!green] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!red] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+\only<6>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!green] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+\only<7>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =4 cm and 5cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!green] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!red] (D) [right =of C] {$D$};
+\path (C) edge[very thick, blue] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+
 \end{frame}
+
+\begin{frame}
+ \frametitle{Wilson's algorithm example}
+ 
+ \only<1>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (A){$A$};
+\node[state] (B) [above right=of A] {$B$};
+\node[state] (C) [right =of B] {$C$};
+\node[state] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick] (B);
+\path (C) edge[very thick] (B);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+ 
+ \only<2>{
+ 
+ Start at $A$ 
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!green] (A){$A$};
+\node[state] (B) [above right=of A] {$B$};
+\node[state] (C) [right =of B] {$C$};
+\node[state] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick] (B);
+\path (C) edge[very thick] (B);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ 
+ \only<3>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!blue] (A){$A$};
+\node[state, fill=white!50!green] (B) [above right=of A] {$B$};
+\node[state] (C) [right =of B] {$C$};
+\node[state] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path[->] (A) edge[very thick, blue]  (B);
+\path (C) edge[very thick] (B);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<4>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!blue] (A){$A$};
+\node[state, fill=white!50!blue] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!green] (C) [right =of B] {$C$};
+\node[state] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path[->] (A) edge[very thick, blue]  (B);
+\path[->] (B) edge[very thick, blue] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+ \only<5>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!blue] (A){$A$};
+\node[state, fill=white!50!blue] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!blue] (C) [right =of B] {$C$};
+\node[state,fill=white!50!green] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path[->] (C) edge[very thick,blue] (D);
+\path (B) edge[very thick] (D);
+\path[->] (A) edge[very thick, blue]  (B);
+\path[->] (B) edge[very thick, blue] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+ \only<6>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!blue] (A){$A$};
+\node[state, fill=white!50!green] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!blue] (C) [right =of B] {$C$};
+\node[state,fill=white!50!blue] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path[->] (C) edge[very thick,blue] (D);
+\path[->] (D) edge[very thick,blue] (B);
+\path[->] (A) edge[very thick, blue]  (B);
+\path[->] (B) edge[very thick, blue] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+ \only<7>{
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!blue] (A){$A$};
+\node[state, fill=white!50!blue] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!green] (C) [right =of B] {$C$};
+\node[state,fill=white!50!blue] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path[->] (C) edge[very thick,blue] (D);
+\path[->] (D) edge[very thick,blue] (B);
+\path[->] (A) edge[very thick, blue]  (B);
+\path[->] (B) edge[very thick, blue] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path (C) edge[very thick] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<8>{
+ 
+ Notice the \textbf{next(C)} has changed from $D$ to $F$. 
+ 
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!blue] (A){$A$};
+\node[state, fill=white!50!blue] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!blue] (C) [right =of B] {$C$};
+\node[state,fill=white!50!blue] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!green] (F) [above right =of E] {$F$};
+
+\path(C) edge[very thick] (D);
+\path[->] (D) edge[very thick,blue] (B);
+\path[->] (A) edge[very thick, blue]  (B);
+\path[->] (B) edge[very thick, blue] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path[->] (C) edge[very thick, blue] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<9>{
+ 
+ Since a vertex already in the tree has been reached (namely $F$), starting from $A$ we trace the successors and set their \textbf{inTree} value to $True$
+ 
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!red] (A){$A$};
+\node[state, fill=white!50!red] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!red] (C) [right =of B] {$C$};
+\node[state] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path(C) edge[very thick] (D);
+\path[->] (D) edge[very thick,blue] (B);
+\path[->] (A) edge[very thick, red]  (B);
+\path[->] (B) edge[very thick, red] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path[->] (C) edge[very thick, red] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<10>{
+ 
+ Since $B$, $C$ are already in the tree they will be skipped and now will start at $D$
+ 
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!red] (A){$A$};
+\node[state, fill=white!50!red] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!red] (C) [right =of B] {$C$};
+\node[state,fill=white!50!green] (D) [below right =of A] {$D$};
+\node[state] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path(C) edge[very thick] (D);
+\path[->] (D) edge[very thick,blue] (B);
+\path[->] (A) edge[very thick, red]  (B);
+\path[->] (B) edge[very thick, red] (C);
+\path (D) edge[very thick] (A);
+\path (D) edge[very thick] (E);
+\path (C) edge[very thick] (E);
+\path[->] (C) edge[very thick, red] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<11>{
+ 
+ 
+ 
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!red] (A){$A$};
+\node[state, fill=white!50!red] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!red] (C) [right =of B] {$C$};
+\node[state,fill=white!50!blue] (D) [below right =of A] {$D$};
+\node[state,fill=white!50!green] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path(C) edge[very thick] (D);
+\path(D) edge[very thick] (B);
+\path[->] (A) edge[very thick, red]  (B);
+\path[->] (B) edge[very thick, red] (C);
+\path (D) edge[very thick] (A);
+\path[->] (D) edge[very thick,blue] (E);
+\path (C) edge[very thick] (E);
+\path[->] (C) edge[very thick, red] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<12>{
+  Since $C$ is already in the tree, the random walk stops and the algorithm retraces from $D$ and includes the vertices into the tree
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!red] (A){$A$};
+\node[state, fill=white!50!red] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!green] (C) [right =of B] {$C$};
+\node[state,fill=white!50!blue] (D) [below right =of A] {$D$};
+\node[state,fill=white!50!blue] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path(C) edge[very thick] (D);
+\path(D) edge[very thick] (B);
+\path[->] (A) edge[very thick, red]  (B);
+\path[->] (B) edge[very thick, red] (C);
+\path (D) edge[very thick] (A);
+\path[->] (D) edge[very thick,blue] (E);
+\path[->] (E) edge[very thick,blue] (C);
+\path[->] (C) edge[very thick, red] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+ \only<13>{
+  Since $C$ is already in the tree, the random walk stops and the algorithm retraces from $D$ and includes the vertices into the tree
+\begin{figure}
+\centering
+\begin {tikzpicture}[auto ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!red] (A){$A$};
+\node[state, fill=white!50!red] (B) [above right=of A] {$B$};
+\node[state,fill=white!50!red] (C) [right =of B] {$C$};
+\node[state,fill=white!50!red] (D) [below right =of A] {$D$};
+\node[state,fill=white!50!red] (E) [right =of D] {$E$};
+\node[state, fill=white!50!red] (F) [above right =of E] {$F$};
+
+\path(C) edge[very thick] (D);
+\path(D) edge[very thick] (B);
+\path[->] (A) edge[very thick, red]  (B);
+\path[->] (B) edge[very thick, red] (C);
+\path (D) edge[very thick] (A);
+\path[->] (D) edge[very thick,red] (E);
+\path[->] (E) edge[very thick,red] (C);
+\path[->] (C) edge[very thick, red] (F);
+\path (F) edge[very thick] (E);
+\end{tikzpicture}
+ 
+\end{figure}
+}
+
+
+\end{frame}
+
+
+
+% white!50!red
+% white!50!green
 
 %------------------------------------------------
 
