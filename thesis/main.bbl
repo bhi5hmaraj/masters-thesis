@@ -900,6 +900,50 @@
     \field{year}{1990}
   \endentry
 
+  \entry{10.5555/2722129.2722263}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=MA}{%
+         family={M\k{a}dry},
+         familyi={M\bibinitperiod},
+         given={Aleksander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Straszak},
+         familyi={S\bibinitperiod},
+         given={Damian},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Tarnawski},
+         familyi={T\bibinitperiod},
+         given={Jakub},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Society for Industrial}%
+      {Applied Mathematics}%
+    }
+    \strng{namehash}{MASDTJ1}
+    \strng{fullhash}{MASDTJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{Proceedings of the Twenty-Sixth Annual ACM-SIAM Symposium
+  on Discrete Algorithms}
+    \field{pages}{2019–2036}
+    \field{series}{SODA ’15}
+    \field{title}{Fast Generation of Random Spanning Trees and the Effective
+  Resistance Metric}
+    \list{location}{1}{%
+      {San Diego, California}%
+    }
+    \field{year}{2015}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
   \entry{doi:10.1002/net.3230200303}{article}{}
     \name{author}{2}{}{%
       {{hash=NLD}{%

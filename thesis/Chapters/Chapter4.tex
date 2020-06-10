@@ -63,7 +63,7 @@ Computing $\laplacian$ takes $\mathcal{O}(N^3)$ hence the overall running time i
 On a high level the main ideas used in the paper are 
 
 \begin{enumerate}
- \item Use a divide and conquer algorithm to break the graph into smaller parts and sample on each parts seperately and update the pseudoinverse of the laplacian lazily only on the subgraph when needed
+ \item Use a divide and conquer algorithm to break the graph into smaller parts and sample on each parts separately and update the pseudoinverse of the laplacian lazily only on the subgraph when needed
  \item The important insight here is that the sampling probability of an edge depends only on 4 entries of the pseudoinverse of the laplacian. Hence we don't need to update all the entries of the matrix when the graph is modified
  \item A well known method to compute inverse of a matrix with updates is to use the Sherman-Morrison-Woodbury formula. But in this case the formula has to be modified to work for the case where only a submatrix is modified.
  \item Since while contracting an edge the number of vertices decreases it would get cumbersome to modify the dimension of the matrix evertime. So they overcome this issue by considering the formula on the limit case. When the graph is considered as a electric network then increasing the weight of an edge corresponds to shorting that link, hence in the limit case we get the same result as contracting the edge
@@ -75,7 +75,7 @@ On a high level the main ideas used in the paper are
 
 \subsection{Harvey, Xu Algorithm}
 
-Given a graph $G = (V_G, E_G)$. The algortihm proceeds by spliting the vertex set into 2 equal halves $V_G = S \uplus R$. And now they define subsets of edges $E[S] = (S \times S) \cap E_G$ and $E[R, S] = (S \times R) \cap E_G$. 
+Given a graph $G = (V_G, E_G)$. The algortihm proceeds by splitting the vertex set into 2 equal halves $V_G = S \uplus R$. And now they define subsets of edges $E[S] = (S \times S) \cap E_G$ and $E[R, S] = (S \times R) \cap E_G$. 
 
 Suppose $S = S_1 \uplus S_2$ and $R = R_1 \uplus R_2$. Then we can see that 
 $$ E[S] = E[S_1] \cup E[S_2] \cup E[S_1, S_2] $$ 
@@ -85,7 +85,7 @@ This formula is used to recurse on the subproblems for each subset. In this mann
 
 \subsubsection{Notation}
 \begin{itemize}
- \item $N$ - This is an auxillary matrix which starts with $\laplacian$ and gets updated lazily as the algorithm progresses.
+ \item $N$ - This is an auxiliary matrix which starts with $\laplacian$ and gets updated lazily as the algorithm progresses.
  \item \textbf{function} $SampleSpanningTree(G = (V, E))$ - This is the main function from which the execution of the algorithm starts. It takes input a graph and outputs a set of edges corresponding to a random spanning tree.
  \item \textbf{function} $SampleEdgesWithin(S)$ - This function takes input a set of vertices $S$ and returns sets $F$ and $D$ which are set of edges contracted and deleted respectively in the subgraph induced by $S$ on $G$. 
  \item \textbf{function} $SampleEdgesCrossing(R,S)$ - This function works similar to the above one but samples edges crossing the sets $R$ and $S$. Also the base case of the entire algorithm (case where $|R| = |S| = 1$) of making the decision to sample an edge is handled here.
@@ -109,7 +109,7 @@ This formula is used to recurse on the subproblems for each subset. In this mann
 
 
 \subsubsection{An Example}
-The below diagram shows how the algorithm proceeds by recursively spliting the graph.
+The below diagram shows how the algorithm proceeds by recursively splitting the graph.
 
 \begin{figure}[h!]
 \begin{minipage}{\textwidth}
@@ -149,7 +149,7 @@ The below diagram shows how the algorithm proceeds by recursively spliting the g
  For any $L \in \mathbb{M}_{n \times n}$ with $\text{ker}(L) = \text{span}(\textbf{1})$, we have $LL^+ = I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ and $P := I - \frac{\textbf{1} \cdot \textbf{1}^T}{n}$ is called the \textbf{projection matrix}. 
 \end{HXf}
 
-The folowing set of facts are about the properties of matrix operations (addition, multiplication, etc.) on sub-matrices. The first 4 are easy to see, so I haven't derived them. For the last one I have written a derivation using Shur's complement from Wikipedia
+The following set of facts are about the properties of matrix operations (addition, multiplication, etc.) on sub-matrices. The first 4 are easy to see, so I haven't derived them. For the last one I have written a derivation using Shur's complement from Wikipedia
 
 \begin{HXf}[Sub-matrices]
 For all the results below, $S$ denotes a index set and $S^c$ denotes it's complement.
@@ -450,7 +450,7 @@ Let $G = (V,E)$, given an edge $e = {u,v} \in E$ the incidence vector of e is de
 First they show \\ 
 $ F$ is a forest $\implies B_F^T \ \laplacian \ B_F \ \text{is invertible}$ 
 
-So the main idea of this proof is to show that $B_F^T \ \laplacian \ B_F $ is positive definite. This is enough because positive definite matrices are non singular (if not then then they will have 0 as an eigenvalue). Now using the following claim
+So the main idea of this proof is to show that $B_F^T \ \laplacian \ B_F $ is positive definite. This is enough because positive definite matrices are non singular (if not then they will have 0 as an eigenvalue). Now using the following claim
  
  \begin{HXcl}
   The incidence matrix of a acyclic graph has full column rank
@@ -535,7 +535,7 @@ In \textbf{Theorem 3} they extend the contraction formula from \textbf{Theorem 2
  
  $$ \norm{M_k - M} \leq \norm{\laplacian}^2 \ \norm{B_F} \ \norm{B_F^T} \ \norm{\left( \frac{I}{k} + A \right)^{-1} - A^{-1}} \qquad (1)$$
  
- Now they expand the last term in the above inequality using the Sherman-Morrison-Woodbury identity and apply the matrix norm inequality and with some straighforward manipulations they show that 
+ Now they expand the last term in the above inequality using the Sherman-Morrison-Woodbury identity and apply the matrix norm inequality and with some straightforward manipulations they show that 
  
  $$\Lim{k \to \infty} \norm{\left( \frac{I}{k} + A \right)^{-1} - A^{-1} } = 0$$
  
