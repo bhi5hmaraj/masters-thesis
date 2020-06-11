@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  10 JUN 2020 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  11 JUN 2020 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2374,6 +2374,11 @@ Package biblatex Warning: BibTeX reported the following issues
 
 
 Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '10.5555/2722129.2722263':
+(biblatex)                - Can't use 'location' + 'address'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with '10.1145/3188745.3188852':
 (biblatex)                - Can't use 'location' + 'address'.
 
@@ -2515,14 +2520,6 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 
 ] [12
 
-] (./main.lot)
-\tf@lot=\write9
-\openout9 = `main.lot'.
-
-
-1: section
-[13] [14
-
 ]
 1: section
 (./Chapters/Chapter1.tex
@@ -2538,12 +2535,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 1: section
 [1
 
-]
-
-LaTeX Warning: Citation '10.5555/2722129.2722263' on page 2 undefined on input 
-line 70.
-
-) (./Chapters/Chapter2.tex [2]
+]) (./Chapters/Chapter2.tex [2]
 Chapter 2.
 1: section
 [3
@@ -2560,17 +2552,31 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 214.
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ; in font nullfont!
-) (./Chapters/Chapter4.tex [6]
+) (./Chapters/Chapter3.tex [6]
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./Chapters/Chapter4.tex
+1: section
+[7
+
+] [8]
+Chapter 4.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 37.
 
 1: section
-[7
+[9
 
-] [8]
-<Figures/HX-algo-screenshot.png, id=442, 670.97736pt x 653.97264pt>
+] [10]
+<Figures/HX-algo-screenshot.png, id=479, 670.97736pt x 653.97264pt>
 File: Figures/HX-algo-screenshot.png Graphic file (type png)
 <use Figures/HX-algo-screenshot.png>
 Package pdftex.def Info: Figures/HX-algo-screenshot.png  used on input line 101
@@ -2581,8 +2587,8 @@ Overfull \hbox (65.65186pt too wide) in paragraph at lines 101--103
 [][] 
  []
 
-[9 <./Figures/HX-algo-screenshot.png (PNG copy)>]
-<Figures/alg-tree.pdf, id=451, 490.23149pt x 478.1865pt>
+[11 <./Figures/HX-algo-screenshot.png (PNG copy)>]
+<Figures/alg-tree.pdf, id=488, 490.23149pt x 478.1865pt>
 File: Figures/alg-tree.pdf Graphic file (type pdf)
 <use Figures/alg-tree.pdf>
 Package pdftex.def Info: Figures/alg-tree.pdf  used on input line 117.
@@ -2592,8 +2598,8 @@ Overfull \hbox (12.66965pt too wide) in paragraph at lines 117--119
  [] 
  []
 
-[10 <./Figures/alg-tree.pdf>]
-<Figures/deps.pdf, id=507, 597.23125pt x 209.18149pt>
+[12 <./Figures/alg-tree.pdf>]
+<Figures/deps.pdf, id=544, 597.23125pt x 209.18149pt>
 File: Figures/deps.pdf Graphic file (type pdf)
 <use Figures/deps.pdf>
 Package pdftex.def Info: Figures/deps.pdf  used on input line 131.
@@ -2603,49 +2609,47 @@ Overfull \hbox (14.02994pt too wide) in paragraph at lines 131--132
  [] 
  []
 
-[11 <./Figures/deps.pdf>] [12] [13]
-Overfull \hbox (26.77843pt too wide) in paragraph at lines 370--371
+[13 <./Figures/deps.pdf>] [14] [15]
+Overfull \hbox (26.77843pt too wide) in paragraph at lines 372--373
 []\T1/lmr/m/n/10.95 From \T1/lmr/bx/n/10.95 The-o-rem 1 \T1/lmr/m/n/10.95 we kn
 ow that $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 L[] \OMS/lmsy/m/n/10.95 ^^@ \O
 ML/lmm/m/it/10.95 L[]\OT1/lmr/m/n/10.95 )[] = \OML/lmm/m/it/10.95 L[] \OMS/lmsy
 /m/n/10.95 ^^@ []$\T1/lmr/m/n/10.95 .
  []
 
-[14] [15]
-Overfull \hbox (59.25922pt too wide) detected at line 511
+[16] [17]
+Overfull \hbox (59.25922pt too wide) detected at line 513
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 L[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/
 10.95 k L[]\OT1/lmr/m/n/10.95 )[] = (\OML/lmm/m/it/10.95 L[]\OT1/lmr/m/n/10.95 
 )[] \OMS/lmsy/m/n/10.95 ^^@ []
  []
 
-[16]
-Overfull \hbox (7.71399pt too wide) in paragraph at lines 530--531
+[18]
+Overfull \hbox (7.71399pt too wide) in paragraph at lines 532--533
 []\T1/lmr/m/n/10.95 From \T1/lmr/bx/n/10.95 The-o-rem 2 \T1/lmr/m/n/10.95 we ha
 ve $\OML/lmm/m/it/10.95 M[] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 L[] \OMS/l
 msy/m/n/10.95 ^^@ []$
  []
 
-) (./Chapters/Chapter6.tex [17] [18
+) (./Chapters/Chapter6.tex [19] [20
 
 ]
-Chapter 4.
-)
-1: section
-[19] [20
-
-]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 326.
-
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+Chapter 5.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 8.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+))
+1: section
+[21] [22
+
+]
 Overfull \hbox (3.08345pt too wide) in paragraph at lines 326--326
 []\T1/lmr/m/n/10.95 David Dur-fee, Ras-mus Kyng, John Pee-bles, Anup B. Rao, an
 d Sushant Sachdeva.
  []
 
 1: section
-[21]
+[23]
 Overfull \hbox (0.66351pt too wide) in paragraph at lines 326--326
 [][]$\T1/lmtt/m/n/10.95 http : / / www . sciencedirect . com / science / articl
 e / pii / 0196677483900226$[][]\T1/lmr/m/n/10.95 . 
@@ -2657,38 +2661,29 @@ Overfull \hbox (4.2047pt too wide) in paragraph at lines 326--326
 TIN 2016: The-o-ret-i-cal In-for-mat-ics\T1/lmr/m/n/10.95 . Springer,
  []
 
-[22]
+[24]
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 326.
- [23]
+ [25]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 35F8FD739E50E39C2287DDA3B9219526;5982.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 1E6EF3D0867ECA2BAB71AF393344E5E0;6373.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53482 strings out of 492982
- 1156783 string characters out of 6134896
- 1432949 words of memory out of 5000000
- 56187 multiletter control sequences out of 15000+600000
+ 53518 strings out of 492982
+ 1157612 string characters out of 6134896
+ 1433949 words of memory out of 5000000
+ 56201 multiletter control sequences out of 15000+600000
  689039 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,82p,10377b,2931s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,82p,10377b,2923s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -2709,10 +2704,10 @@ hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (37 pages, 834779 bytes).
+Output written on main.pdf (37 pages, 845408 bytes).
 PDF statistics:
- 829 PDF objects out of 1000 (max. 8388607)
- 703 compressed objects within 8 object streams
- 188 named destinations out of 1000 (max. 500000)
- 370 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 879 PDF objects out of 1000 (max. 8388607)
+ 753 compressed objects within 8 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 394 words of extra memory for PDF output out of 10000 (max. 10000000)
 

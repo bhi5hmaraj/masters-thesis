@@ -6,8 +6,219 @@
 
 \section{Aldous, Broder}
 
-\section{Wilson}
+Aldous \cite{aldous1990random} and Broder \cite{63516} independently invented the following simple random walk based algortihm.
 
+
+\begin{figure}[h!]
+% \centering
+% \scalebox{0.7}{
+\begin{algorithm}[H]
+ \KwIn{$G = (V,E)$}
+ \KwOut{A random spanning tree}
+ 
+ Choose a starting vertex $s$ arbitrarily
+ 
+ $T_V \leftarrow \{s\}, T_E \leftarrow \emptyset$
+ 
+ \While{$|T_V| < |V$} {
+ 
+    $next =_{u.a.r} N(s)$
+    
+    \If{$next \not\in T_V$} {
+        $T_V = T_V \cup \{next\}$
+        
+        $T_E = T_E \cup \{(s, next)\}$
+    }
+    
+    $s = next$
+ 
+ }
+ 
+ \KwRet{$T = (T_V, T_E)$}
+
+ 
+  \caption{Aldous-Broder Algorithm}
+\end{algorithm}
+%  }
+\end{figure} 
+
+\subsection{Running Time}
+
+
+\textbf{Cover Time}
+
+$cov_G(u) := $ The expected number of steps for a random walk starting at $u$ to visit all the vertices in $G$ \\
+
+
+\textbf{Cover Time of $G$} 
+
+$cov_G := \max_{u \in V_G} cov_G(u)$  
+
+
+It is known that $cov_G = \mathcal{O}(|V|\ |E|) = \mathcal{O}(|V|^3)$
+
+
+\subsection{An Example}
+
+% \centering
+\begin{figure}[h!]
+
+\centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!green] (A) [above =of C] {$A$};
+\node[state] (B) [above right =of C] {$B$};
+\node[state] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick] (A);
+\end{tikzpicture}
+%  \caption{Iteration 1}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[b]{.5\textwidth}
+%  \begin{figure}
+\centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!green] (B) [above right =of C] {$B$};
+\node[state] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick] (A);
+\end{tikzpicture}
+%  \caption{Iteration 2}
+% \end{figure}
+\end{subfigure}
+% \end{figure}
+
+% \begin{figure}
+ \centering
+\begin{subfigure}{.5\textwidth}
+ \centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!green] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick] (A);
+\end{tikzpicture}
+%  \caption{Iteration 3}
+\end{subfigure}
+
+\centering
+\begin{subfigure}{.5\textwidth}
+ \centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!green] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+%  \caption{iteration 4}
+\end{subfigure}
+
+
+% \only<5>{
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!green] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!red] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+\end{subfigure}
+% }
+
+% \only<6>{
+\centering
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!green] (D) [right =of C] {$D$};
+\path (C) edge[very thick] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+\end{subfigure}
+% }
+
+% \only<7>{
+\begin{subfigure}{.5\textwidth}
+\centering
+\begin {tikzpicture}[auto ,node distance =3 cm and 3cm ,on grid ,
+semithick ,
+state/.style ={ circle  , 
+draw,black , text=black , minimum width =1 cm}]
+\node[state, fill=white!50!green] (C){$C$};
+\node[state, fill=white!50!red] (A) [above =of C] {$A$};
+\node[state, fill=white!50!red] (B) [above right =of C] {$B$};
+\node[state, fill=white!50!red] (D) [right =of C] {$D$};
+\path (C) edge[very thick, blue] (D);
+\path (B) edge[very thick] (D);
+\path (A) edge[very thick,blue] (B);
+\path (C) edge[very thick] (A);
+\path (D) edge[very thick, blue] (A);
+\end{tikzpicture}
+ 
+
+\end{subfigure}
+\end{figure}
+
+% \pagebreak
+% 
+% \section{Wilson's Algorithm}
+% 
+% \citet{10.1145/237814.237880} proposed a different variant of random walk based algorithm which runs faster than the cover time of the graph. 
 
 %----------------------------------------------------------------------------------------
 

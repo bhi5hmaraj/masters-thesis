@@ -22,48 +22,50 @@ Repeated entry---line 153 of file example.bib
  : @article{COLBOURN1996268
  :                         ,
 I'm skipping whatever remains of this entry
+Warning--I'm ignoring ttao's extra "note" field
+--line 449 of file example.bib
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 30 entries,
+You've used 32 entries,
             6268 wiz_defined-function locations,
-            1428 strings with 21732 characters,
-and the built_in function-call counts, 182119 in all, are:
-= -- 12330
-> -- 4025
-< -- 1332
-+ -- 4239
-- -- 1577
-* -- 13449
-:= -- 16799
+            1440 strings with 22221 characters,
+and the built_in function-call counts, 194855 in all, are:
+= -- 13131
+> -- 4336
+< -- 1401
++ -- 4619
+- -- 1724
+* -- 14449
+:= -- 18151
 add.period$ -- 0
-call.type$ -- 30
-change.case$ -- 777
+call.type$ -- 32
+change.case$ -- 795
 chr.to.int$ -- 40
-cite$ -- 58
-duplicate$ -- 18744
-empty$ -- 16941
-format.name$ -- 2418
-if$ -- 38295
+cite$ -- 62
+duplicate$ -- 20218
+empty$ -- 18037
+format.name$ -- 2647
+if$ -- 40842
 int.to.chr$ -- 0
-int.to.str$ -- 80
+int.to.str$ -- 84
 missing$ -- 0
-newline$ -- 1110
-num.names$ -- 1733
-pop$ -- 9996
+newline$ -- 1187
+num.names$ -- 1815
+pop$ -- 10740
 preamble$ -- 1
-purify$ -- 942
+purify$ -- 979
 quote$ -- 0
-skip$ -- 6536
+skip$ -- 6929
 stack$ -- 0
-substring$ -- 20461
-swap$ -- 5258
-text.length$ -- 902
-text.prefix$ -- 30
+substring$ -- 21706
+swap$ -- 5589
+text.length$ -- 976
+text.prefix$ -- 32
 top$ -- 1
-type$ -- 1008
+type$ -- 1076
 warning$ -- 0
-while$ -- 1926
+while$ -- 2100
 width$ -- 0
-write$ -- 1081
+write$ -- 1156
 (There was 1 error message)

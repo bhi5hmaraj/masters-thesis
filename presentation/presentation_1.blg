@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: presentation_1.aux
+The style file: amsalpha.bst
+Database file #1: /home/bhishma/Documents/code/masters-thesis/thesis/example.bib.bib
+Warning--missing pages in dolev2016random
+Warning--missing pages in DBLP:journals/corr/abs-1005-0265
+You've used 11 entries,
+            2624 wiz_defined-function locations,
+            631 strings with 6415 characters,
+and the built_in function-call counts, 4956 in all, are:
+= -- 463
+> -- 256
+< -- 1
++ -- 93
+- -- 90
+* -- 413
+:= -- 788
+add.period$ -- 11
+call.type$ -- 11
+change.case$ -- 75
+chr.to.int$ -- 11
+cite$ -- 13
+duplicate$ -- 200
+empty$ -- 359
+format.name$ -- 101
+if$ -- 1025
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 23
+newline$ -- 44
+num.names$ -- 33
+pop$ -- 81
+preamble$ -- 1
+purify$ -- 86
+quote$ -- 0
+skip$ -- 177
+stack$ -- 0
+substring$ -- 279
+swap$ -- 47
+text.length$ -- 1
+text.prefix$ -- 1
+top$ -- 0
+type$ -- 84
+warning$ -- 2
+while$ -- 44
+width$ -- 13
+write$ -- 129
+(There were 2 warnings)

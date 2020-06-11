@@ -360,6 +360,65 @@
     \field{year}{1996}
   \endentry
 
+  \entry{DBLP:journals/corr/abs-2004-12739}{article}{}
+    \name{author}{6}{}{%
+      {{hash=DS}{%
+         family={Datta},
+         familyi={D\bibinitperiod},
+         given={Samir},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Pankaj},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mukherjee},
+         familyi={M\bibinitperiod},
+         given={Anish},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={Tawari},
+         familyi={T\bibinitperiod},
+         given={Anuj},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VN}{%
+         family={Vortmeier},
+         familyi={V\bibinitperiod},
+         given={Nils},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=ZT}{%
+         family={Zeume},
+         familyi={Z\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DSKPMATAVNZT1}
+    \strng{fullhash}{DSKPMATAVNZT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{eprint}
+    \verb 2004.12739
+    \endverb
+    \field{title}{Dynamic complexity of Reachability: How many changes can we
+  handle?}
+    \verb{url}
+    \verb https://arxiv.org/abs/2004.12739
+    \endverb
+    \field{volume}{abs/2004.12739}
+    \field{journaltitle}{CoRR}
+    \field{eprinttype}{arXiv}
+    \field{year}{2020}
+  \endentry
+
   \entry{dolev2016random}{article}{}
     \name{author}{2}{}{%
       {{hash=DS}{%
@@ -1120,6 +1179,25 @@
     }
     \field{year}{2018}
     \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{ttao}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=TT}{%
+         family={Tao},
+         familyi={T\bibinitperiod},
+         given={Terrance},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TT1}
+    \strng{fullhash}{TT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+  \field{note}{\url{https://terrytao.wordpress.com/2013/01/13/matrix-identities-as-derivatives-of-determinant-identities/}}
+    \field{title}{Matrix identities as derivatives of determinant identities}
   \endentry
 
   \entry{TCS-054}{article}{}

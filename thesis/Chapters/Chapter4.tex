@@ -28,7 +28,7 @@
 
 \section{Harvey, Xu}
 
-\citet{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ (where $\omega$ is the exponent of fast matrix multiplication) algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by CMN which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
+\citet{harvey2016generating} proposed a $\mathcal{O}(N^\omega)$ (where $\omega$ is the exponent of fast matrix multiplication) algorithm for sampling a uniform spanning tree which is much simpler compared to the one proposed earlier by \citet{COLBOURN1996268} which also has the same running time. The initial starting point for the algorithm is using the relationship between effective resistance and the probability that an edge belongs to a spanning tree. And also the fact that sampling an edge corresponds to contracting it and discarding the edge corresponds to deleting it. The following naive chain rule algorithm works on the same principle. 
 
 % \subsection{Techniques used}
 
@@ -116,7 +116,7 @@ The below diagram shows how the algorithm proceeds by recursively splitting the 
 \begin{center}
     \includegraphics[scale=0.85]{Figures/alg-tree}
 %     \caption{An example}\textsuperscript{2}
-    \caption[Example]{An example\footnote{The function calls to $SampleEdgesWithin(S_1)$ and $SampleEdgesWithin(S_2)$ in turn would call their respective $SampleEdgesCrossing$ functions. But it would be the base case and would look similar to the one portrayed here and hence omitted for the sake of brevity.}}
+    \caption[Example]{An example of Harvey, Xu algorithm \footnote{The function calls to $SampleEdgesWithin(S_1)$ and $SampleEdgesWithin(S_2)$ in turn would call their respective $SampleEdgesCrossing$ functions. But it would be the base case and would look similar to the one portrayed here and hence omitted for the sake of brevity.}}
 \end{center}
 \end{minipage}
 
@@ -135,6 +135,8 @@ The below diagram shows how the algorithm proceeds by recursively splitting the 
 \end{figure}
 
 \subsection{Facts used}
+
+\citet{ttao} has a nice derivation of the Sherman-Morrison formula. 
 
 \begin{HXf}[Woodbury matrix identity]
  Let $ M \in \mathbb{M}_{n \times n} , U \in \mathbb{M}_{n \times k}, V \in \mathbb{M}_{n \times k}$. Suppose $M$ is non-singular then $M + UV^T$ is non-singular $\iff \ I + V^T M^{-1} U$ is non-singular. If $M + UV^T$ is non-singular, then 
@@ -178,7 +180,7 @@ $$ (DE - I)^{-1} = \begin{bmatrix}
 \end{bmatrix}
 $$
 \begin{proof}
- $(DE - I)^{-1}$ can be computed using Shur's Complement(\cite{wiki:shur}) . 
+ $(DE - I)^{-1}$ can be computed using Shur Complement(\cite{wiki:shur}) . 
  
  Suppse $N =  
 \begin{bmatrix}

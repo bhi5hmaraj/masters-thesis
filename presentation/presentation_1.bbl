@@ -1,0 +1,67 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{KMUW96}
+
+\bibitem[AGM{\etalchar{+}}17]{doi:10.1287/opre.2017.1603}
+Arash Asadpour, Michel~X. Goemans, Aleksander Mądry, Shayan~Oveis Gharan, and
+  Amin Saberi, \emph{An o(log n/log log n)-approximation algorithm for the
+  asymmetric traveling salesman problem}, Operations Research \textbf{65}
+  (2017), no.~4, 1043--1061.
+
+\bibitem[CDM88]{colbourn1988estimating}
+Charles~J Colbourn, Bradley~M Debroni, and Wendy~J Myrvold, \emph{Estimating
+  the coefficients of the reliability polynomial}, Congressus Numerantium
+  \textbf{62} (1988), 217--223.
+
+\bibitem[Col87]{10.5555/535891}
+Charles~J. Colbourn, \emph{The combinatorics of network reliability}, Oxford
+  University Press, Inc., USA, 1987.
+
+\bibitem[DK16]{dolev2016random}
+Shlomi Dolev and Daniel Khankin, \emph{Random spanning trees for expanders,
+  sparsifiers, and virtual network security}, arXiv preprint arXiv:1612.02569
+  (2016).
+
+\bibitem[FGRV14]{doi:10.1137/120890971}
+Alan Frieze, Navin Goyal, Luis Rademacher, and Santosh Vempala, \emph{Expanders
+  via random spanning trees}, SIAM Journal on Computing \textbf{43} (2014),
+  no.~2, 497--513.
+
+\bibitem[FH10]{DBLP:journals/corr/abs-1005-0265}
+Wai~Shing Fung and Nicholas J.~A. Harvey, \emph{Graph sparsification by
+  edge-connectivity and random spanning trees}, CoRR \textbf{abs/1005.0265}
+  (2010).
+
+\bibitem[GRV09]{10.5555/1496770.1496834}
+Navin Goyal, Luis Rademacher, and Santosh Vempala, \emph{Expanders via random
+  spanning trees}, Proceedings of the Twentieth Annual ACM-SIAM Symposium on
+  Discrete Algorithms (USA), SODA ’09, Society for Industrial and Applied
+  Mathematics, 2009, p.~576–585.
+
+\bibitem[GSS11]{6108216}
+S.~O. {Gharan}, A.~{Saberi}, and M.~{Singh}, \emph{A randomized rounding
+  approach to the traveling salesman problem}, 2011 IEEE 52nd Annual Symposium
+  on Foundations of Computer Science, 2011, pp.~550--559.
+
+\bibitem[HX16]{harvey2016generating}
+Nicholas~JA Harvey and Keyulu Xu, \emph{Generating random spanning trees via
+  fast matrix multiplication}, LATIN 2016: Theoretical Informatics, Springer,
+  2016, pp.~522--535.
+
+\bibitem[KMUW96]{KANDEL1996171}
+D.~Kandel, Y.~Matias, R.~Unger, and P.~Winkler, \emph{Shuffling biological
+  sequences}, Discrete Applied Mathematics \textbf{71} (1996), no.~1, 171 --
+  185.
+
+\bibitem[NC90]{doi:10.1002/net.3230200303}
+Louis~D. Nel and Charles~J. Colbourn, \emph{Combining monte carlo estimates and
+  bounds for network reliability}, Networks \textbf{20} (1990), no.~3,
+  277--298.
+
+\end{thebibliography}
