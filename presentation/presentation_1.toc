@@ -1,8 +1,11 @@
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Problem Definition}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Applications}{4}{0}{1}
-\beamer@subsectionintoc {1}{3}{A bird's eye view of existing algorithms}{11}{0}{1}
-\beamer@sectionintoc {2}{Random Walk Based Algorithms}{15}{0}{2}
-\beamer@subsectionintoc {2}{1}{Aldous-Broder Algorithm}{15}{0}{2}
-\beamer@subsectionintoc {2}{2}{Wilson's Algorithm}{27}{0}{2}
-\beamer@sectionintoc {3}{Second Section}{44}{0}{3}
+\beamer@subsectionintoc {1}{3}{A bird's eye view of existing algorithms}{10}{0}{1}
+\beamer@sectionintoc {2}{Random Walk Based Algorithms}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{Aldous-Broder Algorithm}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Wilson's Algorithm}{26}{0}{2}
+\beamer@sectionintoc {3}{Determinant Based Methods}{40}{0}{3}
+\beamer@subsectionintoc {3}{1}{Electric Networks}{45}{0}{3}
+\beamer@subsectionintoc {3}{2}{Harvey, Xu}{65}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{81}{0}{4}

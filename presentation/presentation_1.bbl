@@ -19,6 +19,16 @@ Charles~J Colbourn, Bradley~M Debroni, and Wendy~J Myrvold, \emph{Estimating
   the coefficients of the reliability polynomial}, Congressus Numerantium
   \textbf{62} (1988), 217--223.
 
+\bibitem[CDN89]{COLBOURN1989271}
+Charles~J Colbourn, Robert~P.J Day, and Louis~D Nel, \emph{Unranking and
+  ranking spanning trees of a graph}, Journal of Algorithms \textbf{10} (1989),
+  no.~2, 271 -- 286.
+
+\bibitem[CMN96]{COLBOURN1996268}
+Charles~J. Colbourn, Wendy~J. Myrvold, and Eugene Neufeld, \emph{Two algorithms
+  for unranking arborescences}, Journal of Algorithms \textbf{20} (1996),
+  no.~2, 268 -- 281.
+
 \bibitem[Col87]{10.5555/535891}
 Charles~J. Colbourn, \emph{The combinatorics of network reliability}, Oxford
   University Press, Inc., USA, 1987.
@@ -27,6 +37,11 @@ Charles~J. Colbourn, \emph{The combinatorics of network reliability}, Oxford
 Shlomi Dolev and Daniel Khankin, \emph{Random spanning trees for expanders,
   sparsifiers, and virtual network security}, arXiv preprint arXiv:1612.02569
   (2016).
+
+\bibitem[DKM{\etalchar{+}}20]{DBLP:journals/corr/abs-2004-12739}
+Samir Datta, Pankaj Kumar, Anish Mukherjee, Anuj Tawari, Nils Vortmeier, and
+  Thomas Zeume, \emph{Dynamic complexity of reachability: How many changes can
+  we handle?}, CoRR \textbf{abs/2004.12739} (2020).
 
 \bibitem[FGRV14]{doi:10.1137/120890971}
 Alan Frieze, Navin Goyal, Luis Rademacher, and Santosh Vempala, \emph{Expanders
@@ -54,14 +69,31 @@ Nicholas~JA Harvey and Keyulu Xu, \emph{Generating random spanning trees via
   fast matrix multiplication}, LATIN 2016: Theoretical Informatics, Springer,
   2016, pp.~522--535.
 
+\bibitem[KM09]{10.5555/1747597.1748019}
+Jonathan~A. Kelner and Aleksander Madry, \emph{Faster generation of random
+  spanning trees}, Proceedings of the 2009 50th Annual IEEE Symposium on
+  Foundations of Computer Science (USA), FOCS ’09, IEEE Computer Society,
+  2009, p.~13–21.
+
 \bibitem[KMUW96]{KANDEL1996171}
 D.~Kandel, Y.~Matias, R.~Unger, and P.~Winkler, \emph{Shuffling biological
   sequences}, Discrete Applied Mathematics \textbf{71} (1996), no.~1, 171 --
   185.
 
+\bibitem[Kul90]{KULKARNI1990185}
+V.G Kulkarni, \emph{Generating random combinatorial objects}, Journal of
+  Algorithms \textbf{11} (1990), no.~2, 185 -- 207.
+
 \bibitem[NC90]{doi:10.1002/net.3230200303}
 Louis~D. Nel and Charles~J. Colbourn, \emph{Combining monte carlo estimates and
   bounds for network reliability}, Networks \textbf{20} (1990), no.~3,
   277--298.
+
+\bibitem[ST04]{10.1145/1007352.1007372}
+Daniel~A. Spielman and Shang-Hua Teng, \emph{Nearly-linear time algorithms for
+  graph partitioning, graph sparsification, and solving linear systems},
+  Proceedings of the Thirty-Sixth Annual ACM Symposium on Theory of Computing
+  (New York, NY, USA), STOC ’04, Association for Computing Machinery, 2004,
+  p.~81–90.
 
 \end{thebibliography}

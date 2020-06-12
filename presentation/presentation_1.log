@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  11 JUN 2020 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.5.23)  12 JUN 2020 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,11 +861,224 @@ Package: relsize 2013/03/29 ver 4.1
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/bibentry.sty
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2018/02/28 PDF animations from files and inline graphics
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+)
+\XKV@depth=\count175
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count176
+\calc@Bcount=\count177
+\calc@Adimen=\dimen294
+\calc@Bdimen=\dimen295
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count178
+\calc@Cskip=\skip78
+)
+(/usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/02/21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018/02/21 L3 programming layer (code)
+\c_max_int=\count179
+\l_tmpa_int=\count180
+\l_tmpb_int=\count181
+\g_tmpa_int=\count182
+\g_tmpb_int=\count183
+\g__intarray_font_int=\count184
+\g__prg_map_int=\count185
+\c_log_iow=\count186
+\l_iow_line_count_int=\count187
+\l__iow_line_target_int=\count188
+\l__iow_one_indent_int=\count189
+\l__iow_indent_int=\count190
+\c_zero_dim=\dimen296
+\c_max_dim=\dimen297
+\l_tmpa_dim=\dimen298
+\l_tmpb_dim=\dimen299
+\g_tmpa_dim=\dimen300
+\g_tmpb_dim=\dimen301
+\c_zero_skip=\skip79
+\c_max_skip=\skip80
+\l_tmpa_skip=\skip81
+\l_tmpb_skip=\skip82
+\g_tmpa_skip=\skip83
+\g_tmpb_skip=\skip84
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count191
+\c__fp_leading_shift_int=\count192
+\c__fp_middle_shift_int=\count193
+\c__fp_trailing_shift_int=\count194
+\c__fp_big_leading_shift_int=\count195
+\c__fp_big_middle_shift_int=\count196
+\c__fp_big_trailing_shift_int=\count197
+\c__fp_Bigg_leading_shift_int=\count198
+\c__fp_Bigg_middle_shift_int=\count199
+\c__fp_Bigg_trailing_shift_int=\count266
+\c__fp_rand_size_int=\count267
+\c__fp_rand_four_int=\count268
+\c__fp_rand_eight_int=\count269
+\l__sort_length_int=\count270
+\l__sort_min_int=\count271
+\l__sort_top_int=\count272
+\l__sort_max_int=\count273
+\l__sort_true_max_int=\count274
+\l__sort_block_int=\count275
+\l__sort_begin_int=\count276
+\l__sort_end_int=\count277
+\l__sort_A_int=\count278
+\l__sort_B_int=\count279
+\l__sort_C_int=\count280
+\l__tl_build_start_index_int=\count281
+\l__tl_build_index_int=\count282
+\l__tl_analysis_normal_int=\count283
+\l__tl_analysis_index_int=\count284
+\l__tl_analysis_nesting_int=\count285
+\l__tl_analysis_type_int=\count286
+\l__regex_internal_a_int=\count287
+\l__regex_internal_b_int=\count288
+\l__regex_internal_c_int=\count289
+\l__regex_balance_int=\count290
+\l__regex_group_level_int=\count291
+\l__regex_mode_int=\count292
+\c__regex_cs_in_class_mode_int=\count293
+\c__regex_cs_mode_int=\count294
+\l__regex_catcodes_int=\count295
+\l__regex_default_catcodes_int=\count296
+\c__regex_catcode_D_int=\count297
+\c__regex_catcode_S_int=\count298
+\c__regex_catcode_L_int=\count299
+\c__regex_catcode_O_int=\count300
+\c__regex_catcode_A_int=\count301
+\c__regex_all_catcodes_int=\count302
+\l__regex_show_lines_int=\count303
+\l__regex_min_state_int=\count304
+\l__regex_max_state_int=\count305
+\l__regex_left_state_int=\count306
+\l__regex_right_state_int=\count307
+\l__regex_capturing_group_int=\count308
+\l__regex_min_pos_int=\count309
+\l__regex_max_pos_int=\count310
+\l__regex_curr_pos_int=\count311
+\l__regex_start_pos_int=\count312
+\l__regex_success_pos_int=\count313
+\l__regex_curr_char_int=\count314
+\l__regex_curr_catcode_int=\count315
+\l__regex_last_char_int=\count316
+\l__regex_case_changed_char_int=\count317
+\l__regex_curr_state_int=\count318
+\l__regex_step_int=\count319
+\l__regex_min_active_int=\count320
+\l__regex_max_active_int=\count321
+\l__regex_replacement_csnames_int=\count322
+\l__regex_match_count_int=\count323
+\l__regex_min_submatch_int=\count324
+\l__regex_submatch_int=\count325
+\l__regex_zeroth_submatch_int=\count326
+\g__regex_trace_regex_int=\count327
+\c_empty_box=\box66
+\l_tmpa_box=\box67
+\l_tmpb_box=\box68
+\g_tmpa_box=\box69
+\g_tmpb_box=\box70
+\l__box_top_dim=\dimen302
+\l__box_bottom_dim=\dimen303
+\l__box_left_dim=\dimen304
+\l__box_right_dim=\dimen305
+\l__box_top_new_dim=\dimen306
+\l__box_bottom_new_dim=\dimen307
+\l__box_left_new_dim=\dimen308
+\l__box_right_new_dim=\dimen309
+\l__box_internal_box=\box71
+\l__coffin_internal_box=\box72
+\l__coffin_internal_dim=\dimen310
+\l__coffin_offset_x_dim=\dimen311
+\l__coffin_offset_y_dim=\dimen312
+\l__coffin_x_dim=\dimen313
+\l__coffin_y_dim=\dimen314
+\l__coffin_x_prime_dim=\dimen315
+\l__coffin_y_prime_dim=\dimen316
+\c_empty_coffin=\box73
+\l__coffin_aligned_coffin=\box74
+\l__coffin_aligned_internal_coffin=\box75
+\l_tmpa_coffin=\box76
+\l_tmpb_coffin=\box77
+\l__coffin_display_coffin=\box78
+\l__coffin_display_coord_coffin=\box79
+\l__coffin_display_pole_coffin=\box80
+\l__coffin_display_offset_dim=\dimen317
+\l__coffin_display_x_dim=\dimen318
+\l__coffin_display_y_dim=\dimen319
+\l__coffin_bounding_shift_dim=\dimen320
+\l__coffin_left_corner_dim=\dimen321
+\l__coffin_right_corner_dim=\dimen322
+\l__coffin_bottom_corner_dim=\dimen323
+\l__coffin_top_corner_dim=\dimen324
+\l__coffin_scaled_total_height_dim=\dimen325
+\l__coffin_scaled_width_dim=\dimen326
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count328
+\l__driver_tmp_box=\box81
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
+)
+Package: pdfbase 2018/02/28 v0.21 driver independent access to low-level PDF fe
+atures
+\g_pbs_page_int=\count329
+\g_pbs_oc_int=\count330
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2017/09/29 v0.12 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count331
+)
+\@anim@box=\box82
+\@anim@measbox=\box83
+\@anim@tmpdima=\dimen327
+\@anim@tmpdimb=\dimen328
+\@anim@num=\count332
+\@anim@curframe=\count333
+\@anim@curframe@zb=\count334
+\@anim@resizeflags=\count335
+\@anim@skipfram=\count336
+\@anim@mulframecnt=\count337
+\@anim@@tmlnfile=\read2
+\@anim@tmpcnt=\count338
+\c@@anim@ltxcnt=\count339
+\@anim@curlayer=\count340
+\@anim@lineno=\count341
+\@anim@curfield=\count342
+\@anim@@resizeflags=\count343
+)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/gra
 phs/tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2015/06/05 v3.0.1a (rcs-revision 1.44)
-\tikz@lib@auto@number=\count175
-\tikz@qnode@count=\count176
+\tikz@lib@auto@number=\count344
+\tikz@qnode@count=\count345
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/gra
 phs/tikzlibrarygraphs.standard.code.tex
@@ -875,23 +1088,28 @@ File: tikzlibrarygraphs.standard.code.tex 2012/02/27 v3.0.1a (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
-) (./presentation_1.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count346
+)
+(./presentation_1.aux)
 \openout1 = `presentation_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -929,17 +1147,17 @@ LaTeX Font Info:    ... okay on input line 114.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count177
-\scratchdimen=\dimen294
-\scratchbox=\box66
-\nofMPsegments=\count178
-\nofMParguments=\count179
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count180
-\MPscratchDim=\dimen295
-\MPnumerator=\count181
-\makeMPintoPDFobject=\count182
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count347
+\scratchdimen=\dimen329
+\scratchbox=\box84
+\nofMPsegments=\count348
+\nofMParguments=\count349
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen330
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
+\everyMPtoPDFconversion=\toks48
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -958,8 +1176,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring OFF on input line 114.
+\AtBeginShipoutBox=\box85
+Package hyperref Info: Link coloring OFF on input line 134.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -967,68 +1185,68 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count183
+\c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 114.
-LaTeX Info: Redefining \pageref on input line 114.
-LaTeX Info: Redefining \nameref on input line 114.
+LaTeX Info: Redefining \ref on input line 134.
+LaTeX Info: Redefining \pageref on input line 134.
+LaTeX Info: Redefining \nameref on input line 134.
 
 (./presentation_1.out) (./presentation_1.out)
 \@outlinefile=\write5
 \openout5 = `presentation_1.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 114.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 134.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 114.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 134.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 114.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 114.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 114.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 114.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 134.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 114.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 114.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 114.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 134.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 114.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 114.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 114.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 134.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 114.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 114.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 134.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 114.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 134.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 114.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 114.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 114.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 114.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 114.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 134.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 114.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 114.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 134.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 134.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 1
-14.
+34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-114.
+134.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 114.
+ut line 134.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1061,23 +1279,23 @@ Package caption Info: End \AtBeginDocument code.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./presentation_1.toc) [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 148.
+LaTeX Font Info:    Try loading font information for U+msa on input line 169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 148.
+LaTeX Font Info:    Try loading font information for U+msb on input line 169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 148.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 148.
+line 169.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
@@ -1130,13 +1348,13 @@ thkerncmss.
 
 ] [25
 
-] [26
-
 ]
-Overfull \vbox (5.45331pt too high) detected at line 490
+Overfull \vbox (5.45331pt too high) detected at line 531
  []
 
-[27
+[26
+
+] [27
 
 ] [28
 
@@ -1164,36 +1382,48 @@ Overfull \vbox (5.45331pt too high) detected at line 490
 
 ] [40
 
-] [41
+]
+[41
 
 ]
-<alg-tree.pdf, id=1324, 490.23149pt x 478.1865pt>
-File: alg-tree.pdf Graphic file (type pdf)
-<use alg-tree.pdf>
-Package pdftex.def Info: alg-tree.pdf  used on input line 915.
-(pdftex.def)             Requested size: 245.11514pt x 239.09265pt.
 
-Overfull \vbox (2.67926pt too high) detected at line 915
- []
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 979.
 
 [42
 
- <./alg-tree.pdf>] [43
-
-] [44
-
-] [45
+] [43
 
 ]
-\openout4 = `presentation_1.vrb'.
 
- (./presentation_1.vrb) [46
+LaTeX Warning: Citation `KULKARNI1990185' on page 44 undefined on input line 10
+13.
+
+[44
 
 ]
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \vbox (42.17143pt too high) detected at line 1039
+Overfull \vbox (3.44327pt too high) detected at line 1081
+ []
+
+[45
+
+]
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \vbox (3.44327pt too high) detected at line 1081
+ []
+
+[46
+
+]
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \vbox (3.44327pt too high) detected at line 1081
  []
 
 [47
@@ -1202,35 +1432,189 @@ Overfull \vbox (42.17143pt too high) detected at line 1039
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \vbox (42.17143pt too high) detected at line 1039
+Overfull \hbox (6.90665pt too wide) in paragraph at lines 1138--1138
+[][]  
  []
 
 [48
 
 ]
-<nerd_sniping.png, id=1578, 742.775pt x 372.39125pt>
-File: nerd_sniping.png Graphic file (type png)
-<use nerd_sniping.png>
-Package pdftex.def Info: nerd_sniping.png  used on input line 1061.
-(pdftex.def)             Requested size: 297.10474pt x 148.95386pt.
- [49
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
 
- <./nerd_sniping.png>] (./presentation_1.bbl
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no … in font cmss10!
-Missing character: There is no â in font cmss10!
-Missing character: There is no € in font cmss10!
-Missing character: There is no ™ in font cmss10!
-Missing character: There is no â in font cmss10!
-Missing character: There is no € in font cmss10!
-Missing character: There is no “ in font cmss10!
-)
-Overfull \vbox (298.18185pt too high) detected at line 1079
+Overfull \hbox (6.90665pt too wide) in paragraph at lines 1138--1138
+[][]  
+ []
+
+[49
+
+]
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (6.90665pt too wide) in paragraph at lines 1138--1138
+[][]  
  []
 
 [50
 
- </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+]
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (6.90665pt too wide) in paragraph at lines 1138--1138
+[][]  
+ []
+
+[51
+
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+]
+[66
+
+] [67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+] [77
+
+]
+Overfull \hbox (4.64621pt too wide) in paragraph at lines 1545--1545
+\OT1/cmtt/m/n/10.95 SampleEdgesWithin(\OT1/cmss/m/it/10.95 S\OT1/cmtt/m/n/10.95
+ )\OT1/cmss/bx/it/10.95 :||  
+ []
+
+
+Overfull \hbox (54.08557pt too wide) in paragraph at lines 1545--1545
+\OT1/cmtt/m/n/10.95 SampleEdgesWithin($\OT1/mathkerncmss/m/sl/10.95 S[]$\OT1/cm
+tt/m/n/10.95 ) 
+ []
+
+
+Overfull \hbox (8.58632pt too wide) in paragraph at lines 1545--1545
+\OT1/cmtt/m/n/10.95 Update(\OT1/cmss/m/it/10.95 S,F,D\OT1/cmtt/m/n/10.95 )  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1545--1545
+[]\OT1/cmss/bx/it/10.95 Algorithm 5: \OT1/cmss/m/n/10.95 Sam-
+ []
+
+
+Overfull \hbox (46.55795pt too wide) detected at line 1545
+[][][] $[]$[][][][][][][][] $[]$[][][][][][] 
+ []
+
+[78
+
+]
+<alg-tree.pdf, id=2418, 490.23149pt x 478.1865pt>
+File: alg-tree.pdf Graphic file (type pdf)
+<use alg-tree.pdf>
+Package pdftex.def Info: alg-tree.pdf  used on input line 1556.
+(pdftex.def)             Requested size: 245.11514pt x 239.09265pt.
+
+Overfull \vbox (2.67926pt too high) detected at line 1556
+ []
+
+[79
+
+ <./alg-tree.pdf>] [80
+
+]
+
+LaTeX Warning: Citation `COLBOURN1989271' on page 81 undefined on input line 16
+10.
+
+
+LaTeX Warning: Citation `COLBOURN1996268' on page 81 undefined on input line 16
+10.
+
+
+LaTeX Warning: Citation `10.5555/1747597.1748019' on page 81 undefined on input
+ line 1610.
+
+
+LaTeX Warning: Citation `10.1145/1007352.1007372' on page 81 undefined on input
+ line 1610.
+
+[81
+
+]
+
+LaTeX Warning: Citation `DBLP:journals/corr/abs-2004-12739' on page 82 undefine
+d on input line 1624.
+
+[82
+
+] [83
+
+]
+<nerd_sniping.png, id=2602, 742.775pt x 372.39125pt>
+File: nerd_sniping.png Graphic file (type png)
+<use nerd_sniping.png>
+Package pdftex.def Info: nerd_sniping.png  used on input line 1663.
+(pdftex.def)             Requested size: 297.10474pt x 148.95386pt.
+ [84
+
+ <./nerd_sniping.png>] (./presentation_1.bbl
+Missing character: There is no Ä in font cmss8!
+Missing character: There is no … in font cmss8!
+Missing character: There is no â in font cmss8!
+Missing character: There is no € in font cmss8!
+Missing character: There is no ™ in font cmss8!
+Missing character: There is no â in font cmss8!
+Missing character: There is no € in font cmss8!
+Missing character: There is no “ in font cmss8!
+) [85
+
+ </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [86
+
+
+]
 \tf@nav=\write6
 \openout6 = `presentation_1.nav'.
 
@@ -1240,40 +1624,71 @@ Overfull \vbox (298.18185pt too high) detected at line 1079
 \tf@snm=\write8
 \openout8 = `presentation_1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1086.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1086.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1690.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1690.
 
 (./presentation_1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1086.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1086.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1690.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1690.
 
-Package rerunfilecheck Info: File `presentation_1.out' has not changed.
-(rerunfilecheck)             Checksum: 4FE9E178CCF7C0054330C04DB1B28FCD;518.
+
+
+Package rerunfilecheck Warning: File `presentation_1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `presentation_1.out':
+(rerunfilecheck)             Before: EE6D29F20810A4777107611D106F2418;703
+(rerunfilecheck)             After:  CCFC9DEB8CCA11809D5DC1165BF466D1;703.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 30841 strings out of 492982
- 685103 string characters out of 6134896
- 916982 words of memory out of 5000000
- 33727 multiletter control sequences out of 15000+600000
- 17586 words of font info for 65 fonts, out of 8000000 for 9000
+ 40919 strings out of 492982
+ 890163 string characters out of 6134896
+ 1196917 words of memory out of 5000000
+ 43668 multiletter control sequences out of 15000+600000
+ 551173 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,19n,62p,781b,1076s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb>
-Output written on presentation_1.pdf (50 pages, 432320 bytes).
+ 56i,23n,80p,10397b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Outline0.3.1.47} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.2.2.28} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.2.1.16} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.1.3.12} has been referenced but does not e
+xist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on presentation_1.pdf (86 pages, 577347 bytes).
 PDF statistics:
- 1712 PDF objects out of 1728 (max. 8388607)
- 1580 compressed objects within 16 object streams
- 125 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2798 PDF objects out of 2984 (max. 8388607)
+ 2612 compressed objects within 27 object streams
+ 207 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

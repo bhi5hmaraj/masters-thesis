@@ -3,47 +3,52 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: presentation_1.aux
 The style file: amsalpha.bst
 Database file #1: /home/bhishma/Documents/code/masters-thesis/thesis/example.bib.bib
+Repeated entry---line 153 of file /home/bhishma/Documents/code/masters-thesis/thesis/example.bib.bib
+ : @article{COLBOURN1996268
+ :                         ,
+I'm skipping whatever remains of this entry
 Warning--missing pages in dolev2016random
+Warning--missing pages in DBLP:journals/corr/abs-2004-12739
 Warning--missing pages in DBLP:journals/corr/abs-1005-0265
-You've used 11 entries,
+You've used 17 entries,
             2624 wiz_defined-function locations,
-            631 strings with 6415 characters,
-and the built_in function-call counts, 4956 in all, are:
-= -- 463
-> -- 256
-< -- 1
-+ -- 93
-- -- 90
-* -- 413
-:= -- 788
-add.period$ -- 11
-call.type$ -- 11
-change.case$ -- 75
-chr.to.int$ -- 11
-cite$ -- 13
-duplicate$ -- 200
-empty$ -- 359
-format.name$ -- 101
-if$ -- 1025
+            672 strings with 7605 characters,
+and the built_in function-call counts, 7710 in all, are:
+= -- 727
+> -- 392
+< -- 2
++ -- 140
+- -- 137
+* -- 645
+:= -- 1215
+add.period$ -- 17
+call.type$ -- 17
+change.case$ -- 116
+chr.to.int$ -- 17
+cite$ -- 20
+duplicate$ -- 321
+empty$ -- 557
+format.name$ -- 154
+if$ -- 1609
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 44
-num.names$ -- 33
-pop$ -- 81
+missing$ -- 35
+newline$ -- 62
+num.names$ -- 51
+pop$ -- 125
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 133
 quote$ -- 0
-skip$ -- 177
+skip$ -- 281
 stack$ -- 0
-substring$ -- 279
-swap$ -- 47
-text.length$ -- 1
-text.prefix$ -- 1
+substring$ -- 430
+swap$ -- 82
+text.length$ -- 2
+text.prefix$ -- 2
 top$ -- 0
-type$ -- 84
-warning$ -- 2
-while$ -- 44
-width$ -- 13
-write$ -- 129
-(There were 2 warnings)
+type$ -- 132
+warning$ -- 3
+while$ -- 66
+width$ -- 21
+write$ -- 197
+(There was 1 error message)
