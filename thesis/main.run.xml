@@ -52,16 +52,12 @@
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
-      <file>ACM-Reference-Format.dbx</file>
       <file>blx-compat.def</file>
       <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>blx-natbib.def</file>
-      <file>ACM-Reference-Format.bbx</file>
-      <file>trad-plain.bbx</file>
-      <file>trad-standard.bbx</file>
       <file>standard.bbx</file>
-      <file>ACM-Reference-Format.cbx</file>
+      <file>numeric.bbx</file>
       <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
       <file>english.lbx</file>

@@ -1,47 +1,47 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
-\contentsline {chapter}{Declaration of Authorship}{iii}{section*.1}
-\contentsline {chapter}{Abstract}{v}{section*.2}
-\contentsline {chapter}{Acknowledgements}{vii}{section*.3}
-\contentsline {chapter}{Contents}{ix}{chapter*.4}
-\contentsline {chapter}{List of Figures}{xi}{chapter*.5}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}
-\contentsline {subsection}{\numberline {1.0.1}Algorithms for sampling random spanning trees}{1}{subsection.8}
-\contentsline {subsubsection}{Matrix Based }{1}{section*.9}
-\contentsline {subsubsection}{Random Walk Based}{2}{section*.10}
-\contentsline {subsubsection}{Approximation Algorithms}{2}{section*.11}
-\contentsline {subsection}{\numberline {1.0.2}Motivation}{2}{subsection.12}
-\contentsline {subsection}{\numberline {1.0.3}Structure of the thesis}{2}{subsection.13}
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.14}
-\contentsline {section}{\numberline {2.1}Preliminary Linear Algebra}{3}{section.15}
-\contentsline {section}{\numberline {2.2}Laplacian of a Graph}{3}{section.21}
-\contentsline {subsection}{\numberline {2.2.1}Properties of Laplacian}{4}{subsection.24}
-\contentsline {subsection}{\numberline {2.2.2}Kirchoff Matrix Tree Theorem}{4}{subsection.28}
-\contentsline {section}{\numberline {2.3}Electric Networks}{4}{section.30}
-\contentsline {subsection}{\numberline {2.3.1}Unweighted Graph}{4}{subsection.31}
-\contentsline {subsubsection}{Incidence Matrix}{4}{section*.32}
-\contentsline {subsubsection}{Kirchoff's current law}{5}{section*.35}
-\contentsline {subsubsection}{Ohm's law}{5}{section*.36}
-\contentsline {subsubsection}{Laplacian pseudoinverse}{5}{section*.37}
-\contentsline {subsubsection}{Effective Resistance}{5}{section*.38}
-\contentsline {subsection}{\numberline {2.3.2}Weighted Graph}{5}{subsection.40}
-\contentsline {subsection}{\numberline {2.3.3}An Example}{6}{subsection.41}
-\contentsline {chapter}{\numberline {3}Random Walk Approach}{7}{chapter.43}
-\contentsline {section}{\numberline {3.1}Aldous, Broder}{7}{section.44}
-\contentsline {subsection}{\numberline {3.1.1}Running Time}{7}{subsection.59}
-\contentsline {subsection}{\numberline {3.1.2}An Example}{7}{subsection.60}
-\contentsline {chapter}{\numberline {4}Matrix Approach}{9}{chapter.63}
-\contentsline {section}{\numberline {4.1}Harvey, Xu}{9}{section.64}
-\contentsline {subsubsection}{Naive chain rule algorithm}{9}{section*.65}
-\contentsline {subsection}{\numberline {4.1.1}Summary of the paper}{9}{subsection.78}
-\contentsline {subsection}{\numberline {4.1.2}Harvey, Xu Algorithm}{10}{subsection.85}
-\contentsline {subsubsection}{Notation}{10}{section*.86}
-\contentsline {subsubsection}{An Example}{12}{section*.90}
-\contentsline {subsection}{\numberline {4.1.3}Structure of the paper}{13}{subsection.94}
-\contentsline {subsection}{\numberline {4.1.4}Facts used}{13}{subsection.96}
-\contentsline {subsection}{\numberline {4.1.5}Technical details of the results}{15}{subsection.112}
-\contentsline {subsubsection}{Deletion}{15}{section*.113}
-\contentsline {subsubsection}{Contraction}{17}{section*.131}
-\contentsline {subsection}{\numberline {4.1.6}Summary}{19}{subsection.141}
-\contentsline {chapter}{\numberline {5}Conclusion}{21}{chapter.142}
-\contentsline {chapter}{Bibliography}{23}{chapter*.143}
+\contentsline {chapter}{Declaration of Authorship}{iii}{section*.1}% 
+\contentsline {chapter}{Abstract}{v}{section*.2}% 
+\contentsline {chapter}{Acknowledgements}{vii}{section*.3}% 
+\contentsline {chapter}{Contents}{ix}{chapter*.4}% 
+\contentsline {chapter}{List of Figures}{xi}{chapter*.5}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}% 
+\contentsline {subsection}{\numberline {1.0.1}Algorithms for sampling random spanning trees}{1}{subsection.8}% 
+\contentsline {subsubsection}{Matrix Based }{1}{section*.9}% 
+\contentsline {subsubsection}{Random Walk Based}{2}{section*.10}% 
+\contentsline {subsubsection}{Approximation Algorithms}{2}{section*.11}% 
+\contentsline {subsection}{\numberline {1.0.2}Motivation}{2}{subsection.12}% 
+\contentsline {subsection}{\numberline {1.0.3}Structure of the thesis}{2}{subsection.13}% 
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.14}% 
+\contentsline {section}{\numberline {2.1}Preliminary Linear Algebra}{3}{section.15}% 
+\contentsline {section}{\numberline {2.2}Laplacian of a Graph}{3}{section.21}% 
+\contentsline {subsection}{\numberline {2.2.1}Properties of Laplacian}{4}{subsection.24}% 
+\contentsline {subsection}{\numberline {2.2.2}Kirchoff Matrix Tree Theorem}{4}{subsection.28}% 
+\contentsline {section}{\numberline {2.3}Electric Networks}{4}{section.30}% 
+\contentsline {subsection}{\numberline {2.3.1}Unweighted Graph}{4}{subsection.31}% 
+\contentsline {subsubsection}{Incidence Matrix}{4}{section*.32}% 
+\contentsline {subsubsection}{Kirchoff's current law}{5}{section*.35}% 
+\contentsline {subsubsection}{Ohm's law}{5}{section*.36}% 
+\contentsline {subsubsection}{Laplacian pseudoinverse}{5}{section*.37}% 
+\contentsline {subsubsection}{Effective Resistance}{5}{section*.38}% 
+\contentsline {subsection}{\numberline {2.3.2}Weighted Graph}{5}{subsection.40}% 
+\contentsline {subsection}{\numberline {2.3.3}An Example}{6}{subsection.41}% 
+\contentsline {chapter}{\numberline {3}Random Walk Approach}{7}{chapter.43}% 
+\contentsline {section}{\numberline {3.1}Aldous, Broder}{7}{section.44}% 
+\contentsline {subsection}{\numberline {3.1.1}Running Time}{7}{subsection.59}% 
+\contentsline {subsection}{\numberline {3.1.2}An Example}{7}{subsection.60}% 
+\contentsline {chapter}{\numberline {4}Matrix Approach}{9}{chapter.62}% 
+\contentsline {section}{\numberline {4.1}Harvey, Xu}{9}{section.63}% 
+\contentsline {subsubsection}{Naive chain rule algorithm}{9}{section*.64}% 
+\contentsline {subsection}{\numberline {4.1.1}Summary of the paper}{9}{subsection.77}% 
+\contentsline {subsection}{\numberline {4.1.2}Harvey, Xu Algorithm}{10}{subsection.84}% 
+\contentsline {subsubsection}{Notation}{10}{section*.85}% 
+\contentsline {subsubsection}{An Example}{12}{section*.89}% 
+\contentsline {subsection}{\numberline {4.1.3}Structure of the paper}{13}{subsection.93}% 
+\contentsline {subsection}{\numberline {4.1.4}Facts used}{13}{subsection.95}% 
+\contentsline {subsection}{\numberline {4.1.5}Technical details of the results}{15}{subsection.111}% 
+\contentsline {subsubsection}{Deletion}{15}{section*.112}% 
+\contentsline {subsubsection}{Contraction}{17}{section*.130}% 
+\contentsline {subsection}{\numberline {4.1.6}Summary}{19}{subsection.140}% 
+\contentsline {chapter}{\numberline {5}Conclusion}{21}{chapter.141}% 
+\contentsline {chapter}{Bibliography}{23}{chapter*.142}% 
